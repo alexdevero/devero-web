@@ -1,0 +1,61 @@
+{
+  "name": "devero-xyz",
+  "version": "1.0.0",
+  "description": "Repository for DEVERO Corporation website on devero.xyz.",
+  "engines": {
+    "node": ">=9.x",
+    "npm": ">=5.x",
+    "yarn": ">=1.x.x"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "main": "src/index.js",
+  "homepage": "https://github.com/alexdevero/devero-xyz#readme",
+  "bugs": {
+    "url": "https://github.com/alexdevero/devero-xyz/issues"
+  },
+  "license": "proprietary",
+  "author": {
+    "name": "Alex Devero",
+    "url": "https://github.com/alexdevero"
+  },
+  "email": "deveroalex@gmail.com",
+  "url": "http://alexdevero.com/",
+  "contributors": [
+    {
+      "name": "contributor",
+      "url": "https://github.com/contributor"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexdevero/devero-xyz.git"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production parcel build ./src/index.html --no-minify",
+    "start": "cross-env NODE_ENV=development parcel ./src/index.html -p 1337"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.1.6",
+    "eslint": "^4.19.1",
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
+    "imagemin-pngquant": "^5.1.0",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "parcel-bundler": "^1.8.1"
+  },
+  "private": true
+}
