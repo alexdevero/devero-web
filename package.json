@@ -32,12 +32,33 @@
     "url": "https://github.com/alexdevero/devero-xyz.git"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production parcel build ./src/index.html --no-minify",
-    "start": "cross-env NODE_ENV=development parcel ./src/index.html -p 1337"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "start": "npm run develop",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "gatsby": "^2.0.19",
+    "gatsby-image": "^2.0.15",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby-plugin-postcss": "2.0.1",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-source-filesystem": "^2.0.4",
+    "gatsby-transformer-sharp": "^2.1.4",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cssnano": "4.1.7",
+    "postcss-extend": "1.0.5",
+    "postcss-import": "12.0.1",
+    "postcss-merge-rules": "4.0.2",
+    "postcss-nesting": "7.0.0",
+    "postcss-preset-env": "6.4.0",
+    "postcss-pxtorem": "4.0.1"
+  }
 }
