@@ -22,7 +22,9 @@ const Footer = () => (
             </li>
 
             <li>
-              <Link to="/case-studies/">Case studies</Link>
+              <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
+                Blog
+              </a>
             </li>
 
             <li>
@@ -46,25 +48,25 @@ const Footer = () => (
         <div className="col-md-4">
           <ul className="footer__list-social">
             <li>
-              <a href="/" target="_blank">
+              <a href="/" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-facebook-f" />
               </a>
             </li>
 
             <li>
-              <a href="/" target="_blank">
+              <a href="/" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-twitter" />
               </a>
             </li>
 
             <li>
-              <a href="/" target="_blank">
+              <a href="/" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-instagram" />
               </a>
             </li>
 
             <li>
-              <a href="/" target="_blank">
+              <a href="/" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-linkedin" />
               </a>
             </li>

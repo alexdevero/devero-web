@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
           </li>
 
           <li>
-            <a href="https://www.blog.alexdevero.com" target="_blank">
+            <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
               Blog
             </a>
           </li>
@@ -29,25 +29,25 @@ const Header = ({ siteTitle }) => (
 
         <ul className="header__list-social">
           <li>
-            <a href="/" target="_blank">
+            <a href="/" rel="noopener noreferrer" target="_blank">
               <span className="fab fa-facebook-f" />
             </a>
           </li>
 
           <li>
-            <a href="/" target="_blank">
+            <a href="/" rel="noopener noreferrer" target="_blank">
               <span className="fab fa-twitter" />
             </a>
           </li>
 
           <li>
-            <a href="/" target="_blank">
+            <a href="/" rel="noopener noreferrer" target="_blank">
               <span className="fab fa-instagram" />
             </a>
           </li>
 
           <li>
-            <a href="/" target="_blank">
+            <a href="/" rel="noopener noreferrer" target="_blank">
               <span className="fab fa-linkedin" />
             </a>
           </li>
