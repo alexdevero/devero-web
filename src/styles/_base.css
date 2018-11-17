@@ -1,0 +1,34 @@
+:root {
+  --color-black: hsl(0, 0%, 20%);
+  --color-brand: hsl(351.6, 97.2%, 42%); /* #d30320 */
+  --color-brand-hover: hsl(351.6, 97.2%, 22%);
+
+  --transition-duration: .25s;
+  --transition-timing: ease-in-out;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: 1rem / 1.616 georgia, serif;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-kerning: normal;
+  font-weight: normal;
+  word-wrap: break-word;
+  color: hsla(0, 0%, 0%, 0.8);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+}
