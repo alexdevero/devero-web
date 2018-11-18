@@ -1,10 +1,11 @@
+/* Header */
 header {
   width: 100%;
   background: var(--color-black);
 }
 
 .nav,
-.header ul {
+.nav > ul {
   display: flex;
   flex-flow: row wrap;
 }
@@ -35,9 +36,10 @@ header {
 }
 
 .header__list-links a {
+  position: relative;
+  z-index: 1000; /* Place links above opened dropdown */
   padding: 18px 14px;
-  transition: background-color var(--transition-duration)
-    var(--transition-timing);
+  transition: background-color var(--transition-duration) var(--transition-timing);
 }
 
 .header__list-links a:hover {
