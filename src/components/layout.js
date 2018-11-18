@@ -6,7 +6,10 @@ import { StaticQuery, graphql } from 'gatsby'
 import Footer from './footer'
 import Header from './header'
 
+import '../styles/normalize.css'
 import '../styles/_base.css'
+import '../styles/_grid.css'
+import '../styles/styles.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -29,9 +32,10 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+
           <link
+            href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&amp;subset=latin-ext"
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.min.css"
           />
 
           <link
