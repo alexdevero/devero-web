@@ -1,0 +1,34 @@
+/* Dropdown */
+.dropdown__wrapper {
+  position: relative;
+}
+
+.dropdown__list {
+  display: none;
+  flex-flow: column wrap;
+  position: absolute;
+  top: 61px;
+}
+
+.nav .dropdown__list {
+  padding-top: 61px;
+  margin-top: -61px;
+}
+
+.dropdown__trigger {
+  position: relative;
+  z-index: 1000; /* Place links above opened dropdown */
+}
+
+.dropdown__trigger:hover + .dropdown__list,
+.dropdown__trigger + .dropdown__list:hover {
+  display: flex;
+  z-index: 999;
+}
+
+.dropdown__item {
+  min-width: 220px;
+  background-color: var(--color-black);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  white-space: nowrap;
+}
