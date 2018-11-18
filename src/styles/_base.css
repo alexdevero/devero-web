@@ -12,7 +12,9 @@ html {
 }
 
 body {
-  font: 1rem / 1.616 georgia, serif;
+  font-family: 'Raleway', georgia, serif;
+  font-size: 1rem;
+  line-height: 1.616;
   -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
