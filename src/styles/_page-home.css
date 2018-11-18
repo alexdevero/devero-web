@@ -1,0 +1,23 @@
+/* Page - home */
+.dashboard {
+  padding-top: 32px;
+  padding-bottom: 48px;
+}
+
+@media (max-width: 767px) {
+  .dashboard [class*='col-']:nth-of-type(n + 2) {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .dashboard [class*='col-']:nth-of-type(n + 3) {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard [class*='col-']:nth-of-type(n + 4) {
+    margin-top: 48px;
+  }
+}
