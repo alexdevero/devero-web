@@ -36,7 +36,7 @@ const Footer = () => (
         <div className="col-md-4">
           <ul className="footer__list-links">
             <li>
-              <Link to="/">Privacy policy</Link>
+              <Link to="/privacy-policy">Privacy policy</Link>
             </li>
 
             <li>
