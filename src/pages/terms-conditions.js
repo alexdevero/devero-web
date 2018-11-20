@@ -4,160 +4,196 @@ import Layout from '../components/layout'
 
 const TermsConditions = () => (
   <Layout>
-    <h2>Last updated: 20th November 2018</h2>
+    <h2>Last updated: 19th November 2018</h2>
 
-    <p>Here at DEVERO.xyz Limited ("DEVERO.xyz", "we" or "us"), we take your privacy seriously. We're committed to protecting the privacy of any personal information you give us and we will comply with all relevant data protection legislation and related applicable Czech legislation.</p>
+    <h1>Welcome to DEVERO.xyz</h1>
 
-    <p>For the purposes of relevant data protection legislation, DEVERO.xyz Limited is the data controller of personal information we hold and process about you. We are registered on the public register of data controllers maintained by the Information Commissioner in the Czech. See the "Talk to us" section at the end of this Privacy Policy for details of how to contact us.</p>
+    <p>DEVERO.xyz would ask that you take the time to read these Terms and Conditions carefully. They explain a number of things including, for example, the rules covering your use of this site as well as other information regarding your rights. By using www.devero.xyz, you'll be confirming that you have read and understood and agree to these Terms and Conditions. These Terms and Conditions may change from time to time and, if they do, the up-to-date version will always be available on the DEVERO.xyz website. We will indicate at the top of these Terms and Conditions when they were last updated.</p>
 
-    <p>We have a philosophy here about the way we use your data you share with us and the way that we communicate with you. If you hear from us, we will always aim to be respectful, relevant and appropriate. If at any time you don't feel we've lived up to our philosophy, please let us know straight away by getting in touch with us through the Contact Us page of DEVERO.xyz.</p>
+    <p>Please ensure that you check these Terms and Conditions regularly to view any changes which may have been made, because by continuing to use the site after these Terms and Conditions have changed, you will be confirming that you have read and understood, and agreed to be bound by, any revised Terms and Conditions.</p>
 
-    <p>Please take the time to read this Privacy Policy as it is important for you to understand how we collect and use your data when you use DEVERO.xyz. This policy explains how we collect, use and store the personal information you provide to us. 'Personal information' is data that relates to you and that identifies or can be used to identify you – this might be your name, email address, or other digital identifiers relating to you, such as cookies, IP addresses or logs.</p>
+    <h2>Your Information and Privacy</h2>
 
-    <p>This policy may change from time to time and, if it does, the up-to-date version will always be available on the DEVERO.xyz site. Please make sure that you are aware of the latest version of this Privacy Policy.</p>
+    <p>For a more detailed explanation of how we will collect, use and store information relating to you, and our commitment to protecting your privacy, please see the DEVERO.xyz Privacy Policy. To learn more about how we use cookies on our site, please check out our Cookies page.</p>
 
-    <p>We are proud to give you access to DEVERO.xyz and, in return, we may collect, use and share your personal information as is necessary for us to make the website available in accordance with the Terms and Conditions and to give you the best user experience. We will only use personal information for our purposes in a manner permitted by relevant data protection legislation.</p>
+    <h2>Third Party Content</h2>
 
-    <h2>Cookie Policy</h2>
+    <p>This site will contain some content which does not come from us, whether such content is posted by users or otherwise comes from anyone other than us (together, "Third Party Content"). Because of the open nature of the site, this Third Party Content is not approved by us. We have to state that any views expressed in such Third Party Content may not represent our views and that we shall not be responsible or liable for any Third Party Content or for the consequences of the use of it.</p>
 
-    <p>We use cookies to improve your experience on our site, DEVERO.xyz, and to recommend content that may be of interest to you. You can find out more below about what cookies are, the cookies we use and how to switch them off.</p>
+    <p>We will include on the site Third Party Content that is personal opinion and political or controversial in its nature. These views do not necessarily reflect our views and we cannot accept any responsibility for those views.</p>
 
-    <p>You can indicate your acceptance to our use of cookies in accordance with this policy by clicking “OK” in the appropriate place on the banner that appears on DEVERO.xyz. However, please note that if you do not click “OK” but continue to browse the site, you will be deemed to have accepted our use of cookies (and what we use them for) in accordance with this Privacy Policy.</p>
+    <p>We may keep an eye on Third Party Content from time to time but please note that we have no obligation to police it. If we have any concerns, we may remove Third Party Content from the site with or without notice.</p>
 
-    <h2>What are cookies?</h2>
+    <p>If you have any concerns about content appearing on this site, please click here to contact DEVERO.xyz.</p>
 
-    <p>A cookie is a text file containing small amounts of information which is downloaded to your device when you access a website. The text file is then sent back to our server each time your browser requests a page from the server. This enables us to operate the site more effectively and load the site so that it reflects your personal preferences, based on your previous browsing on DEVERO.xyz as well as keywords we may be able to gather from URLs of other webpages from which you accessed DEVERO.xyz. Cookies can also allow us to do various other things, as explained below.</p>
+    <h2>Business Proposal Submissions</h2>
 
-    <h2>What cookies do we use?</h2>
+    <p>If you wish to create a DEVERO business and submit a business proposal to DEVERO.xyz, that submission is subject to the particular terms and conditions of the “Business Proposal Submission Agreement” which we ask you to read and tick the tick-box indicating your agreement to those terms and conditions. You will not be able to submit any business proposals to us without agreeing to the terms and conditions of the Business Proposal Submission Agreement.</p>
 
-    <p>When you visit DEVERO.xyz, the following types of cookies may be downloaded to your device:</p>
+    <h2>User Content</h2>
 
-    <h2>Analytical and Performance Cookies</h2>
+    <p>This site contains an opportunity for users to comment on articles and posts on the site ("User Content"). It is information in the public domain, so be aware that it may be accessed by any person using the web in any part of the world and can be found using independent search engines. So, if you choose to post information to the interactive parts of our site, we have to state that you do so at your own risk and that it won't be protected by us. So, we advise you to think carefully before choosing to share any personal information on the interactive parts of our site. For more information, please see our Privacy Policy.</p>
 
-    <p>We may use analytics service providers for website traffic analysis and reporting. Analytics service providers generate statistical and other information about the use of DEVERO.xyz by using cookies. They allow us to recognise and count the number of visitors and to see how often visitors return to the site, how long they stay and how visitors move around our site when they are using it. This helps us to improve the way our site works, for example, it helps users to find what they are looking for easily. The information generated relating to the site may be used to create reports about the use of the site and the analytics service provider will store this information.</p>
+    <p>In order for our open forum to work, you the user must bear sole responsibility for the content which you post on the site and not post anything unless you have appropriate permission and authority to do so. By posting User Content, we have to assume that you are warranting that you have the permission and authority to do so and that, if at any point you no longer have that permission and authority, you will remove the User Content.</p>
 
-    <h2>Advertising and Targeting Cookies</h2>
+    <p>In posting User Content to the site, you are basically granting to DEVERO.xyz an irrevocable, perpetual, royalty-free, non-exclusive, worldwide, transferable licence to publish, display, copy, modify, create derivative works from and distribute the User Content on the site. You're also granting DEVERO.xyz the licence to use the User Content in any way for the purpose of publicizing the site as well as the products and services of DEVERO companies and also to grant sub-licenses on the same basis.</p>
 
-    <p>These cookies record your visit to DEVERO.xyz, the pages you have visited and the links you have followed to other sites. We will use this information to try and make our site and other sites that you visit more relevant to your interests. We may also share this information with others, such as other DEVERO companies and carefully selected third parties, for this purpose.</p>
+    <p>We may keep an eye on User Content from time to time but please note that we don't have any obligation to police it. We may remove or block access to any User Content at any time. For example, we may do this where we reasonably believe that someone has broken the law, e.g. infringed a third party's intellectual property rights or breached a duty of confidentiality. We can bear no liability in respect of any loss or damage suffered as a result of any of these actions.</p>
 
-    <p>We work with technology partners to support our website and to provide you with relevant information about the products and services of other DEVERO companies both on DEVERO.xyz and on affiliated sites or sites within the advertising networks we work with. We may use cookies on our site to help us to place relevant DEVERO company advertising on third party websites when you visit those sites. If you are not happy for us to do this, please see the section of this policy titled “How do I turn cookies off?” below.</p>
+    <p>The following section — User Code of Conduct — gives you our common sense guidelines for how to contribute to the site in order to avoid causing harm or offence to yourself and others and to avoid having your User Content removed.</p>
 
-    <h2>Functionality Cookies</h2>
+    <p>If you have any concerns about content appearing on this site, please click here to contact DEVERO.xyz.</p>
 
-    <p>We may use functional cookies that allow us to remember choices you have made on the site so as to provide you with a more enhanced user experience by delivering content specific to your interests.</p>
+    <h2>User Code of Conduct</h2>
 
-    <h2>Strictly Necessary Cookies</h2>
+    <p>We are excited about customers and users being able to communicate with each other and share ideas. However, we want all our users to be able to feel safe and at ease whilst using our site. The best way of addressing this balance is to have a user code of conduct.</p>
 
-    <p>These are cookies that are required for the administration and operation of our site. Some cookies that we use are necessary for our site to function properly and to enable you to move around the site and use its features.</p>
+    <p>By using our site you'll be agreeing to these Terms and Conditions including the Code of Conduct in this section.</p>
 
-    <h2>Third Party Cookies</h2>
+    <p>Our community is designed where possible to manage itself. Every comment left by a user can be rated and flagged by any other user. A user can positively, neutrally or negatively rate a comment. Also, a user can flag a comment as inappropriate or offensive by clicking a link that says "flag" next to each comment. Flagged comments may be reviewed by the moderators of DEVERO.xyz, who may remove those comments if they feel they are inconsistent with these Terms and Conditions.</p>
 
-    <p>Because DEVERO and Alex have a strong presence on various social networks, we try and make it as easy as possible to share content and to see what content is popular on those networks. We add buttons to allow people to easily share to those networks. We also use Facebook to power the commenting functionality on the site. When we include these social 'plugins', it gives those sites the flexibility to use their own cookies. They can't read any cookies we set from DEVERO.xyz, and we can't read any cookies they set, but it lets them do the same kind of traffic measuring that we do on the rest of DEVERO.xyz, and it also lets them know whether you're logged into their site. For example, if you're logged in to Facebook, read a post by Alex Devero and want to make a comment, you can do that straight away without having to log in again - we never know whether you're logged in or not, as you communicate directly with Facebook, through their plugins on our site.</p>
+    <p>So if we believe that a user's behavior is likely to cause offence or harm to other users or to DEVERO, or is otherwise unacceptable, we may issue that user with a warning. In addition, we may need to remove any content which they have shared or posted up on the site. We will try to give that user warnings through the flag and probation system outlined above but we're not obliged to give the user that notice.</p>
 
-    <p>Other sites and services (including, for example, advertising networks, providers of external services like web traffic analysis services and content recommendation engines) may also use cookies, over which we have no control. These cookies are likely to be analytical/performance cookies or targeting cookies.</p>
+    <p>To protect our users and the reputation of the site, we may keep an eye on the interaction between users from time to time but please note that we have no obligation to police it.</p>
 
-    <p>As at 9th October 2017, we use the following third party cookies:</p>
+    <p>We cannot take responsibility or liability for the conduct of any person who uses our site. In addition, we are not responsible or liable for any loss or damage suffered as a result of the use of our site.</p>
 
-    <ul>
-      <li>MailChimp - Email distribution</li>
-      <li>Google Analytics - Web Analytics</li>
-      <li>Google Tag Manager - Tag Manger</li>
-    </ul>
+    <p>We ask that in using this site you show respect for other users and the property of others.</p>
 
-    <h2>How do I turn cookies off?</h2>
-
-    <p>If you do not wish us to install cookies or you don't agree with how we use these cookies, you can change the settings on your internet browser to reject them. For more information please consult the “Help” section of your browser or visit www.aboutcookies.org,  www.allaboutcookies.org or http://optout.aboutads.info/#/. Please note that if you do set your browser to reject cookies, you may not be able to use all of the features on our site.</p>
-
-    <h2>What information do we collect if you sign up for our newsletter?</h2>
-
-    <p>If you want to sign up to receive our newsletter we will collect personal information from you as is necessary for the newsletter service, namely your email address, name and what you are interested in hearing more about.</p>
-
-    <h2>Will we use your information for marketing?</h2>
-
-    <p>Once you have given your consent to marketing, we may display offers, promotions, products or services on the site which we think will interest you based upon the information we collect from your cookies. You may withdraw your consent to direct marketing at any time by writing to <a href="mailto:contactus@devero.xyz">contactus@devero.xyz</a> with the subject line ‘Withdraw consent request from direct marketing'.</p>
-
-    <h2>How else will we use your information?</h2>
-
-    <p>We may also use your information for the following purposes:</p>
+    <h2>You agree:</h2>
 
     <ul>
-      <li>To help us make the website and other related content available to you (please see the "Will we share your information with anyone else?" section below for more information)</li>
-      <li>To make the website more relevant for you and our other visitors. This includes sometimes requesting personal information from you to help us run and develop our website and associated functions</li>
-      <li>To send you our newsletter if you have signed up to receive it</li>
-      <li>To carry out occasional surveys to analyse our user base — ultimately we want to ensure that DEVERO.xyz provides everything that you — our audience — is looking for</li>
-      <li>To check whether you are eligible for a competition and to contact you if you win</li>
-      <li>To comply with the law</li>
-      <li>As we feel is necessary to prevent illegal activity or to protect our interests</li>
-      <li>How long do we keep hold of the information?</li>
+      <li>to behave in a respectful way to all other users.</li>
+
+      <li>not to post or otherwise make available content which is, in our view, likely to impair others' enjoyment of this site;</li>
+
+      <li>not to breach the law or encourage a breach of the law;</li>
+
+      <li>not to post or otherwise make available content which is, in our view, abusive, offensive, defamatory, obscene, pornographic or of a sexual nature, illegal, threatening, intimidating, in breach of privacy, confidentiality or third party rights or otherwise unacceptable;</li>
+
+      <li>not to post or otherwise make available content which, in our view, portrays unacceptable violence;</li>
+
+      <li>not to behave in a way which is threatening, intimidating, harassing or bullying, offensive, abusive, defamatory, discriminatory or demeaning or to stalk or violate the rights of others including individuals' privacy rights;</li>
+
+      <li>not to do, cause or permit anything to be done that may infringe, damage or interfere with any copyright, moral rights, performing rights, design rights, trade mark rights or other proprietary or intellectual property rights of DEVERO.xyz, any other DEVERO company, their respective licensors or any third party;</li>
+
+      <li>to only upload content which is an original work created by you;</li>
+
+      <li>not to share any information which is confidential to any other person;</li>
+
+      <li>not do anything which will or might damage, interfere with, disrupt access to, overburden, interrupt or impair the functionality of the site the materials available on the site or any software or hardware;</li>
+
+      <li>not to obtain or attempt to obtain unauthorized access to the site, any part of it or any private or member account areas;</li>
+
+      <li>not to obtain or seek to obtain personal information, confidential information or passwords from any other person;</li>
+
+      <li>not to circumvent or attempt to circumvent any filters we may use on this site.</li>
+
+      <li>not to do anything which may cause any liability for DEVERO.xyz or any other DEVERO company;</li>
+
+      <li>not to distort or misrepresent any individual or thing;.</li>
+
+      <li>not to register as or on behalf of anyone else, impersonate anyone else, seek to take on a false identity or misrepresent yourself, your identity or your age;</li>
+
+      <li>not post or otherwise make available content containing financial information (such as account, credit or debit card details) or information which identifies an individual personally or is capable of identifying an individual personally (such as names, phone numbers, email addresses or postal addresses);</li>
+
+      <li>to respect information you obtain on our site and use it only in accordance with this User Code of Conduct and our Terms and Conditions;</li>
+
+      <li>not to advertise, promote or endorse any goods or services; and</li>
+
+      <li>not use our site to send any chain letters, junk mail, 'spamming' material or any other form of bulk communication.</li>
     </ul>
 
-    <p>There are certain reasons that we have to keep hold of some of your information. Naturally we keep your information while you are registered with us so that we are able to provide the service to you but we also keep it after you've left us, though only for as long as we need it. How long we keep it depends very much on the type of information we are holding and the purpose for which we need it. We also have to take into account our legal obligations in respect of how long we keep that data.</p>
+    <h2>Minors</h2>
 
-    <p>You can request that we delete your personal information at any time.</p>
+    <p>Protecting the online privacy of children is especially important to us. By accessing the site or providing us with any of
+    your personal information, you'll be representing and warranting that you are 18 or older and that you agree to these Terms and Conditions. If you are under 18 years old, please do not attempt to use www.devero.xyz and do not provide us with your name, contact details or any other information about yourself. If we reasonably believe a user to be under 18, we may need to remove their details provided by them from our site and our records.</p>
 
-    <h2>Will we share your information with anyone else?</h2>
+    <h2>DEVERO.xyz guest blogs</h2>
 
-    <p>Only if...</p>
+    <p>Guest blogs posted on our site don't necessarily represent the views of DEVERO.xyz, or the DEVERO Corporation. Any positive or other review of any venue, restaurant, hotel, museum, or otherwise does not constitute a recommendation, endorsement or guarantee by us and we make no representation as to quality. All ratings are intended as a guideline only and we do not guarantee their accuracy.</p>
+
+    <p>We make no endorsements, recommendations, guarantees or representations in relation to any restaurants, hotels, museums or other reviews published on this site. The reviews don't necessarily represent our views. Please read these terms and conditions for further details.</p>
+
+    <p>Prices, menus, hotel amenities and other indicators in any review published by us are accurate as at the date of going to press, but are subject to change. We make no guarantee that any such information, or information in reviews posted by other users, will be accurate or up to date at the time you read it. Always review travel advice from the Foreign and Commonwealth Office before you decide to visit an international destination.</p>
+
+    <p>DEVERO will not be responsible or liable for any injury, loss or damage incurred or suffered as a result of any review. This paragraph should be read in accordance with applicable local laws.</p>
+
+    <h2>Indemnity</h2>
+
+    <p>Our legal eagles have said that we need to include this paragraph which basically protects DEVERO against people suing us for something bad happening:</p>
+
+    <p>In using this site you agree to indemnify and hold harmless DEVERO.xyz and all other DEVERO companies, their subsidiaries and holding companies, the subsidiaries of their holding companies and each of their respective officers, directors, shareholders, employees, representatives and agents (and you shall continue to indemnify them and hold them harmless) in respect of all losses, liabilities, costs, claims, damages and demands suffered in connection with your conduct in using the site, your behavior towards us, other DEVERO companies, our and their representatives, other users, any breach of law, any breach of these Terms and Conditions or any breach of any third party's rights.</p>
+
+    <h2>Proprietary Rights</h2>
+
+    <p>All text, graphics, audio, video or image files, content, software, applications and information displayed on or available from this site, and all copyright, trade mark rights, design rights and other intellectual property rights in them (together, the "Proprietary Content") are the property of DEVERO.xyz, other DEVERO companies, our users, suppliers or licensors. This includes, without limitation, the organization and lay-out of the site and the underlying software that is owned by us, other DEVERO companies, our users, suppliers or licensors.</p>
+
+    <p>By using the site you're agreeing that Proprietary Content is available for personal use only and that you will not copy, reproduce, publish, distribute or dispose of in any way any Proprietary Content. Neither the DEVERO name nor any other DEVERO company name, trade mark, logo or design may be used or copied in any manner.</p>
+
+    <h2>Links to Other Sites</h2>
+
+    <p>DEVERO.xyz provides, amongst other things, convenient links to other DEVERO companies' websites. You can also contact the DEVERO companies through the Find a DEVERO Company section of the site. Our site also contains links to other third party websites, resources, advertisements or sponsorships.</p>
+
+    <p>If you choose to access any of these links, you will be leaving DEVERO.xyz and since we don't have any control over these sites, we are not responsible for the content, advertising, products or services available from them, or for any dealings or disputes that you may have in relation to those sites. DEVERO.xyz is not liable for any loss or damage which may be suffered as a result of the use of such links and third party sites. We would encourage you to review the terms and conditions and privacy policy on any new site you may choose to access because our terms and conditions and privacy policy will no longer be applicable.</p>
+
+    <p>We reserve the right to remove a link at any time.</p>
+
+    <h2>Pop Ups</h2>
+
+    <p>When using www.devero.xyz, you may get pop-ups occasionally. We use these for many reasons, like competition entry forms, signing up to our newsletters and questionnaires to help us improve our service to you. Pop-up boxes from DEVERO.xyz are clearly marked with a heading from DEVERO.xyz.</p>
+
+    <p>You might also get pop-up boxes from other DEVERO companies. Again you should be able to identify these, as they should be marked with a heading from the relevant DEVERO company.</p>
+
+    <p>You might also get pop-up ads from third parties. These may appear due to software you have installed, deliberately or unknowingly, on your computer. Unfortunately, DEVERO.xyz cannot control these pop-up boxes because they haven't come from us.</p>
+
+    <p>We do not endorse any website or product which appears in any pop-ups which do not come from DEVERO.xyz. To read more about our cookie policy click here.</p>
+
+    <h2>Accessibility</h2>
+
+    <p>If you have trouble using our website with certain web browsers or other software or if you want to let us know how we can improve accessibility, please let us know by clicking here to contact DEVERO.xyz. We appreciate your feedback and your suggestions will help us to improve our service to you.</p>
+
+    <h2>Site information and downtime</h2>
+
+    <p>This site may be unavailable occasionally for maintenance, updating or otherwise. Where this happens we apologise for any inconvenience caused. However, we shall not be liable for any loss, damages or inconvenience resulting from such unavailability.</p>
+
+    <p>We take great care in seeking to present accurate, transparent and useful information to you as a user. However, as an open platform there is content on this site which is not generated by us, for example Third Party Content, as described above. Therefore, we should let you know that information on this site might be out of date, incomplete, contain some errors or be in some way unreliable. Just to be sure, please check any information obtained from this site before acting upon it in any way.</p>
+
+    <p>Please note that we may make changes to the site, its functions and services from time to time.</p>
+
+    <h2>Other Limitation of Liability</h2>
+
+    <p>It is important to note that using the internet does have its dangers. Our aim is to ensure a fast, reliable and secure service and to protect your personal information. However we cannot take responsibility for:</p>
 
     <ul>
-      <li>You specifically request this, such as when you submit information to enquire about jobs or submit a job application through www.devero.xyz</li>
-      <li>We are required to do so to comply with the law or with the directions of the courts or other authorities</li>
-      <li>We feel it is reasonably necessary to prevent illegal activity or to protect our interests</li>
-      <li>We feel that other DEVERO companies products and services may interest you</li>
-      <li>It helps our trusted third party service providers to provide and improve our service to you or to carry out surveys and user analysis to understand your needs and preferences. We will also share your information with MailChimp, who securely host emails and act as a supplier to distribute our newsletter. We contractually require these service providers to keep your personal information safe and secure. These trusted third parties would only be permitted to use your personal information for the purposes we specify.</li>
-      <li>We currently don't share any info with third parties that is not anonymized. However, if we do in the future we will list them in this privacy policy and we will notify you of this change to our privacy terms.</li>
+      <li>any breach of security of www.devero.xyz;</li>
+
+      <li>any damage, loss or corruption of any data, information or material;</li>
+
+      <li>any viruses or other malicious programs that may infect your computer equipment or other property; or</li>
+
+      <li>any breach of security by hackers in relation to www.devero.xyz.</li>
     </ul>
 
-    <p>We may share some broader statistics and customer profiling information with third parties and other DEVERO companies - but we'll keep it anonymous, so you won't be identifiable from that data.</p>
+    <p>DEVERO.xyz and the other DEVERO companies won't be liable for any special, indirect, incidental, consequential or economic loss (or for any exemplary or punitive damages) in connection with the use of www.devero.xyz or any other site. The same applies for the employees, officers, directors, representatives and agents of DEVERO.xyz and/or the other DEVERO companies. This paragraph only applies to the extent that it can in accordance with applicable laws.</p>
 
-    <p>We will never rent or sell our user's details to any other organization or individual.</p>
+    <h2>Law and Jurisdiction</h2>
 
-    <h2>What if you post information on our site?</h2>
+    <p>These Terms and Conditions and any dispute in relation to them are governed by English law and we reserve the right to bring proceedings in the courts in any location, the English courts or whichever forum we feel is appropriate.</p>
 
-    <p>This site contains an opportunity for users to comment ("User Content") on content displayed on the site. This information is in the public domain, so it may be accessed by any person using the web in any part of the world and can be found using independent search engines. So, if you choose to post information to the interactive parts of our site, we have to state that you do so at your own risk. This is the case whether the User Content is uploaded directly onto www.devero.xyz or through a connected site.</p>
+    <p>As a user, the laws of your location may apply to your online dealings with www.devero.xyz and you may have additional legal rights and/or obligations than those provided under English law. We always recommend that you should seek local legal advice, however we would encourage you to speak to us if you have any concerns to see if they can be resolved.</p>
 
-    <h2>This means your User Content:</h2>
+    <h2>Other terms — a final word from our lawyers</h2>
 
-    Won't have its usage and circulation limited as described in the sections of this policy above entitled 'Will we use your information for marketing?', 'How else will we use your information?' and 'Will we share your information with anyone else?'
-    Won't be protected as described in the section of this policy below headed 'Will we be transferring any personal information outside the EU?'
-    Won't be held securely as described in the section of this policy below headed 'Keeping your information safe'
-    We are obliged by our legal eagles to state that, to the maximum extent permitted by law, neither DEVERO.xyz nor any other DEVERO company will be liable to you or to any third party for any loss or damage resulting from any User Content posted on www.devero.xyz.
+    <p>These Terms and Conditions and the Privacy Policies constitute the entire agreement between you, the user, and us in relation to your use of the site (which includes details on our approach to cookies) and supersede all prior agreements and arrangements between us in relation to your use of the site.</p>
 
-    <p>However, if you upload User Content to our site using Facebook, we will protect your privacy consistently with your Facebook privacy settings.</p>
+    <p>If any provision or part of these Terms and Conditions is or becomes illegal, invalid or unenforceable, the legality, validity and enforceability of all of the other provisions and parts of these Terms and Conditions will not be impaired.</p>
 
-    <p>Please read our Terms and Conditions for more information about posting User Content. If you register on the site, you'll need to comply with our Terms and Conditions.</p>
+    <p>No failure or delay by DEVERO.xyz in exercising or enforcing any right, power or remedy which arises under these Terms and Conditions shall operate as a waiver of that or any other right, power or remedy. No waiver by DEVERO.xyz shall be effective unless in writing and signed by an authorized representative of DEVERO.xyz.</p>
 
-    <p>If you have any concerns about User Content appearing on this site, please contact us using the Contact Us page on www.devero.xyz.</p>
+    <h2>Finally — if in doubt, talk to us</h2>
 
-    <h2>How will we make sure our site is secure?</h2>
-
-    <p>We follow strict security procedures to manage how your personal information is stored, used, who sees it and to help stop any unauthorized person getting hold of it. All personal information you register with DEVERO.xyz will be located behind a firewall. We take security extremely seriously but as no system is 100% secure, we can't completely guarantee the protection of your personal information, any more than any other organization can. So we can't accept any liability for the loss, theft or misuse of the personal information which you've registered on our website if there is a security breach.</p>
-
-    <h2>Will we transfer any personal information outside the EU?</h2>
-
-    <p>Countries outside the European Union may have a lower standard of protection for personal information than that required by EU data protection laws. The information we collect from you may be transferred to, and stored, outside the EU (including for example in the United States) and may also be processed by people operating outside the EU who work for us or one of our suppliers. If we need to transfer your data to a company based outside the EU (e.g. if our hosting company is based in the US), we'll take steps to make sure your personal data is handled in line with EU law. Please see the table of our suppliers in the "Will we share your information with anyone else?" section above which sets out whether they are based inside or outside the EU. If you would like any more details on this please get in contact with us.</p>
-
-    <h2>What about personal information relating to minors?</h2>
-
-    <p>Protecting the online privacy of children is especially important to us. If you are under 18 years old, please do not provide us with your name, contact details or any other information about yourself. To find out more, please read our Terms and Conditions.</p>
-
-    <h2>Are you protected by this policy outside www.devero.xyz?</h2>
-
-    <p>www.devero.xyz contains links to other websites. Obviously, we don't have any control over those websites and we cannot take any responsibility for any information you give them. Other sites have different privacy and security policies and terms and conditions, so we advise you to read these before using them.</p>
-
-    <h2>How you can access your information</h2>
-
-    <p>You can request access to the personal information we hold about you at any time. You can write to us at the following address requesting access to your personal information.</p>
-
-    <p>Email: <a href="mailto:contactus@devero.xyz">contactus@devero.xyz</a></p>
-
-    <p>You are entitled to be told by us whether we or someone else on our behalf is processing the personal information we hold on you; what personal information we hold; details of the purposes for the processing of your personal information; and details of any third party with whom your personal information has been shared. You can also request that we correct any personal information which we hold about you where it is inaccurate.</p>
-
-    <p>Sometimes we may ask you to provide proof of identity before we show you your personal information - so we can prevent unauthorized access.</p>
-
-    <p>Talk to us</p>
-
-    <p>If you have any queries, comments or complaints regarding this Privacy Policy, just get in touch. You can contact us through the Contact Us section of www.devero.xyz or write to us at the address set out above or at the following email address <a href="mailto:contactus@devero.xyz">contactus@devero.xyz</a>.</p>
+    <p>If you have any queries, comments or complaints regarding the websites of any other DEVERO companies or the products or services you receive from them, then please contact them directly. For your convenience, you can contact them through the Find a DEVERO Company section of our site.</p>
   </Layout>
 )
 
