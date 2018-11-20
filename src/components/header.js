@@ -3,31 +3,11 @@ import { Link } from 'gatsby'
 
 import '../styles/header.css'
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className="header">
     <div className="container">
       <nav className="nav">
         <ul className="header__list-links">
-          <li className="dropdown__wrapper">
-            <Link to="/about-us/" className="dropdown__trigger">
-              About us
-            </Link>
-
-            <ul className="dropdown__list">
-              <li className="dropdown__item">
-                <Link to="">Our story</Link>
-              </li>
-
-              <li className="dropdown__item">
-                <Link to="">Our brand</Link>
-              </li>
-
-              <li className="dropdown__item">
-                <Link to="">Our mission</Link>
-              </li>
-            </ul>
-          </li>
-
           <li className="dropdown__wrapper">
             <Link to="/brand-portfolio" className="dropdown__trigger">
               Brand portfolio
@@ -72,14 +52,30 @@ const Header = ({ siteTitle }) => (
             </ul>
           </li>
 
+          <li className="dropdown__wrapper">
+            <Link to="/about-us/" className="dropdown__trigger">Discover DEVERO</Link>
+
+            <ul className="dropdown__list">
+              <li className="dropdown__item">
+                <Link to="">About us</Link>
+              </li>
+
+              <li className="dropdown__item">
+                <Link to="">Our story</Link>
+              </li>
+
+              <li className="dropdown__item">
+                <Link to="">Our brand</Link>
+              </li>
+
+              <li className="dropdown__item">
+                <Link to="">Our mission</Link>
+              </li>
+            </ul>
+          </li>
+
           <li>
-            <a
-              href="https://www.blog.alexdevero.com"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Blog
-            </a>
+            <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">Blog</a>
           </li>
 
           <li>
