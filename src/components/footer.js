@@ -36,11 +36,11 @@ const Footer = () => (
         <div className="col-md-4">
           <ul className="footer__list-links">
             <li>
-              <Link to="/privacy-policy">Privacy policy</Link>
+              <Link to="/privacy-policy/">Privacy policy</Link>
             </li>
 
             <li>
-              <Link to="/">Terms and conditions</Link>
+              <Link to="/terms-conditions/">Terms and conditions</Link>
             </li>
           </ul>
         </div>
