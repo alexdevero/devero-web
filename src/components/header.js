@@ -49,6 +49,10 @@ const Header = () => (
               <li className="dropdown__item">
                 <Link to="">Technologies</Link>
               </li>
+
+              <li className="dropdown__item">
+                <Link to="">Ventures</Link>
+              </li>
             </ul>
           </li>
 
