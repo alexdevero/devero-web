@@ -33,6 +33,7 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "clean": "rimraf public/*",
     "develop": "gatsby develop",
     "format": "prettier --write \"src/**/*.js\"",
     "start": "npm run develop",
@@ -60,6 +61,7 @@
     "postcss-merge-rules": "4.0.2",
     "postcss-nesting": "7.0.0",
     "postcss-preset-env": "6.4.0",
-    "postcss-pxtorem": "4.0.1"
+    "postcss-pxtorem": "4.0.1",
+    "rimraf": "^2.6.2"
   }
 }
