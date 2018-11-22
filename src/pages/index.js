@@ -11,7 +11,7 @@ const IndexPage = () => (
 
     <div className="dashboard row">
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-ai/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -23,7 +23,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-financial/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -35,7 +35,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-foundation/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -47,7 +47,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-galactic/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -59,7 +59,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-genomics/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -71,7 +71,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-industries/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -83,7 +83,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-media/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -95,7 +95,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-studio/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -107,7 +107,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-technologies/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -119,7 +119,7 @@ const IndexPage = () => (
       </div>
 
       <div className="col-md-6 col-lg-4">
-        <Link to="/" className="company-box">
+        <Link to="/devero-ventures/" className="company-box">
           <div className="card-box__thumbnail" />
 
           <div className="company-box__info">
@@ -130,7 +130,6 @@ const IndexPage = () => (
         </Link>
       </div>
     </div>
-    {/*<Link to="/about-us/">About us</Link>*/}
   </Layout>
 )
 
