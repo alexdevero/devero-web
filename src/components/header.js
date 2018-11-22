@@ -15,43 +15,43 @@ const Header = () => (
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
-                <Link to="">AI</Link>
+                <Link to="/devero-aI/">AI</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Financial</Link>
+                <Link to="/devero-financial/">Financial</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Foundation</Link>
+                <Link to="/devero-foundation/">Foundation</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Galactic</Link>
+                <Link to="/devero-galactic/">Galactic</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Genomics</Link>
+                <Link to="/devero-genomics/">Genomics</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Industries</Link>
+                <Link to="/devero-industries/">Industries</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Media</Link>
+                <Link to="/devero-media/">Media</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Studio</Link>
+                <Link to="/devero-studio/">Studio</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Technologies</Link>
+                <Link to="/devero-technologies/">Technologies</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Ventures</Link>
+                <Link to="/devero-ventures/">Ventures</Link>
               </li>
             </ul>
           </li>
