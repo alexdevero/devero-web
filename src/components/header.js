@@ -15,7 +15,7 @@ const Header = () => (
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
-                <Link to="/devero-aI/">AI</Link>
+                <Link to="/devero-ai/">AI</Link>
               </li>
 
               <li className="dropdown__item">
