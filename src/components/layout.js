@@ -33,17 +33,11 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
 
-          <link
-            href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&amp;subset=latin-ext"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&amp;subset=latin-ext" rel="stylesheet" />
 
-          <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-            crossorigin="anonymous"
-          />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+
+          {/* <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" /> */}
         </Helmet>
 
         <div className="page-wrapper">
