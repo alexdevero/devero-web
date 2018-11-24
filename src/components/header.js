@@ -15,49 +15,51 @@ const Header = () => (
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
-                <Link to="/devero-ai/">AI</Link>
+                <Link to="/ai/">AI</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-financial/">Financial</Link>
+                <Link to="/financial/">Financial</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-foundation/">Foundation</Link>
+                <Link to="/foundation/">Foundation</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-galactic/">Galactic</Link>
+                <Link to="/galactic/">Galactic</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-genomics/">Genomics</Link>
+                <Link to="/genomics/">Genomics</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-industries/">Industries</Link>
+                <Link to="/industries/">Industries</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-media/">Media</Link>
+                <Link to="/media/">Media</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-studio/">Studio</Link>
+                <Link to="/studio/">Studio</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-technologies/">Technologies</Link>
+                <Link to="/technologies/">Technologies</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/devero-ventures/">Ventures</Link>
+                <Link to="/ventures/">Ventures</Link>
               </li>
             </ul>
           </li>
 
           <li className="dropdown__wrapper">
-            <Link to="/about-us/" className="dropdown__trigger">Discover DEVERO</Link>
+            <Link to="/about-us/" className="dropdown__trigger">
+              Discover DEVERO
+            </Link>
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
@@ -79,11 +81,13 @@ const Header = () => (
           </li>
 
           <li>
-            <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">Blog</a>
+            <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
+              Blog
+            </a>
           </li>
 
           <li>
-            <Link to="/foundation/">Foundation</Link>
+            <Link to="foundation/">Foundation</Link>
           </li>
         </ul>
 
