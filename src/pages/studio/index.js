@@ -6,31 +6,66 @@ class DeveroStudio extends React.Component {
   state = {
     formAdditionalMessage: '',
     formEmail: '',
-    formInterest: '',
     formName: '',
-    formNewsletter: null,
-    isformValid: false
+    formNewsletter: false,
+    checkboxApp: false,
+    checkboxConsultation: false,
+    checkboxDesign: false,
+    checkboxElse: false,
+    checkboxFrontBack: false,
+    isFormSubmitted: false,
+    isFormValid: false
   }
 
-  emailValidator = value => {
-    /* eslint-disable */
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    /* eslint-enable */
-    return re.test(String(value).toLowerCase())
+  handleInputChange = event => {
+    if (event.target.value.length > 0 && event.target.name !== 'formEmail') {
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+    }
+
+    if (event.target.name === 'formEmail') {
+      /* eslint-disable */
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      /* eslint-enable */
+
+      if (re.test(String(event.target.value).toLowerCase())) {
+        this.setState({
+          [event.target.name]: event.target.value
+        })
+      }
+    }
   }
 
-  handleInputChange = event => {}
+  handleCheckboxClick = event => {
+    this.setState({
+      [event.target.name]: event.target.checked
+    })
+  }
 
   handleFormSubmit = event => {
     event.preventDefault()
 
-    if (this.state.formEmail.length > 0 && this.state.formInterest.length > 0 && this.state.formName.length > 0) {
+    if (this.state.formEmail.length > 0 && this.state.formName.length > 0) {
       this.setState({
-        formIsValid: true
+        isFormValid: true
       })
-      console.log('Success')
-    } else {
-      console.log('Fail')
+
+      this.setState({
+        formAdditionalMessage: '',
+        formEmail: '',
+        formName: '',
+        formNewsletter: false,
+        checkboxApp: false,
+        checkboxConsultation: false,
+        checkboxDesign: false,
+        checkboxElse: false,
+        checkboxFrontBack: false,
+        isFormSubmitted: true,
+        isFormValid: false
+      })
+
+      console.log(this.state)
     }
   }
 
@@ -38,7 +73,7 @@ class DeveroStudio extends React.Component {
     return (
       <Layout>
         <section className="studio--benefits">
-          <h1>Design + Development + Managament</h1>
+          <h1>Design + Development + Management</h1>
 
           <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </section>
@@ -124,15 +159,15 @@ class DeveroStudio extends React.Component {
         <section className="studio--contact">
           <form action="">
             <fieldset>
-              <label htmlFor="">Full name</label>
+              <label htmlFor="formName">Full name</label>
 
-              <input type="text" name="" id="" />
+              <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
             </fieldset>
 
             <fieldset>
-              <label htmlFor="">Email address</label>
+              <label htmlFor="formEmail">Email address</label>
 
-              <input type="text" name="" id="" />
+              <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
             </fieldset>
 
             <h2>What are you interested in?</h2>
@@ -140,8 +175,8 @@ class DeveroStudio extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <fieldset>
-                  <label htmlFor="">
-                    <input type="checkbox" name="" id="" />
+                  <label htmlFor="checkboxFrontBack">
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" />
 
                     <span>Frontend / Backend</span>
                   </label>
@@ -150,8 +185,8 @@ class DeveroStudio extends React.Component {
 
               <div className="col-md-6">
                 <fieldset>
-                  <label htmlFor="">
-                    <input type="checkbox" name="" id="" />
+                  <label htmlFor="checkboxDesign">
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" />
 
                     <span>Design</span>
                   </label>
@@ -162,8 +197,8 @@ class DeveroStudio extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <fieldset>
-                  <label htmlFor="">
-                    <input type="checkbox" name="" id="" />
+                  <label htmlFor="checkboxApp">
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" />
 
                     <span>App</span>
                   </label>
@@ -172,8 +207,8 @@ class DeveroStudio extends React.Component {
 
               <div className="col-md-6">
                 <fieldset>
-                  <label htmlFor="">
-                    <input type="checkbox" name="" id="" />
+                  <label htmlFor="checkboxConsultation">
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" />
 
                     <span>Consultation</span>
                   </label>
@@ -184,8 +219,8 @@ class DeveroStudio extends React.Component {
             <div className="row">
               <div className="col-md-6">
                 <fieldset>
-                  <label htmlFor="">
-                    <input type="checkbox" name="" id="" />
+                  <label htmlFor="checkboxElse">
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" />
 
                     <span>Something Else</span>
                   </label>
@@ -195,15 +230,21 @@ class DeveroStudio extends React.Component {
 
             <h2>Want to add something?</h2>
 
-            <textarea name="" id="" />
+            <textarea onChange={this.handleInputChange} name="formAdditionalMessage" id="formAdditionalMessage" />
 
             <fieldset>
-              <label htmlFor="">
-                <input type="checkbox" name="" id="" />
+              <label htmlFor="formNewsletter">
+                <input onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" />
 
                 <span>Yes, I want to be informed about new tech, design & business articles.</span>
               </label>
             </fieldset>
+
+            {this.state.isFormSubmitted && (
+              <fieldset>
+                <p>Your message is on the way. I will reply in three days.</p>
+              </fieldset>
+            )}
 
             <fieldset>
               <button onClick={this.handleFormSubmit}>Send</button>
