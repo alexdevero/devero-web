@@ -1,6 +1,6 @@
 import React from 'react'
-// import $ from 'jquery'
-import nodemailer from 'nodemailer'
+import $ from 'jquery'
+import { withPrefix } from 'gatsby'
 
 import Layout from '../../components/layout'
 
@@ -53,54 +53,19 @@ class DeveroStudio extends React.Component {
         isFormValid: true
       })
 
-      /*$.ajax({
+      $.ajax({
         data: this.state,
         type: 'POST',
-        url: require('../../contact.php'),
+        url: withPrefix('/contact.php'),
         success: function(data) {
           console.info(data)
         },
         error: function(xhr, status, err) {
           console.error(status, err.toString())
         }
-      })*/
-
-      /*let smtpConfig = {
-        host: 'smtp.gmail.com',
-        port: 587, // TLS: 587, SSL: 465
-        secure: true, // use TLS
-        auth: {
-          user: process.env.emailAddress, // Gmail address from .env
-          pass: process.env.emailPassword // Gmail password from .env
-        }
-      }*/
-
-      // Source: https://www.w3schools.com/nodejs/nodejs_email.asp
-      const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-          user: process.env.emailAddress,
-          pass: process.env.emailPassword
-        }
       })
 
-      // Message configuration
-      // https://nodemailer.com/message/
-      let message = {
-        from: this.state.formEmail,
-        to: process.env.emailAddress,
-        subject: 'Contact via DEVERO Studio',
-        // text: `Contact from ${this.state.formName}, ${this.state.formEmail}`,
-        html: `<p>Contact from: ${this.state.formName},<br /> email: ${this.state.formEmail}</p>, interested in App: ${this.state.checkboxApp}, Consultation: ${this.state.checkboxConsultation}, Design: ${this.state.checkboxDesign}, Else: ${this.state.checkboxElse}, FrontBack: ${this.state.checkboxFrontBack}<br /> Want newsletter: ${this.state.formNewsletter}, <br /> Additional message ${this.state.formAdditionalMessage}.`
-      }
-
-      transporter.sendMail(message, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      })
+      console.log(this.state)
 
       this.setState({
         formAdditionalMessage: '',
@@ -115,8 +80,6 @@ class DeveroStudio extends React.Component {
         isFormSubmitted: true,
         isFormValid: false
       })
-
-      console.log(this.state)
     }
   }
 
@@ -227,7 +190,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxFrontBack">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={true} />
 
                     <span>Frontend / Backend</span>
                   </label>
@@ -237,7 +200,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxDesign">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={true} />
 
                     <span>Design</span>
                   </label>
@@ -249,7 +212,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxApp">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={true} />
 
                     <span>App</span>
                   </label>
@@ -259,7 +222,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxConsultation">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={true} />
 
                     <span>Consultation</span>
                   </label>
@@ -271,7 +234,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxElse">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={true} />
 
                     <span>Something Else</span>
                   </label>
@@ -285,7 +248,7 @@ class DeveroStudio extends React.Component {
 
             <fieldset>
               <label htmlFor="formNewsletter">
-                <input onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" />
+                <input onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={true} />
 
                 <span>Yes, I want to be informed about new tech, design & business articles.</span>
               </label>
