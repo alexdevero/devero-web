@@ -35,6 +35,10 @@ npm-debug.log*
 *.eps
 *.psd
 
+# Private files #
+#################
+.env
+
 # Runtime data
 pids
 *.pid
