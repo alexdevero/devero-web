@@ -1,4 +1,6 @@
 import React from 'react'
+// import $ from 'jquery'
+import nodemailer from 'nodemailer'
 
 import Layout from '../../components/layout'
 
@@ -49,6 +51,55 @@ class DeveroStudio extends React.Component {
     if (this.state.formEmail.length > 0 && this.state.formName.length > 0) {
       this.setState({
         isFormValid: true
+      })
+
+      /*$.ajax({
+        data: this.state,
+        type: 'POST',
+        url: require('../../contact.php'),
+        success: function(data) {
+          console.info(data)
+        },
+        error: function(xhr, status, err) {
+          console.error(status, err.toString())
+        }
+      })*/
+
+      /*let smtpConfig = {
+        host: 'smtp.gmail.com',
+        port: 587, // TLS: 587, SSL: 465
+        secure: true, // use TLS
+        auth: {
+          user: process.env.emailAddress, // Gmail address from .env
+          pass: process.env.emailPassword // Gmail password from .env
+        }
+      }*/
+
+      // Source: https://www.w3schools.com/nodejs/nodejs_email.asp
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: process.env.emailAddress,
+          pass: process.env.emailPassword
+        }
+      })
+
+      // Message configuration
+      // https://nodemailer.com/message/
+      let message = {
+        from: this.state.formEmail,
+        to: process.env.emailAddress,
+        subject: 'Contact via DEVERO Studio',
+        // text: `Contact from ${this.state.formName}, ${this.state.formEmail}`,
+        html: `<p>Contact from: ${this.state.formName},<br /> email: ${this.state.formEmail}</p>, interested in App: ${this.state.checkboxApp}, Consultation: ${this.state.checkboxConsultation}, Design: ${this.state.checkboxDesign}, Else: ${this.state.checkboxElse}, FrontBack: ${this.state.checkboxFrontBack}<br /> Want newsletter: ${this.state.formNewsletter}, <br /> Additional message ${this.state.formAdditionalMessage}.`
+      }
+
+      transporter.sendMail(message, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
       })
 
       this.setState({
