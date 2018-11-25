@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'DEVERO Corporation'
   },
+  pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
