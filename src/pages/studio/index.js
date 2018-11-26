@@ -190,9 +190,9 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxFrontBack">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={true} />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={false} />
 
-                    <span>Frontend / Backend</span>
+                    <span>Front-end / Back-end</span>
                   </label>
                 </fieldset>
               </div>
@@ -200,7 +200,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxDesign">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={true} />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={false} />
 
                     <span>Design</span>
                   </label>
@@ -212,7 +212,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxApp">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={true} />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={false} />
 
                     <span>App</span>
                   </label>
@@ -222,7 +222,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxConsultation">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={true} />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={false} />
 
                     <span>Consultation</span>
                   </label>
@@ -234,7 +234,7 @@ class DeveroStudio extends React.Component {
               <div className="col-md-6">
                 <fieldset>
                   <label htmlFor="checkboxElse">
-                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={true} />
+                    <input onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={false} />
 
                     <span>Something Else</span>
                   </label>
@@ -248,7 +248,7 @@ class DeveroStudio extends React.Component {
 
             <fieldset>
               <label htmlFor="formNewsletter">
-                <input onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={true} />
+                <input onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
 
                 <span>Yes, I want to be informed about new tech, design & business articles.</span>
               </label>
