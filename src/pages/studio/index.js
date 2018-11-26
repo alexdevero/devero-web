@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery'
+import ajax from 'ajax-query'
 import { withPrefix } from 'gatsby'
 
 import Layout from '../../components/layout'
@@ -53,7 +54,23 @@ class DeveroStudio extends React.Component {
         isFormValid: true
       })
 
-      $.ajax({
+      // $.ajax({
+      //   data: this.state,
+      //   type: 'POST',
+      //   url: withPrefix('/contact.php'),
+      //   success: function(data) {
+      //     console.info(data)
+      //   },
+      //   error: function(xhr, status, err) {
+      //     console.error(status, err.toString())
+      //   }
+      // })
+
+      const callback = function() {
+        console.info(this)
+      }
+
+      ajax.ajaxRequest({
         data: this.state,
         type: 'POST',
         url: withPrefix('/contact.php'),
@@ -63,7 +80,7 @@ class DeveroStudio extends React.Component {
         error: function(xhr, status, err) {
           console.error(status, err.toString())
         }
-      })
+      }, callback)
 
       console.log(this.state)
 
