@@ -91,7 +91,7 @@ const Header = () => (
           </li>
         </ul>
 
-        <ul className="header__list-social">
+        {/*<ul className="header__list-social">
           <li>
             <a href="/" target="_blank">
               <span className="fab fa-facebook-f" />
@@ -115,7 +115,7 @@ const Header = () => (
               <span className="fab fa-linkedin" />
             </a>
           </li>
-        </ul>
+        </ul>*/}
       </nav>
     </div>
   </header>
