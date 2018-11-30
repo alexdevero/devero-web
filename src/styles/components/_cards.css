@@ -6,7 +6,7 @@
   z-index: 2;
   min-height: 320px;
   text-decoration: none;
-  transition: transform var(--transition-duration) var(--transition-timing);
+  transition: transform var(--tran-duration) var(--tran-timing);
 }
 
 .company-box:hover {
@@ -25,10 +25,10 @@
   width: 100%;
   height: 100%;
   content: '';
-  background-color: hsla(0, 0%, 80%, 0.5);
+  background-color: hsla(0, 0%, 80%, .5);
   /* background: url('https://res.cloudinary.com/www-virgin-com/f_auto,fl_lossy,q_auto/virgin-virgingroup-prod/virgingroup/profiles/site_installer/themes/custom/virgin/images/bg-main.png?1542382727')
     hsla(0, 0%, 80%, 0.5); */
-  transition: bottom var(--transition-duration) var(--transition-timing);
+  transition: bottom var(--tran-duration) var(--tran-timing);
 }
 
 .card-box__thumbnail {
@@ -67,7 +67,7 @@
   height: auto;
   max-height: 0;
   font-size: 14px;
-  transition: max-height var(--transition-duration) var(--transition-timing);
+  transition: max-height var(--tran-duration) var(--tran-timing);
 }
 
 .company-box:hover .company-box__description {
