@@ -1,4 +1,13 @@
-/* Page - home */
+/* Page - Home */
+.dashboard__header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 620px;
+  text-align: center;
+}
+
 .dashboard {
   padding-top: 32px;
   padding-bottom: 48px;
