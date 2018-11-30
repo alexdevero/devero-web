@@ -3,8 +3,8 @@
   --color-brand: hsl(351.6, 97.2%, 42%); /* #d30320 */
   --color-brand-hover: hsl(351.6, 97.2%, 22%);
 
-  --transition-duration: .25s;
-  --transition-timing: ease-in-out;
+  --tran-duration: .25s;
+  --tran-timing: ease-in-out;
 }
 
 html {
@@ -20,9 +20,9 @@ body {
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-kerning: normal;
-  font-weight: normal;
+  font-weight: 400;
   word-wrap: break-word;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: hsla(0, 0%, 0%, .8);
 }
 
 .page-wrapper {
