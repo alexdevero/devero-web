@@ -42,7 +42,7 @@ footer {
 .footer a {
   text-decoration: none;
   color: #fff;
-  transition: color var(--transition-duration) var(--transition-timing);
+  transition: color var(--tran-duration) var(--tran-timing);
 }
 
 .footer a:hover {

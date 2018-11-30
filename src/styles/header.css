@@ -22,6 +22,7 @@ header {
 }
 
 .header__list-social {
+  display: none;
   align-items: center;
 }
 
@@ -39,7 +40,7 @@ header {
   position: relative;
   z-index: 1000; /* Place links above opened dropdown */
   padding: 18px 14px;
-  transition: background-color var(--transition-duration) var(--transition-timing);
+  transition: background-color var(--tran-duration) var(--tran-timing);
 }
 
 .header__list-links a:hover {
@@ -47,7 +48,7 @@ header {
 }
 
 .header__list-social a {
-  transition: color var(--transition-duration) var(--transition-timing);
+  transition: color var(--tran-duration) var(--tran-timing);
 }
 
 .header__list-social .fab {
