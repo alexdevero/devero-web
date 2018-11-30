@@ -1,6 +1,13 @@
-/* Styles */
-@import '_cards.css';
-@import '_dropdown.css';
-@import '_forms.css';
+/* Base */
+@import '/base/_modern-normalize.css';
+@import '/base/_base.css';
+@import '/base/_grid.css';
 
-@import '_page-home.css';
+/* Components */
+@import '/components/_buttons.css';
+@import '/components/_cards.css';
+@import '/components/_dropdown.css';
+@import '/components/_forms.css';
+
+/* Pages */
+@import '/pages/_page-home.css';
