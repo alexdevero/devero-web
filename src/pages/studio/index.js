@@ -188,17 +188,23 @@ class DeveroStudio extends React.Component {
 
         <section className="studio--contact">
           <form action="">
-            <fieldset>
-              <label htmlFor="formName">Full name</label>
+          <div className="row">
+              <div className="col-md-6 col-lg-4">
+                <fieldset>
+                  <label htmlFor="formName">Full name</label>
 
-              <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
-            </fieldset>
+                  <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
+                </fieldset>
+              </div>
 
-            <fieldset>
-              <label htmlFor="formEmail">Email address</label>
+              <div className="col-md-6 col-lg-4">
+                <fieldset>
+                  <label htmlFor="formEmail">Email address</label>
 
-              <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
-            </fieldset>
+                  <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                </fieldset>
+              </div>
+            </div>
 
             <h2>What are you interested in?</h2>
 
