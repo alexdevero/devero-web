@@ -50,7 +50,6 @@
     "gatsby-plugin-sharp": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
-    "jquery": "^3.3.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
