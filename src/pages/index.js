@@ -5,9 +5,11 @@ import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Welcome to The DEVERO Corporation</h1>
+    <div className="dashboard__header">
+      <h1>Welcome to DEVERO Corporation</h1>
 
-    <p>The DEVERO Corporation is the home of DEVERO. We support the growth of the DEVERO brand by developing and nurturing valuable DEVERO businesses. We aspire to change the world for good.</p>
+      <p>We aspire to change the world for good.</p>
+    </div>
 
     <div className="dashboard row">
       <div className="col-md-6 col-lg-4">
