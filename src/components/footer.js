@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import '../styles/footer.css'
-
 const Footer = () => (
   <footer className="footer">
     <div className="container">
@@ -17,9 +15,9 @@ const Footer = () => (
               <Link to="/about-us/">About us</Link>
             </li>
 
-            <li>
+            {/* <li>
               <Link to="/brand-portfolio/">Brand portfolio</Link>
-            </li>
+            </li> */}
 
             <li>
               <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
