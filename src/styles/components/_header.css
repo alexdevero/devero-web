@@ -1,7 +1,7 @@
 /* Header */
 header {
   width: 100%;
-  background: var(--color-black);
+  background-color: var(--color-brand);
 }
 
 .nav,
@@ -36,15 +36,20 @@ header {
   color: #fff;
 }
 
+.header .dropdown__item:hover {
+  border-top: 1px solid #fff;
+}
+
 .header__list-links a {
   position: relative;
   z-index: 1000; /* Place links above opened dropdown */
   padding: 18px 14px;
-  transition: background-color var(--tran-duration) var(--tran-timing);
+  transition: all var(--tran-duration) var(--tran-timing);
 }
 
 .header__list-links a:hover {
-  background-color: var(--color-brand);
+  color: var(--color-brand);
+  background-color: #fff;
 }
 
 .header__list-social a {
