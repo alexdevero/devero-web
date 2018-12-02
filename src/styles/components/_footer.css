@@ -28,15 +28,15 @@ footer {
 }
 
 .footer__list-social .fab {
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .footer__list-social .fa-facebook-f {
-  font-size: 23px;
+  font-size: 19px;
 }
 
 .footer__list-social li + li {
-  margin-left: 12px;
+  margin-left: 16px;
 }
 
 .footer a {
