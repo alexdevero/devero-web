@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { IconAi, IconFoundation, IconGenomics, IconIndustries, IconTechnologies } from '../components/icons'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
