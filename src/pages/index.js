@@ -122,6 +122,18 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">{/* <IconAi /> */}</div>
 
           <div className="company-box__info">
+            <h2 className="company-box__heading">Security</h2>
+
+            <p className="company-box__description">Division of DEVERO Corporation focused on providing first-class security solution for individuals, companies and countries.</p>
+          </div>
+        </Link>
+      </div>
+
+      <div className="col-md-6 col-lg-4">
+        <Link to="/studio/" className="company-box">
+          <div className="card-box__thumbnail">{/* <IconAi /> */}</div>
+
+          <div className="company-box__info">
             <h2 className="company-box__heading">Studio</h2>
 
             <p className="company-box__description">Division of DEVERO Corporation focused on design, development and hosting.</p>
