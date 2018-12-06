@@ -41,6 +41,14 @@ const Header = () => (
               </li>
 
               <li className="dropdown__item">
+                <Link to="/robotics/">Robotics</Link>
+              </li>
+
+              <li className="dropdown__item">
+                <Link to="/security/">Security</Link>
+              </li>
+
+              <li className="dropdown__item">
                 <Link to="/studio/">Studio</Link>
               </li>
 
