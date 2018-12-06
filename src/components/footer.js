@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="row">
-        <div className="col-md-4">
+      <div className="col-md-4">
           <ul className="footer__list-links">
             <li>
               <Link to="/">DEVERO</Link>
@@ -28,17 +28,65 @@ const Footer = () => (
             <li>
               <Link to="/foundation/">Foundation</Link>
             </li>
-          </ul>
-        </div>
 
-        <div className="col-md-4">
-          <ul className="footer__list-links">
             <li>
               <Link to="/privacy-policy/">Privacy policy</Link>
             </li>
 
             <li>
               <Link to="/terms-conditions/">Terms and conditions</Link>
+            </li>
+          </ul>
+        </div>
+
+        <div className="col-md-4">
+          <ul className="footer__list-links">
+            <li>
+              <Link to="/ai/">AI</Link>
+            </li>
+
+            <li>
+              <Link to="/financial/">Financial</Link>
+            </li>
+
+            <li>
+              <Link to="/foundation/">Foundation</Link>
+            </li>
+
+            <li>
+              <Link to="/galactic/">Galactic</Link>
+            </li>
+
+            <li>
+              <Link to="/genomics/">Genomics</Link>
+            </li>
+
+            <li>
+              <Link to="/industries/">Industries</Link>
+            </li>
+
+            <li>
+              <Link to="/media/">Media</Link>
+            </li>
+
+            <li>
+              <Link to="/robotics/">Robotics</Link>
+            </li>
+
+            <li>
+              <Link to="/security/">Security</Link>
+            </li>
+
+            <li>
+              <Link to="/studio/">Studio</Link>
+            </li>
+
+            <li>
+              <Link to="/technologies/">Technologies</Link>
+            </li>
+
+            <li>
+              <Link to="/ventures/">Ventures</Link>
             </li>
           </ul>
         </div>
