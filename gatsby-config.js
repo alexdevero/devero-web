@@ -19,6 +19,7 @@ module.exports = {
           require(`postcss-import`)(),
           require(`postcss-extend`)(),
           require(`postcss-nesting`)(),
+          require(`postcss-responsive-type`),
           require('postcss-pxtorem')({
             mediaQuery: false,
             minPixelValue: 0,
