@@ -52,7 +52,7 @@ export class ParticlesComponent extends React.Component {
             'draw': {
               'enable': true,
               'stroke': {
-                'color': 'rgba(1, 1, 1, .2)'
+                'color': 'rgba(211, 3, 32, .2)'
               }
             }
           },
