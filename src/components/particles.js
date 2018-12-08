@@ -40,7 +40,7 @@ export class ParticlesComponent extends React.Component {
           },
           'polygon': {
             'enable': true,
-            'scale': 0.5,
+            'scale': 0.68,
             'type': 'inline',
             'move': {
               'radius': 10
@@ -52,7 +52,7 @@ export class ParticlesComponent extends React.Component {
             'draw': {
               'enable': true,
               'stroke': {
-                'color': 'rgba(211, 3, 32, .2)'
+                'color': 'rgba(211, 3, 32, .25)'
               }
             }
           },
