@@ -16,7 +16,7 @@ const IndexPage = () => (
 
       <ParticlesComponent />
 
-      <ParticlesComponentSimple />
+      {/* <ParticlesComponentSimple /> */}
     </div>
 
     <div className="dashboard row">
