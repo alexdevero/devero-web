@@ -3,16 +3,20 @@ import { Link } from 'gatsby'
 
 // import { IconAi, IconFoundation, IconGenomics, IconIndustries, IconTechnologies } from '../components/icons'
 import Layout from '../components/layout'
-import { ParticlesComponent } from '../components/particles'
+import { ParticlesComponent, ParticlesComponentSimple } from '../components/particles'
 
 const IndexPage = () => (
   <Layout>
     <div className="dashboard__header">
-      <h1>Welcome to DEVERO Corporation</h1>
+      <div className="dashboard__content">
+        <h1>Welcome to DEVERO Corporation</h1>
 
-      <p>We aspire to change the world for good.</p>
+        <p>We aspire to change the world for good.</p>
+      </div>
 
       <ParticlesComponent />
+
+      <ParticlesComponentSimple />
     </div>
 
     <div className="dashboard row">

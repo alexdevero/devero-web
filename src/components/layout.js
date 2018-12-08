@@ -29,6 +29,8 @@ const Layout = ({ children }) => (
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
 
           {/*<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />*/}
+
+          <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js"></script>
         </Helmet>
 
         <div className="page-wrapper">

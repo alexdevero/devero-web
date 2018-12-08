@@ -43,14 +43,14 @@ export class ParticlesComponent extends React.Component {
             move: {
               radius: 10
             },
-            url: require('../images/deer.svg'),
+            url: require('./../images/deer.svg'),
             inline: {
               arrangement: 'equidistant'
             },
             draw: {
               enable: true,
               stroke: {
-                color: 'rgba(255, 255, 255, .2)'
+                color: 'rgba(0, 0, 0, .2)'
               }
             }
           },
@@ -66,6 +66,50 @@ export class ParticlesComponent extends React.Component {
               bubble: {
                 size: 6,
                 distance: 40
+              }
+            }
+          }
+        }}
+      />
+    )
+  }
+}
+
+export class ParticlesComponentSimple extends React.Component {
+  render() {
+    return (
+      <Particles
+        className="particles-canvas__wrapper"
+        canvasClassName="particles-canvas"
+        height="600"
+        params={{
+          particles: {
+            number: {
+              value: 100
+            },
+            color: {
+              value: '#111'
+            },
+            size: {
+              value: 1
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: '#111',
+              opacity: 0.2,
+              width: 1
+            },
+            opacity: {
+              value: 0.25,
+              random: false
+            }
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: false,
+                mode: 'repulse'
               }
             }
           }
