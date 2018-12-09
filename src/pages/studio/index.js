@@ -1,5 +1,5 @@
 import React from 'react'
-import $ from 'query'
+import $ from 'jquery'
 import { withPrefix } from 'gatsby'
 
 import Layout from '../../components/layout'
