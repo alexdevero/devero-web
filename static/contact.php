@@ -11,12 +11,12 @@
       $name = str_replace(array("\r","\n"),array(" "," "),$name);
       $email = filter_var(trim($_POST["formEmail"]), FILTER_SANITIZE_EMAIL);
       $message = trim($_POST["formAdditionalMessage"]);
-      $checkboxApp = isset($_POST["checkboxApp"]);
-      $checkboxConsultation = isset($_POST["checkboxConsultation"]);
-      $checkboxDesign = isset($_POST["checkboxDesign"]);
-      $checkboxElse = isset($_POST["checkboxElse"]);
-      $checkboxFrontBack = isset($_POST["checkboxFrontBack"]);
-      $checkboxNewsletter = isset($_POST["formNewsletter"]);
+      $checkboxApp = trim($_POST["checkboxApp"]);
+      $checkboxConsultation = trim($_POST["checkboxConsultation"]);
+      $checkboxDesign = trim($_POST["checkboxDesign"]);
+      $checkboxElse = trim($_POST["checkboxElse"]);
+      $checkboxFrontBack = trim($_POST["checkboxFrontBack"]);
+      $checkboxNewsletter = trim($_POST["formNewsletter"]);
 
       // Check that data was sent to the mailer.
       if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
