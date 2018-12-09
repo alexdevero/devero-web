@@ -15,6 +15,7 @@ class DeveroStudio extends React.Component {
     checkboxDesign: false,
     checkboxElse: false,
     checkboxFrontBack: false,
+    isErrorShown: false,
     isFormSubmitted: false,
     isFormValid: false
   }
@@ -50,6 +51,7 @@ class DeveroStudio extends React.Component {
 
     if (this.state.formEmail.length > 0 && this.state.formName.length > 0) {
       this.setState({
+        isErrorShown: false,
         isFormValid: true
       })
 
@@ -77,8 +79,13 @@ class DeveroStudio extends React.Component {
         checkboxDesign: false,
         checkboxElse: false,
         checkboxFrontBack: false,
+        isErrorShown: false,
         isFormSubmitted: true,
         isFormValid: false
+      })
+    } else {
+      this.setState({
+        isErrorShown: true
       })
     }
   }
@@ -259,6 +266,12 @@ class DeveroStudio extends React.Component {
                 <span>Yes, I want to be informed about new tech, design & business articles.</span>
               </label>
             </fieldset>
+
+            {this.state.isErrorShown && (
+              <fieldset>
+                <p>Please, make sure to fill all fields.</p>
+              </fieldset>
+            )}
 
             {this.state.isFormSubmitted && (
               <fieldset>
