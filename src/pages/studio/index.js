@@ -1,6 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 import { withPrefix } from 'gatsby'
+import Recaptcha from 'react-recaptcha'
 
 import Layout from '../../components/layout'
 
@@ -15,6 +16,7 @@ class DeveroStudio extends React.Component {
     checkboxDesign: false,
     checkboxElse: false,
     checkboxFrontBack: false,
+    isCaptchaValid: false,
     isErrorShown: false,
     isFormSubmitted: false,
     isFormValid: false
@@ -46,10 +48,22 @@ class DeveroStudio extends React.Component {
     })
   }
 
+  // Show message in console when reCaptcha plugin is loaded
+  onCaptchaLoad = () => {
+    console.log('Captcha loaded')
+  }
+
+  // Update state after reCaptcha validates visitor
+  onCaptchaVerify = (response) => {
+    this.setState({
+      isCaptchaValid: true
+    })
+  }
+
   handleFormSubmit = event => {
     event.preventDefault()
 
-    if (this.state.formEmail.length > 0 && this.state.formName.length > 0) {
+    if (this.state.formEmail.length > 0 && this.state.formName.length > 0 && this.state.isCaptchaValid) {
       this.setState({
         isErrorShown: false,
         isFormValid: true
@@ -79,6 +93,7 @@ class DeveroStudio extends React.Component {
         checkboxDesign: false,
         checkboxElse: false,
         checkboxFrontBack: false,
+        isCaptchaValid: false,
         isErrorShown: false,
         isFormSubmitted: true,
         isFormValid: false
@@ -265,6 +280,15 @@ class DeveroStudio extends React.Component {
 
                 <span>Yes, I want to be informed about new tech, design & business articles.</span>
               </label>
+            </fieldset>
+
+            <fieldset>
+              <Recaptcha
+                onloadCallback={this.onCaptchaLoad}
+                sitekey="6Lc5yH8UAAAAAMxhaZalYwUovMxyP7e0e_M6fMCL"
+                render="explicit"
+                verifyCallback={this.onCaptchaVerify}
+              />
             </fieldset>
 
             {this.state.isErrorShown && (
