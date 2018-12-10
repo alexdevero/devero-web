@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import $ from 'jquery'
 import { withPrefix } from 'gatsby'
 import Recaptcha from 'react-recaptcha'
@@ -107,208 +108,215 @@ class DeveroStudio extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <section className="studio--benefits">
-          <h1>Design + Development + Management</h1>
+      <React.Fragment>
+        <Helmet>
+          {/* <!-- reCaptcha API --> */}
+          <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+        </Helmet>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </section>
+        <Layout>
+          <section className="studio--benefits">
+            <h1>Design + Development + Management</h1>
 
-        <button>What we do</button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </section>
 
-        <section className="studio--benefits">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6 col-lg-4">1</div>
+          <button>What we do</button>
 
-              <div className="col-md-6 col-lg-4">2</div>
+          <section className="studio--benefits">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6 col-lg-4">1</div>
 
-              <div className="col-md-6 col-lg-4">3</div>
+                <div className="col-md-6 col-lg-4">2</div>
 
-              <div className="col-md-6 col-lg-4">4</div>
+                <div className="col-md-6 col-lg-4">3</div>
 
-              <div className="col-md-6 col-lg-4">5</div>
-            </div>
-          </div>
-        </section>
+                <div className="col-md-6 col-lg-4">4</div>
 
-        <section className="studio--split">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">Content</div>
-
-              <div className="col-md-6">image</div>
-            </div>
-          </div>
-        </section>
-
-        <div className="studio--testimonial">
-          <div className="container">
-            <blockquote>
-              <p>Testimonial</p>
-            </blockquote>
-
-            <cite>&mdash;Author</cite>
-          </div>
-        </div>
-
-        <section className="studio--split">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">Content</div>
-
-              <div className="col-md-6">image</div>
-            </div>
-          </div>
-        </section>
-
-        <div className="studio--testimonial">
-          <div className="container">
-            <blockquote>
-              <p>Testimonial</p>
-            </blockquote>
-
-            <cite>&mdash;Author</cite>
-          </div>
-        </div>
-
-        <section className="studio--split">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">Content</div>
-
-              <div className="col-md-6">image</div>
-            </div>
-          </div>
-        </section>
-
-        <div className="studio--testimonial">
-          <div className="container">
-            <blockquote>
-              <p>Testimonial</p>
-            </blockquote>
-
-            <cite>&mdash;Author</cite>
-          </div>
-        </div>
-
-        <section className="studio--contact">
-          <form action="">
-          <div className="row">
-              <div className="col-md-6 col-lg-4">
-                <fieldset>
-                  <label htmlFor="formName">Full name</label>
-
-                  <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
-                </fieldset>
-              </div>
-
-              <div className="col-md-6 col-lg-4">
-                <fieldset>
-                  <label htmlFor="formEmail">Email address</label>
-
-                  <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
-                </fieldset>
+                <div className="col-md-6 col-lg-4">5</div>
               </div>
             </div>
+          </section>
 
-            <h2>What are you interested in?</h2>
+          <section className="studio--split">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6">Content</div>
 
-            <div className="row">
-              <div className="col-md-6">
-                <fieldset>
-                  <label htmlFor="checkboxFrontBack">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={false} />
-
-                    <span>Frontend / Backend</span>
-                  </label>
-                </fieldset>
-              </div>
-
-              <div className="col-md-6">
-                <fieldset>
-                  <label htmlFor="checkboxDesign">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={false} />
-
-                    <span>Design</span>
-                  </label>
-                </fieldset>
+                <div className="col-md-6">image</div>
               </div>
             </div>
+          </section>
 
-            <div className="row">
-              <div className="col-md-6">
-                <fieldset>
-                  <label htmlFor="checkboxApp">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={false} />
+          <div className="studio--testimonial">
+            <div className="container">
+              <blockquote>
+                <p>Testimonial</p>
+              </blockquote>
 
-                    <span>App</span>
-                  </label>
-                </fieldset>
-              </div>
+              <cite>&mdash;Author</cite>
+            </div>
+          </div>
 
-              <div className="col-md-6">
-                <fieldset>
-                  <label htmlFor="checkboxConsultation">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={false} />
+          <section className="studio--split">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6">Content</div>
 
-                    <span>Consultation</span>
-                  </label>
-                </fieldset>
+                <div className="col-md-6">image</div>
               </div>
             </div>
+          </section>
 
-            <div className="row">
-              <div className="col-md-6">
-                <fieldset>
-                  <label htmlFor="checkboxElse">
-                    <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={false} />
+          <div className="studio--testimonial">
+            <div className="container">
+              <blockquote>
+                <p>Testimonial</p>
+              </blockquote>
 
-                    <span>Something Else</span>
-                  </label>
-                </fieldset>
+              <cite>&mdash;Author</cite>
+            </div>
+          </div>
+
+          <section className="studio--split">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-6">Content</div>
+
+                <div className="col-md-6">image</div>
               </div>
             </div>
+          </section>
 
-            <h2>Want to add something?</h2>
+          <div className="studio--testimonial">
+            <div className="container">
+              <blockquote>
+                <p>Testimonial</p>
+              </blockquote>
 
-            <textarea onChange={this.handleInputChange} name="formAdditionalMessage" id="formAdditionalMessage" />
+              <cite>&mdash;Author</cite>
+            </div>
+          </div>
 
-            <fieldset>
-              <label htmlFor="formNewsletter">
-                <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
+          <section className="studio--contact">
+            <form action="">
+            <div className="row">
+                <div className="col-md-6 col-lg-4">
+                  <fieldset>
+                    <label htmlFor="formName">Full name</label>
 
-                <span>Yes, I want to be informed about new tech, design & business articles.</span>
-              </label>
-            </fieldset>
+                    <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
+                  </fieldset>
+                </div>
 
-            <fieldset>
-              <Recaptcha
-                onloadCallback={this.onCaptchaLoad}
-                sitekey="6Lc5yH8UAAAAAMxhaZalYwUovMxyP7e0e_M6fMCL"
-                render="explicit"
-                verifyCallback={this.onCaptchaVerify}
-              />
-            </fieldset>
+                <div className="col-md-6 col-lg-4">
+                  <fieldset>
+                    <label htmlFor="formEmail">Email address</label>
 
-            {this.state.isErrorShown && (
+                    <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                  </fieldset>
+                </div>
+              </div>
+
+              <h2>What are you interested in?</h2>
+
+              <div className="row">
+                <div className="col-md-6">
+                  <fieldset>
+                    <label htmlFor="checkboxFrontBack">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={false} />
+
+                      <span>Frontend / Backend</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div className="col-md-6">
+                  <fieldset>
+                    <label htmlFor="checkboxDesign">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={false} />
+
+                      <span>Design</span>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-md-6">
+                  <fieldset>
+                    <label htmlFor="checkboxApp">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={false} />
+
+                      <span>App</span>
+                    </label>
+                  </fieldset>
+                </div>
+
+                <div className="col-md-6">
+                  <fieldset>
+                    <label htmlFor="checkboxConsultation">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={false} />
+
+                      <span>Consultation</span>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-md-6">
+                  <fieldset>
+                    <label htmlFor="checkboxElse">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={false} />
+
+                      <span>Something Else</span>
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+
+              <h2>Want to add something?</h2>
+
+              <textarea onChange={this.handleInputChange} name="formAdditionalMessage" id="formAdditionalMessage" />
+
               <fieldset>
-                <p>Please, make sure to fill all fields.</p>
-              </fieldset>
-            )}
+                <label htmlFor="formNewsletter">
+                  <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
 
-            {this.state.isFormSubmitted && (
+                  <span>Yes, I want to be informed about new tech, design & business articles.</span>
+                </label>
+              </fieldset>
+
               <fieldset>
-                <p>Your message is on the way. I will reply in three days.</p>
+                <Recaptcha
+                  onloadCallback={this.onCaptchaLoad}
+                  sitekey="6Lc5yH8UAAAAAMxhaZalYwUovMxyP7e0e_M6fMCL"
+                  render="explicit"
+                  verifyCallback={this.onCaptchaVerify}
+                />
               </fieldset>
-            )}
 
-            <fieldset>
-              <button onClick={this.handleFormSubmit} className="btn">Send</button>
-            </fieldset>
-          </form>
-        </section>
-      </Layout>
+              {this.state.isErrorShown && (
+                <fieldset>
+                  <p>Please, make sure to fill all fields.</p>
+                </fieldset>
+              )}
+
+              {this.state.isFormSubmitted && (
+                <fieldset>
+                  <p>Your message is on the way. I will reply in three days.</p>
+                </fieldset>
+              )}
+
+              <fieldset>
+                <button onClick={this.handleFormSubmit} className="btn">Send</button>
+              </fieldset>
+            </form>
+          </section>
+        </Layout>
+      </React.Fragment>
     )
   }
 }
