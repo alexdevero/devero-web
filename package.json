@@ -53,7 +53,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
-    "react-particles-js": "^2.4.2"
+    "react-particles-js": "^2.4.2",
+    "react-recaptcha": "^2.3.10"
   },
   "devDependencies": {
     "cssnano": "4.1.7",

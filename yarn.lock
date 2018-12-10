@@ -10209,6 +10209,11 @@ react-particles-js@^2.4.2:
   resolved "https://registry.yarnpkg.com/react-particles-js/-/react-particles-js-2.4.2.tgz#34a4d1ea15eaebcbb068f7b6a7c43b18792fcf65"
   integrity sha512-/rfpLRYUA4JFEBBM8cN3X+kEr9P7J2lXktJi81ugcK6B9H69xNlDFKXOUYe+YizW8E5NapxNgubAcKYt0Co7TQ==
 
+react-recaptcha@^2.3.10:
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/react-recaptcha/-/react-recaptcha-2.3.10.tgz#1f7a001f24ab7e1a323fcf1fd8644afecb56f7da"
+  integrity sha512-IyanbozsYCuHvTYDuskZTIEcRAMG/sdvAu5b29iQWoC8Kd3Zk9WGCv2oNxh6RfGHvSvgHAyaLjmC6ei/yMsJ7g==
+
 react-side-effect@^1.1.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
