@@ -199,121 +199,131 @@ class DeveroStudio extends React.Component {
             </div>
           </div>
 
-          <section className="studio--contact">
-            <form action="">
-            <div className="row">
-                <div className="col-md-6 col-lg-4">
+          <section className="studio--contact pt-3 pb-3">
+            <div className="row justify-content-center">
+              <div className="col-lg-8 col-xl-7">
+                <h2 className="text--center">Contact us</h2>
+
+                <form action="">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="formName">Full name</label>
+
+                        <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
+                      </fieldset>
+                    </div>
+
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="formEmail">Email address</label>
+
+                        <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <label>How can we help you?</label>
+                  </div>
+
+                  <div className="row row--checkboxes">
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="checkboxFrontBack">
+                          <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={false} />
+
+                          <span>Frontend / Backend</span>
+                        </label>
+                      </fieldset>
+                    </div>
+
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="checkboxDesign">
+                          <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={false} />
+
+                          <span>Design</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div className="row row--checkboxes">
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="checkboxApp">
+                          <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={false} />
+
+                          <span>App</span>
+                        </label>
+                      </fieldset>
+                    </div>
+
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="checkboxConsultation">
+                          <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={false} />
+
+                          <span>Consultation</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                  </div>
+
+                  <div className="row row--checkboxes">
+                    <div className="col-md-6">
+                      <fieldset>
+                        <label htmlFor="checkboxElse">
+                          <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={false} />
+
+                          <span>Something Else</span>
+                        </label>
+                      </fieldset>
+                    </div>
+                  </div>
+
                   <fieldset>
-                    <label htmlFor="formName">Full name</label>
+                    <label htmlFor="formAdditionalMessage">Want to add something?</label>
 
-                    <input onChange={this.handleInputChange} type="text" name="formName" id="formName" required={true} />
+                    <textarea onChange={this.handleInputChange} name="formAdditionalMessage" id="formAdditionalMessage" />
                   </fieldset>
-                </div>
 
-                <div className="col-md-6 col-lg-4">
                   <fieldset>
-                    <label htmlFor="formEmail">Email address</label>
+                    <label htmlFor="formNewsletter">
+                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
 
-                    <input onChange={this.handleInputChange} type="email" name="formEmail" id="formEmail" required={true} />
+                      <span>Yes, I want to be informed about new tech, design & business articles.</span>
+                    </label>
                   </fieldset>
-                </div>
+
+                  <fieldset>
+                    <Recaptcha
+                      onloadCallback={this.onCaptchaLoad}
+                      sitekey="6Lc5yH8UAAAAAMxhaZalYwUovMxyP7e0e_M6fMCL"
+                      render="explicit"
+                      verifyCallback={this.onCaptchaVerify}
+                    />
+                  </fieldset>
+
+                  {this.state.isErrorShown && (
+                    <fieldset>
+                      <p>Please, make sure to fill all fields.</p>
+                    </fieldset>
+                  )}
+
+                  {this.state.isFormSubmitted && (
+                    <fieldset>
+                      <p>Your message is on the way. I will reply in three days.</p>
+                    </fieldset>
+                  )}
+
+                  <fieldset>
+                    <button onClick={this.handleFormSubmit} className="btn">Send</button>
+                  </fieldset>
+                </form>
               </div>
-
-              <h2>What are you interested in?</h2>
-
-              <div className="row">
-                <div className="col-md-6">
-                  <fieldset>
-                    <label htmlFor="checkboxFrontBack">
-                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxFrontBack" id="checkboxFrontBack" defaultChecked={false} />
-
-                      <span>Frontend / Backend</span>
-                    </label>
-                  </fieldset>
-                </div>
-
-                <div className="col-md-6">
-                  <fieldset>
-                    <label htmlFor="checkboxDesign">
-                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxDesign" id="checkboxDesign" defaultChecked={false} />
-
-                      <span>Design</span>
-                    </label>
-                  </fieldset>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-md-6">
-                  <fieldset>
-                    <label htmlFor="checkboxApp">
-                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxApp" id="checkboxApp" defaultChecked={false} />
-
-                      <span>App</span>
-                    </label>
-                  </fieldset>
-                </div>
-
-                <div className="col-md-6">
-                  <fieldset>
-                    <label htmlFor="checkboxConsultation">
-                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxConsultation" id="checkboxConsultation" defaultChecked={false} />
-
-                      <span>Consultation</span>
-                    </label>
-                  </fieldset>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-md-6">
-                  <fieldset>
-                    <label htmlFor="checkboxElse">
-                      <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="checkboxElse" id="checkboxElse" defaultChecked={false} />
-
-                      <span>Something Else</span>
-                    </label>
-                  </fieldset>
-                </div>
-              </div>
-
-              <h2>Want to add something?</h2>
-
-              <textarea onChange={this.handleInputChange} name="formAdditionalMessage" id="formAdditionalMessage" />
-
-              <fieldset>
-                <label htmlFor="formNewsletter">
-                  <input className="styled-checkbox" onClick={this.handleCheckboxClick} type="checkbox" name="formNewsletter" id="formNewsletter" defaultChecked={false} />
-
-                  <span>Yes, I want to be informed about new tech, design & business articles.</span>
-                </label>
-              </fieldset>
-
-              <fieldset>
-                <Recaptcha
-                  onloadCallback={this.onCaptchaLoad}
-                  sitekey="6Lc5yH8UAAAAAMxhaZalYwUovMxyP7e0e_M6fMCL"
-                  render="explicit"
-                  verifyCallback={this.onCaptchaVerify}
-                />
-              </fieldset>
-
-              {this.state.isErrorShown && (
-                <fieldset>
-                  <p>Please, make sure to fill all fields.</p>
-                </fieldset>
-              )}
-
-              {this.state.isFormSubmitted && (
-                <fieldset>
-                  <p>Your message is on the way. I will reply in three days.</p>
-                </fieldset>
-              )}
-
-              <fieldset>
-                <button onClick={this.handleFormSubmit} className="btn">Send</button>
-              </fieldset>
-            </form>
+            </div>
           </section>
         </Layout>
       </React.Fragment>
