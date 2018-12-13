@@ -9,9 +9,9 @@ const IndexPage = () => (
   <Layout>
     <div className="dashboard__header">
       <div className="dashboard__content">
-        <h1>Welcome to DEVERO Corporation</h1>
+        <h1 className="h2">Welcome to DEVERO Corporation</h1>
 
-        <p>We aspire to change the world for good.</p>
+        <p>Our mission is to change the world with technology.</p>
       </div>
 
       <ParticlesComponent />
@@ -25,7 +25,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> AI
             </h3>
           </div>
@@ -43,7 +43,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Financial
             </h3>
           </div>
@@ -61,7 +61,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconFoundation /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Foundation
             </h3>
           </div>
@@ -79,7 +79,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Galactic
             </h3>
           </div>
@@ -97,7 +97,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconGenomics /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Genomics
             </h3>
           </div>
@@ -115,7 +115,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconIndustries /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Industries
             </h3>
           </div>
@@ -133,7 +133,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Media
             </h3>
           </div>
@@ -151,7 +151,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Robotics
             </h3>
           </div>
@@ -169,7 +169,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Security
             </h3>
           </div>
@@ -187,7 +187,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Studio
             </h3>
           </div>
@@ -205,7 +205,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconTechnologies /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Technologies
             </h3>
           </div>
@@ -223,7 +223,7 @@ const IndexPage = () => (
           <div className="card-box__thumbnail">
             {/* <IconAi /> */}
 
-            <h3>
+            <h3 className="h4">
               Devero <br /> Ventures
             </h3>
           </div>
