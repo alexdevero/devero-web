@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'DEVERO Corporation'
+    title: 'DEVERO Corporation',
+    description: 'Welcome to DEVERO Corporation. Our mission is to change the world with technology.',
+    author: '@alexdevero'
   },
   pathPrefix: '/',
   plugins: [
