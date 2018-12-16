@@ -4,9 +4,12 @@ import { Link } from 'gatsby'
 // import { IconAi, IconFoundation, IconGenomics, IconIndustries, IconTechnologies } from '../components/icons'
 import Layout from '../components/layout'
 import { ParticlesComponent, ParticlesComponentSimple } from '../components/particles'
+import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
+    <SEO title="Home" keywords={['company', 'innovation', 'technology', 'web design', 'web development', 'nanotechnology', 'financial', 'space', 'media', 'industries', 'robotics', 'security', 'ventures', 'ai', 'genomics']} />
+
     <div className="dashboard__header">
       <div className="dashboard__content">
         <h1 className="h2">Welcome to DEVERO Corporation</h1>
