@@ -5,6 +5,7 @@ import { withPrefix } from 'gatsby'
 import Recaptcha from 'react-recaptcha'
 
 import Layout from '../../components/layout'
+import SEO from '../../components/seo'
 
 class DeveroStudio extends React.Component {
   state = {
@@ -115,6 +116,8 @@ class DeveroStudio extends React.Component {
         </Helmet>
 
         <Layout>
+          <SEO title="DEVERO Studio" keywords={['company', 'innovation', 'technology', 'web design', 'web development', 'nanotechnology', 'financial', 'space', 'media', 'industries', 'robotics', 'security', 'ventures', 'ai', 'genomics']} />
+
           <section className="studio--benefits">
             <h1>Design + Development + Management</h1>
 
