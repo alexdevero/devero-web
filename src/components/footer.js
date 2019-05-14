@@ -92,6 +92,10 @@ const Footer = () => (
             <li>
               <a href="https://ventures.devero.io/" onClick={handleFooterLinkClick}>Ventures</a>
             </li>
+
+            <li>
+              <a href="https://x.devero.io/" onClick={handleFooterLinkClick}>X</a>
+            </li>
           </ul>
         </div>
 

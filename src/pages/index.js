@@ -243,6 +243,24 @@ class IndexPage extends React.Component {
               </div> */}
             </a>
           </div>
+
+          <div className="col-md-6 col-lg-4">
+            <a href="https://x.devero.io" className="company-box" onClick={this.handleBoxClick}>
+              <div className="card-box__thumbnail">
+                {/* <IconAi /> */}
+
+                <h3 className="h4">
+                  Devero <br /> X
+                </h3>
+              </div>
+
+              {/* <div className="company-box__info">
+                <h2 className="company-box__heading">X</h2>
+
+                <p className="company-box__description">Division of DEVERO Corporation focused on helping you build + launch your ideas.</p>
+              </div> */}
+            </a>
+          </div>
         </div>
       </Layout>
     )

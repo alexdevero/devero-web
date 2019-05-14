@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+const handleHeaderLinkClick = (event) => {
+  event.preventDefault()
+}
+
 const Header = () => (
   <header className="header">
     <div className="container">
@@ -13,51 +17,55 @@ const Header = () => (
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
-                <Link to="/ai/">AI</Link>
+                <a href="https://ai.devero.io/" onClick={handleHeaderLinkClick}>AI</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/financial/">Financial</Link>
+                <a href="https://financial.devero.io/" onClick={handleHeaderLinkClick}>Financial</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/foundation/">Foundation</Link>
+                <a href="https://foundation.devero.io/" onClick={handleHeaderLinkClick}>Foundation</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/galactic/">Galactic</Link>
+                <a href="https://galactic.devero.io/" onClick={handleHeaderLinkClick}>Galactic</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/genomics/">Genomics</Link>
+                <a href="https://genomics.devero.io/" onClick={handleHeaderLinkClick}>Genomics</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/industries/">Industries</Link>
+                <a href="https://industries.devero.io/" onClick={handleHeaderLinkClick}>Industries</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/media/">Media</Link>
+                <a href="https://media.devero.io/" onClick={handleHeaderLinkClick}>Media</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/robotics/">Robotics</Link>
+                <a href="https://robotics.devero.io/" onClick={handleHeaderLinkClick}>Robotics</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/security/">Security</Link>
+                <a href="https://security.devero.io/" onClick={handleHeaderLinkClick}>Security</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/studio/">Studio</Link>
+                <a href="https://studio.devero.io/">Studio</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/technologies/">Technologies</Link>
+                <a href="https://technologies.devero.io/" onClick={handleHeaderLinkClick}>Technologies</a>
               </li>
 
               <li className="dropdown__item">
-                <Link to="/ventures/">Ventures</Link>
+                <a href="https://ventures.devero.io/" onClick={handleHeaderLinkClick}>Ventures</a>
+              </li>
+
+              <li className="dropdown__item">
+                <a href="https://x.devero.io/" onClick={handleHeaderLinkClick}>X</a>
               </li>
             </ul>
           </li>
