@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+const handleFooterLinkClick = () => {
+  event.preventDefault()
+}
+
 const Footer = () => (
   <footer className="footer">
     <div className="container">
@@ -42,51 +46,51 @@ const Footer = () => (
         <div className="col-md-4">
           <ul className="footer__list-links">
             <li>
-              <Link to="/ai/">AI</Link>
+              <a href="https://ai.devero.io/" onClick={handleFooterLinkClick}>AI</a>
             </li>
 
             <li>
-              <Link to="/financial/">Financial</Link>
+              <a href="https://financial.devero.io/" onClick={handleFooterLinkClick}>Financial</a>
             </li>
 
             <li>
-              <Link to="/foundation/">Foundation</Link>
+              <a href="https://foundation.devero.io/" onClick={handleFooterLinkClick}>Foundation</a>
             </li>
 
             <li>
-              <Link to="/galactic/">Galactic</Link>
+              <a href="https://galactic.devero.io/" onClick={handleFooterLinkClick}>Galactic</a>
             </li>
 
             <li>
-              <Link to="/genomics/">Genomics</Link>
+              <a href="https://genomics.devero.io/" onClick={handleFooterLinkClick}>Genomics</a>
             </li>
 
             <li>
-              <Link to="/industries/">Industries</Link>
+              <a href="https://industries.devero.io/" onClick={handleFooterLinkClick}>Industries</a>
             </li>
 
             <li>
-              <Link to="/media/">Media</Link>
+              <a href="https://media.devero.io/" onClick={handleFooterLinkClick}>Media</a>
             </li>
 
             <li>
-              <Link to="/robotics/">Robotics</Link>
+              <a href="https://robotics.devero.io/" onClick={handleFooterLinkClick}>Robotics</a>
             </li>
 
             <li>
-              <Link to="/security/">Security</Link>
+              <a href="https://security.devero.io/" onClick={handleFooterLinkClick}>Security</a>
             </li>
 
             <li>
-              <Link to="/studio/">Studio</Link>
+              <a href="https://studio.devero.io/">Studio</a>
             </li>
 
             <li>
-              <Link to="/technologies/">Technologies</Link>
+              <a href="https://technologies.devero.io/" onClick={handleFooterLinkClick}>Technologies</a>
             </li>
 
             <li>
-              <Link to="/ventures/">Ventures</Link>
+              <a href="https://ventures.devero.io/" onClick={handleFooterLinkClick}>Ventures</a>
             </li>
           </ul>
         </div>
