@@ -59,6 +59,7 @@
     "react-recaptcha": "^2.3.10"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "cssnano": "4.1.10",
     "eslint": "^6.4.0",
