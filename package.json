@@ -52,8 +52,8 @@
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-transformer-sharp": "^2.2.19",
     "jquery": "^3.4.1",
-    "react": "^16.10.0",
-    "react-dom": "^16.10.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
     "react-particles-js": "^2.7.0",
     "react-recaptcha": "^2.3.10"
