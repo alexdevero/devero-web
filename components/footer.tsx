@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 
-const handleFooterLinkClick = () => {
+const handleFooterLinkClick = (event: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   event.preventDefault()
 }
 
@@ -9,18 +9,18 @@ const Footer = () => (
   <footer className="footer">
     <div className="container">
       <div className="row">
-      <div className="col-md-4">
+        <div className="col-md-4">
           <ul className="footer__list-links">
             <li>
-              <Link to="/">DEVERO</Link>
+              <Link href="/">DEVERO</Link>
             </li>
 
             <li>
-              <Link to="/about-us/">About us</Link>
+              <Link href="/about-us/">About us</Link>
             </li>
 
             {/* <li>
-              <Link to="/brand-portfolio/">Brand portfolio</Link>
+              <Link href="/brand-portfolio/">Brand portfolio</Link>
             </li> */}
 
             <li>
@@ -30,15 +30,15 @@ const Footer = () => (
             </li>
 
             <li>
-              <Link to="/foundation/">Foundation</Link>
+              <Link href="/foundation/">Foundation</Link>
             </li>
 
             <li>
-              <Link to="/privacy-policy/">Privacy policy</Link>
+              <Link href="/privacy-policy/">Privacy policy</Link>
             </li>
 
             <li>
-              <Link to="/terms-conditions/">Terms and conditions</Link>
+              <Link href="/terms-conditions/">Terms and conditions</Link>
             </li>
           </ul>
         </div>
