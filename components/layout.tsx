@@ -1,49 +1,36 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import Head from 'next/head'
 
 import Footer from './footer'
 import Header from './header'
 
-import '../styles/styles.css'
+interface LayoutUI {
+  title: string;
+  children: React.ReactChild;
+}
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet title={data.site.siteMetadata.title} meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}>
-          <html lang="en" />
+const Layout = (props: LayoutUI) => {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&amp;subset=latin-ext" rel="stylesheet" />
+        <title>{props.title}</title>
+      </Head>
 
-          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+      <div className="page-wrapper">
+        <Header />
 
-          {/*<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css" />*/}
-        </Helmet>
-
-        <div className="page-wrapper">
-          <Header siteTitle={data.site.siteMetadata.title} />
-
-          <div className="page-content">
-            <div className="container">{children}</div>
-          </div>
-
-          <Footer />
+        <div className="page-content">
+          <div className="container">{props.children}</div>
         </div>
-      </>
-    )}
-  />
-)
+
+        <Footer />
+      </div>
+    </>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
