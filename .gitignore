@@ -3,6 +3,7 @@
 .cache/
 .tmp/
 dist/
+.next/
 node_modules/
 out/
 
