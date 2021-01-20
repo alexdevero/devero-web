@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Head from 'next/head'
 
 import Footer from './footer'
@@ -7,7 +6,7 @@ import Header from './header'
 
 interface LayoutUI {
   title: string;
-  children: React.ReactChild;
+  children: React.ReactNode;
 }
 
 const Layout = (props: LayoutUI) => {
@@ -30,10 +29,6 @@ const Layout = (props: LayoutUI) => {
       </div>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
 }
 
 export default Layout
