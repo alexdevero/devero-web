@@ -1,7 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 
-const handleHeaderLinkClick = (event) => {
+const handleHeaderLinkClick = (event: MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   event.preventDefault()
 }
 
@@ -11,8 +11,8 @@ const Header = () => (
       <nav className="nav">
         <ul className="header__list-links">
           <li className="dropdown__wrapper">
-            <Link to="/brand-portfolio" className="dropdown__trigger">
-              Brand portfolio
+            <Link href="/brand-portfolio">
+              <a className="dropdown__trigger">Brand portfolio</a>
             </Link>
 
             <ul className="dropdown__list">
@@ -71,25 +71,25 @@ const Header = () => (
           </li>
 
           <li className="dropdown__wrapper">
-            <Link to="/about-us/" className="dropdown__trigger">
-              Discover DEVERO
+            <Link href="/about-us/">
+              <a className="dropdown__trigger">Discover DEVERO</a>
             </Link>
 
             <ul className="dropdown__list">
               <li className="dropdown__item">
-                <Link to="">About us</Link>
+                <Link href="">About us</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Our story</Link>
+                <Link href="">Our story</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Our brand</Link>
+                <Link href="">Our brand</Link>
               </li>
 
               <li className="dropdown__item">
-                <Link to="">Our mission</Link>
+                <Link href="">Our mission</Link>
               </li>
             </ul>
           </li>
@@ -101,11 +101,11 @@ const Header = () => (
           </li>
 
           <li>
-            <Link to="foundation/">Foundation</Link>
+            <Link href="foundation/">Foundation</Link>
           </li>
         </ul>
 
-        {/*<ul className="header__list-social">
+        {/* <ul className="header__list-social">
           <li>
             <a href="/" target="_blank">
               <span className="fab fa-facebook-f" />
@@ -129,7 +129,7 @@ const Header = () => (
               <span className="fab fa-linkedin" />
             </a>
           </li>
-        </ul>*/}
+        </ul> */}
       </nav>
     </div>
   </header>
