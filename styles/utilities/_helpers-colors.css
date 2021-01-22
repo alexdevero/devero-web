@@ -1,0 +1,18 @@
+/* Color helpers */
+/* Background colors */
+.bg-black {
+  background-color: var(--color-black);
+}
+
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+/* Colors */
+.color-black {
+  color: var(--color-black);
+}
+
+.color-brand {
+  color: var(--color-brand);
+}
