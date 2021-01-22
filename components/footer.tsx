@@ -6,126 +6,67 @@ const handleFooterLinkClick = (event: MouseEvent<HTMLAnchorElement, MouseEvent>)
 }
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer bg-black">
     <div className="container">
-      <div className="row">
-        <div className="col-md-4">
-          <ul className="footer__list-links">
-            <li>
-              <Link href="/">DEVERO</Link>
-            </li>
+      <div>
+        <ul className="nav d-flex justify-content-center">
+          <li className="nav-item">
+            <Link href="/">
+              <a className="nav-link">DEVERO</a>
+            </Link>
+          </li>
 
-            <li>
-              <Link href="/about-us/">About us</Link>
-            </li>
+          <li className="nav-item">
+            <Link href="/about-us/">
+              <a className="nav-link">About us</a>
+            </Link>
+          </li>
 
-            {/* <li>
-              <Link href="/brand-portfolio/">Brand portfolio</Link>
-            </li> */}
+          <li className="nav-item">
+            <a className="nav-link" href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
+              Blog
+            </a>
+          </li>
 
-            <li>
-              <a href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
-                Blog
-              </a>
-            </li>
+          <li className="nav-item">
+            <Link href="/privacy-policy/">
+              <a className="nav-link">Privacy policy</a>
+            </Link>
+          </li>
 
-            <li>
-              <Link href="/foundation/">Foundation</Link>
-            </li>
+          <li className="nav-item">
+            <Link href="/terms-conditions/">
+              <a className="nav-link">Terms &amp; conditions</a>
+            </Link>
+          </li>
+        </ul>
+      </div>
 
-            <li>
-              <Link href="/privacy-policy/">Privacy policy</Link>
-            </li>
+      <div className="mt-2">
+        <ul className="nav d-flex justify-content-center">
+          <li className="nav-item">
+            <a href="https://twitter.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <span className="fab fa-twitter" />
+            </a>
+          </li>
 
-            <li>
-              <Link href="/terms-conditions/">Terms and conditions</Link>
-            </li>
-          </ul>
-        </div>
+          <li className="nav-item">
+            <a href="https://cz.linkedin.com/in/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <span className="fab fa-linkedin" />
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="https://facebook.com/deverocorp" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <span className="fab fa-facebook-f" />
+            </a>
+          </li>
 
-        <div className="col-md-4">
-          <ul className="footer__list-links">
-            <li>
-              <a href="https://ai.devero.io/" onClick={handleFooterLinkClick}>AI</a>
-            </li>
-
-            <li>
-              <a href="https://financial.devero.io/" onClick={handleFooterLinkClick}>Financial</a>
-            </li>
-
-            <li>
-              <a href="https://foundation.devero.io/" onClick={handleFooterLinkClick}>Foundation</a>
-            </li>
-
-            <li>
-              <a href="https://galactic.devero.io/" onClick={handleFooterLinkClick}>Galactic</a>
-            </li>
-
-            <li>
-              <a href="https://genomics.devero.io/" onClick={handleFooterLinkClick}>Genomics</a>
-            </li>
-
-            <li>
-              <a href="https://industries.devero.io/" onClick={handleFooterLinkClick}>Industries</a>
-            </li>
-
-            <li>
-              <a href="https://media.devero.io/" onClick={handleFooterLinkClick}>Media</a>
-            </li>
-
-            <li>
-              <a href="https://robotics.devero.io/" onClick={handleFooterLinkClick}>Robotics</a>
-            </li>
-
-            <li>
-              <a href="https://security.devero.io/" onClick={handleFooterLinkClick}>Security</a>
-            </li>
-
-            <li>
-              <a href="https://studio.devero.io/">Studio</a>
-            </li>
-
-            <li>
-              <a href="https://technologies.devero.io/" onClick={handleFooterLinkClick}>Technologies</a>
-            </li>
-
-            <li>
-              <a href="https://ventures.devero.io/" onClick={handleFooterLinkClick}>Ventures</a>
-            </li>
-
-            <li>
-              <a href="https://x.devero.io/" onClick={handleFooterLinkClick}>X</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className="col-md-4">
-          <ul className="footer__list-social">
-            <li>
-              <a href="/" rel="noopener noreferrer" target="_blank">
-                <span className="fab fa-facebook-f" />
-              </a>
-            </li>
-
-            <li>
-              <a href="/" rel="noopener noreferrer" target="_blank">
-                <span className="fab fa-twitter" />
-              </a>
-            </li>
-
-            <li>
-              <a href="/" rel="noopener noreferrer" target="_blank">
-                <span className="fab fa-instagram" />
-              </a>
-            </li>
-
-            <li>
-              <a href="/" rel="noopener noreferrer" target="_blank">
-                <span className="fab fa-linkedin" />
-              </a>
-            </li>
-          </ul>
-        </div>
+          <li className="nav-item">
+            <a href="https://github.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <span className="fab fa-github" />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
