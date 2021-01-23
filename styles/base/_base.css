@@ -7,24 +7,6 @@
   --tran-timing: ease-in-out;
 }
 
-html {
-  font-size: 16px;
-}
-
-body {
-  font-family: 'Raleway', georgia, serif;
-  font-size: 1rem;
-  line-height: 1.616;
-  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
-  font-kerning: normal;
-  font-weight: 400;
-  word-wrap: break-word;
-  color: hsla(0, 0%, 0%, .8);
-}
-
 .page-wrapper {
   display: flex;
   flex-flow: column wrap;

@@ -1,6 +1,11 @@
 /* Typography */
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
   font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
