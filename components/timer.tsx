@@ -32,29 +32,33 @@ export const Timer = () => {
   })
 
   return (
-    <div>
-      <div className="countdown-days">
-        <div className="countdown-label">Days</div>
-
-        <div className="countdown-value">{timeLeft.days}</div>
+    <div className="row mt-2">
+      <div className="col-6 col-sm-3">
+        <div className="countdown-days">
+          <div className="countdown-label h4 font-weight-normal">Days</div>
+          <div className="countdown-value h1 font-weight-normal">{timeLeft.days}</div>
+        </div>
       </div>
 
-      <div className="countdown-hours">
-        <div className="countdown-label">Hours</div>
-
-        <div className="countdown-value">{timeLeft.hours}</div>
+      <div className="col-6 col-sm-3">
+        <div className="countdown-hours">
+          <div className="countdown-label h4 font-weight-normal">Hours</div>
+          <div className="countdown-value h1 font-weight-normal">{timeLeft.hours}</div>
+        </div>
       </div>
 
-      <div className="countdown-minutes">
-        <div className="countdown-label">Minutes</div>
-
-        <div className="countdown-value">{timeLeft.minutes}</div>
+      <div className="col-6 col-sm-3">
+        <div className="countdown-minutes">
+          <div className="countdown-label h4 font-weight-normal">Mins</div>
+          <div className="countdown-value h1 font-weight-normal">{timeLeft.minutes}</div>
+        </div>
       </div>
 
-      <div className="countdown-seconds">
-        <div className="countdown-label">Seconds</div>
-
-        <div className="countdown-value">{timeLeft.seconds}</div>
+      <div className="col-6 col-sm-3">
+        <div className="countdown-seconds">
+          <div className="countdown-label h4 font-weight-normal">Secs</div>
+          <div className="countdown-value h1 font-weight-normal">{timeLeft.seconds}</div>
+        </div>
       </div>
     </div>
   )
