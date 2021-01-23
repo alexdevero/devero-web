@@ -1,12 +1,7 @@
-import React from 'react'
-
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 const TermsConditions = () => (
-  <Layout>
-    <SEO title="Terms & Conditions" keywords={['company', 'innovation', 'technology', 'web design', 'web development', 'nanotechnology', 'financial', 'space', 'media', 'industries', 'robotics', 'security', 'ventures', 'ai', 'genomics']} />
-
+  <Layout title="Terms & Conditions | Devero">
     <h2>Last updated: 19th November 2018</h2>
 
     <h1>Welcome to DEVERO.xyz</h1>
