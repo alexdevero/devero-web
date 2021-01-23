@@ -2,22 +2,20 @@ import { useEffect, useState } from 'react'
 
 export const Timer = () => {
   const countdown = () => {
-    // https://github.com/tipenehughes/space-x-app/blob/master/src/Components/HomePage/Home.js
-
     const today = new Date().getTime()
     const deadline = new Date('2021-12-31, 23:59').getTime()
     const dateDifference = deadline - today
 
-    const days = Math.floor(dateDifference / (1000 * 60 * 60 * 24))
-    const hours = Math.floor((dateDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    const minutes = Math.floor((dateDifference % (1000 * 60 * 60)) / (1000 * 60))
-    const seconds = Math.floor((dateDifference % (1000 * 60)) / 1000)
+    const days = Math.floor(dateDifference / (1000 * 60 * 60 * 24)).toString(10)
+    const hours = Math.floor((dateDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString(10)
+    const minutes = Math.floor((dateDifference % (1000 * 60 * 60)) / (1000 * 60)).toString(10)
+    const seconds = Math.floor((dateDifference % (1000 * 60)) / 1000).toString(10)
 
     return {
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds
+      days: days.length < 2 ? '0' + days : days,
+      hours: hours.length < 2 ? '0' + hours : hours,
+      minutes: minutes.length < 2 ? '0' + minutes : minutes,
+      seconds: seconds.length < 2 ? '0' + seconds : seconds
     }
   }
 
