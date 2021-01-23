@@ -1,4 +1,3 @@
-import React from 'react'
 import Head from 'next/head'
 
 import Footer from './footer'
@@ -7,6 +6,7 @@ import Header from './header'
 interface LayoutUI {
   title: string;
   children: React.ReactNode;
+  pageName?: string;
 }
 
 const Layout = (props: LayoutUI) => {
@@ -18,7 +18,7 @@ const Layout = (props: LayoutUI) => {
         <title>{props.title}</title>
       </Head>
 
-      <div className="page-wrapper">
+      <div className={`page-wrapper${props.pageName ? ' ' + props.pageName : ''}`}>
         <Header />
 
         <div className="page-content">
