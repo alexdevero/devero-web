@@ -1,12 +1,7 @@
-import React from 'react'
-
 import Layout from '../components/layout'
-import SEO from '../components/seo'
 
 const PrivacyPolicy = () => (
-  <Layout>
-    <SEO title="Privacy Policy" keywords={['company', 'innovation', 'technology', 'web design', 'web development', 'nanotechnology', 'financial', 'space', 'media', 'industries', 'robotics', 'security', 'ventures', 'ai', 'genomics']} />
-
+  <Layout title="Privacy Policy | Devero">
     <h2>Last updated: 20th November 2018</h2>
 
     <p>Here at DEVERO.xyz Limited ("DEVERO.xyz", "we" or "us"), we take your privacy seriously. We're committed to protecting the privacy of any personal information you give us and we will comply with all relevant data protection legislation and related applicable Czech legislation.</p>
