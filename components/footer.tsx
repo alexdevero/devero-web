@@ -3,7 +3,7 @@ import Link from 'next/link'
 const Footer = () => (
   <footer className="footer bg-black">
     <div className="container">
-      <div>
+      {/* <div>
         <ul className="nav d-flex justify-content-center">
           <li className="nav-item">
             <Link href="/about-us/">
@@ -29,7 +29,7 @@ const Footer = () => (
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="mt-1">
         <ul className="nav d-flex justify-content-center">
