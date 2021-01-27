@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export const Timer = () => {
   const countdown = () => {
     const today = new Date().getTime()
-    const deadline = new Date('2021-12-31, 23:59').getTime()
+    const deadline = new Date('2021-12-31 23:59').getTime()
     const dateDifference = deadline - today
 
     const days = Math.floor(dateDifference / (1000 * 60 * 60 * 24)).toString(10)
