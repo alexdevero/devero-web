@@ -1,4 +1,21 @@
 /* Page - Home */
+.homepage {
+  background: url('/images/bg-hp-tablet.jpg') no-repeat 50% / cover;
+  overflow: hidden;
+  color: #fff;
+}
+
+@media only screen and (min-width: 769px) {
+  .homepage {
+    background: url('/images/bg-hp-desktop.jpg') no-repeat 50% / cover;
+  }
+}
+
+.homepage .header,
+.homepage .footer {
+  background-color: transparent;
+}
+
 .dashboard__header {
   display: flex;
   align-items: center;
@@ -9,44 +26,8 @@
   text-align: center;
 }
 
-.dashboard {
-  padding-top: 32px;
-  padding-bottom: 48px;
-}
-
-@media (max-width: 767px) {
-  .dashboard [class*='col-']:nth-of-type(n + 2) {
-    margin-top: 48px;
-  }
-}
-
-@media (max-width: 991px) and (min-width: 768px) {
-  .dashboard [class*='col-']:nth-of-type(n + 3) {
-    margin-top: 48px;
-  }
-}
-
-@media (min-width: 992px) {
-  .dashboard [class*='col-']:nth-of-type(n + 4) {
-    margin-top: 48px;
-  }
-}
-
-.dashboard__content {
-  position: relative;
-  z-index: 2;
-}
-
-.particles-canvas__wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-
-  & canvas {
-    width: 100%;
-    height: 100%;
+@media (max-width: 479px) {
+  .dashboard__content h1 {
+    font-size: 48px;
   }
 }
