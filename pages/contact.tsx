@@ -39,7 +39,32 @@ export default function Contact() {
           setEmailError(false)
 
           // Process and send the email
-          console.log(name, email, message)
+          setTimeout(() => {
+            ajax({
+              data: {
+                name: name,
+                email: email,
+                message: message
+              },
+              type: 'POST',
+              url: './contact.php',
+              success: function(data) {
+                console.info(data)
+              },
+              error: function(xhr, status, err) {
+                console.log(xhr)
+                console.error(status, err.toString())
+              }
+            })
+
+            // Reset states
+            setName('')
+            setEmail('')
+            setMessage('')
+            setBot(false)
+            setNameError(false)
+            setEmailError(false)
+          }, 1000)
         } else {
           setEmailError(true)
         }
