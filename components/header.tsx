@@ -49,11 +49,11 @@ const Header = () => {
                 </Link>
               </li> */}
 
-              {/* <li className="nav-item">
-                <Link href="/">
+              <li className="nav-item">
+                <Link href="/contact">
                   <a className="nav-link">Contact us</a>
                 </Link>
-              </li> */}
+              </li>
 
               <li className="nav-item">
                 <a className="nav-link" href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
