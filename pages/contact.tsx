@@ -7,6 +7,8 @@ export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [nameError, setNameError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
 
   const updateState = (type: String, payload: String) => {
     switch (type) {
