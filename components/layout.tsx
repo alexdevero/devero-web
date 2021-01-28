@@ -7,6 +7,7 @@ interface LayoutUI {
   title: string;
   children: React.ReactNode;
   pageName?: string;
+  isFluid?: boolean;
 }
 
 const Layout = (props: LayoutUI) => {
@@ -22,7 +23,7 @@ const Layout = (props: LayoutUI) => {
         <Header />
 
         <div className="page-content">
-          <div className="container">{props.children}</div>
+          <div className={`container${props.isFluid ? ' ' + props.isFluid : ''}`}>{props.children}</div>
         </div>
 
         <Footer />
