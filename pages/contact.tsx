@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useState, ChangeEvent } from 'react'
 import sanitizeHtml from 'sanitize-html'
+import { ajax } from 'jquery'
 
 import Layout from '../components/layout'
 
@@ -82,74 +83,80 @@ export default function Contact() {
 
   return (
     <Layout title="Contact | Devero">
-      <h1>Contact us</h1>
+      <div className="row justify-content-center">
+        <div className="col-md-8 col-lg-6 text-center">
+          <h1>Contact us</h1>
 
-      <p>Do you have an idea for a new product? Do you want to start a new start-up, or even build a new unicorn? Let&apos;s get in touch!</p>
+          <p className="mt-3">Do you have an idea for a new product? Do you want to start a new start-up, or even build a new unicorn? Let&apos;s get in touch!</p>
+          <p>Do you have a question about product or startup development? Send as a message as well. We will do our best to help.</p>
+        </div>
+      </div>
 
-      <p>Do you have a question about product or startup development? Send as a message as well. We will do our best to help.</p>
+      <div className="contact-form mt-3">
+        <div className="row justify-content-center">
+          <div className="col-md-8 col-lg-6">
+            <div className="form-row mb-1">
+              <div className="col-md-6 mb-md-down-1">
+                <label htmlFor="formName">Full name:</label>
 
-      <div className="contact-form">
-        <div className="form-row">
-          <div className="col-md-6">
-            <label htmlFor="formName">Full name:</label>
+                <input
+                  required
+                  type="text"
+                  className={`form-control${nameError ? ' is-invalid' : ''}`}
+                  name="formName"
+                  id="formName"
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => updateState('name', event.target.value)}
+                />
 
-            <input
-              required
-              type="text"
-              className={`form-control${nameError ? ' is-invalid' : ''}`}
-              name="formName"
-              id="formName"
-              onChange={(event: InputEvent) => updateState('name', event.currentTarget.value)}
-            />
+                <div className="invalid-feedback">
+                  Please provide a valid name.
+                </div>
+              </div>
 
-            <div className="invalid-feedback">
-              Please provide a valid name.
+              <div className="col-md-6">
+                <label htmlFor="formEmail">Email:</label>
+
+                <input
+                  required
+                  type="text"
+                  className={`form-control${emailError ? ' is-invalid' : ''}`}
+                  name="formEmail"
+                  id="formEmail"
+                  onChange={(event: ChangeEvent<HTMLInputElement>) => updateState('email', event.target.value)}
+                />
+
+                <div className="invalid-feedback">
+                  Please provide a valid email.
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label htmlFor="formEmail">Message (optional)</label>
+
+              <textarea
+                className="form-control"
+                name="formMessage"
+                id="formMessage"
+                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => updateState('message', event.target.value)}
+              />
+
+              <div className="d-none" aria-hidden="true">
+                <label htmlFor="formBot">Are you a bot?</label>
+                <input
+                  type="checkbox"
+                  className={`form-control${nameError ? ' is-invalid' : ''}`}
+                  name="formBot"
+                  id="formBot"
+                  onClick={() => updateState('bot', '')}
+                />
+              </div>
+            </div>
+
+            <div className="mt-1">
+              <button className="btn w-100" type="button" onClick={submitForm}>Send email</button>
             </div>
           </div>
-
-          <div className="col-md-6">
-            <label htmlFor="formEmail">Email:</label>
-
-            <input
-              required
-              type="text"
-              className={`form-control${emailError ? ' is-invalid' : ''}`}
-              name="formEmail"
-              id="formEmail"
-              onChange={(event: InputEvent) => updateState('email', event.currentTarget.value)}
-            />
-
-            <div className="invalid-feedback">
-              Please provide a valid email.
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <label htmlFor="formEmail">Message (optional)</label>
-
-          <textarea
-            className="form-control"
-            name="formMessage"
-            id="formMessage"
-            onChange={(event: HTMLTextAreaElement) => updateState('message', event.value)}
-          />
-
-          <div className="d-none" aria-hidden="true">
-            <label htmlFor="formBot">Are you a bot?</label>
-
-            <input
-              type="checkbox"
-              className={`form-control${nameError ? ' is-invalid' : ''}`}
-              name="formBot"
-              id="formBot"
-              onClick={(event: InputEvent) => updateState('bot', event.currentTarget.value)}
-            />
-          </div>
-        </div>
-
-        <div>
-          <button type="button" onClick={submitForm}>Send email</button>
         </div>
       </div>
     </Layout>
