@@ -14,13 +14,38 @@ export default function Contact() {
     switch (type) {
       case 'name':
         setName(sanitizeHtml(payload))
+        setNameError(false)
         break
       case 'email':
         setEmail(sanitizeHtml(payload))
+        setEmailError(false)
         break
       case 'message':
         setMessage(sanitizeHtml(payload))
         break
+    }
+  }
+
+  const submitForm = () => {
+    if (name.length > 0 && email.length > 0) {
+      setNameError(false)
+
+      if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
+        setEmailError(false)
+
+        // Process and send the email
+        console.log(name, email, message)
+      } else {
+        setEmailError(true)
+      }
+    } else {
+      if (name.length === 0) {
+        setNameError(true)
+      }
+
+      if (email.length === 0) {
+        setEmailError(true)
+      }
     }
   }
 
@@ -38,7 +63,7 @@ export default function Contact() {
             <input
               required
               type="text"
-              className="form-control"
+              className={`form-control${nameError ? ' is-invalid' : ''}`}
               name="formName"
               id="formName"
               onChange={(event: HTMLInputElement) => updateState('name', event.value)}
@@ -55,14 +80,14 @@ export default function Contact() {
             <input
               required
               type="text"
-              className="form-control"
+              className={`form-control${emailError ? ' is-invalid' : ''}`}
               name="formEmail"
               id="formEmail"
               onChange={(event: HTMLInputElement) => updateState('email', event.value)}
             />
 
             <div className="invalid-feedback">
-              Please select a valid email.
+              Please provide a valid email.
             </div>
           </div>
         </div>
@@ -71,10 +96,15 @@ export default function Contact() {
           <label htmlFor="formEmail">Message (optional)</label>
 
           <textarea
+            className="form-control"
             name="formMessage"
             id="formMessage"
             onChange={(event: HTMLTextAreaElement) => updateState('message', event.value)}
           />
+        </div>
+
+        <div>
+          <button type="button" onClick={submitForm}>Send email</button>
         </div>
       </div>
     </Layout>
