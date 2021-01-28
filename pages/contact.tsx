@@ -66,7 +66,7 @@ export default function Contact() {
               className={`form-control${nameError ? ' is-invalid' : ''}`}
               name="formName"
               id="formName"
-              onChange={(event: HTMLInputElement) => updateState('name', event.value)}
+              onChange={(event: InputEvent) => updateState('name', event.currentTarget.value)}
             />
 
             <div className="invalid-feedback">
@@ -83,7 +83,7 @@ export default function Contact() {
               className={`form-control${emailError ? ' is-invalid' : ''}`}
               name="formEmail"
               id="formEmail"
-              onChange={(event: HTMLInputElement) => updateState('email', event.value)}
+              onChange={(event: InputEvent) => updateState('email', event.currentTarget.value)}
             />
 
             <div className="invalid-feedback">
