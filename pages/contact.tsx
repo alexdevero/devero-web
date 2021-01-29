@@ -3,6 +3,7 @@ import sanitizeHtml from 'sanitize-html'
 import { ajax } from 'jquery'
 
 import Layout from '../components/layout'
+import { PageHeader } from '../components/page-header'
 
 export default function Contact() {
   const [name, setName] = useState('')
@@ -83,11 +84,12 @@ export default function Contact() {
 
   return (
     <Layout title="Contact | Devero">
+      <PageHeader title="Contact us" />
+
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6 text-center">
-          <h1>Contact us</h1>
+          <p>Do you have an idea for a new product you want to build? Do you want to start a new start-up, or even build a new unicorn? Let&apos;s get in touch!</p>
 
-          <p className="mt-3">Do you have an idea for a new product? Do you want to start a new start-up, or even build a new unicorn? Let&apos;s get in touch!</p>
           <p>Do you have a question about product or startup development? Send as a message as well. We will do our best to help.</p>
         </div>
       </div>
