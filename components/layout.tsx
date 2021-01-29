@@ -23,7 +23,7 @@ const Layout = (props: LayoutUI) => {
         <Header />
 
         <div className="page-content">
-          <div className={`container${props.isFluid ? ' ' + props.isFluid : ''}`}>{props.children}</div>
+          <div className={`container${props.isFluid ? '-fluid' : ''}`}>{props.children}</div>
         </div>
 
         <Footer />
