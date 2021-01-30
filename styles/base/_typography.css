@@ -40,10 +40,6 @@ h6,
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   color: inherit;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
 }
 
 h1:not(:last-child),
