@@ -3,6 +3,11 @@
   display: block;
   text-decoration: none;
   color: #fff;
+  transition: opacity var(--tran-duration) var(--tran-timing);
+}
+
+.header a:not(.navbar-brand):hover {
+  opacity: .25;
 }
 
 .header .navbar-brand {
