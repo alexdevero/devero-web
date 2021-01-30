@@ -3,48 +3,14 @@ footer {
   padding-top: 32px;
   padding-bottom: 32px;
   width: 100%;
-  background: var(--color-brand);
-}
-
-.footer__list-links,
-.footer__list-social {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.footer__list-links {
-  flex-flow: column wrap;
-}
-
-.footer__list-social {
-  flex-flow: row wrap;
-  align-items: center;
-}
-
-.footer__list-links li + li {
-  margin-top: 8px;
-}
-
-.footer__list-social .fab {
-  font-size: 24px;
-}
-
-.footer__list-social .fa-facebook-f {
-  font-size: 19px;
-}
-
-.footer__list-social li + li {
-  margin-left: 16px;
 }
 
 .footer a {
   text-decoration: none;
   color: #fff;
-  transition: color var(--tran-duration) var(--tran-timing);
+  transition: opacity var(--tran-duration) var(--tran-timing);
 }
 
 .footer a:hover {
-  color: var(--color-brand-hover);
+  opacity: .25;
 }
