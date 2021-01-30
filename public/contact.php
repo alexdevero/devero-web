@@ -7,16 +7,10 @@
       $myEmail = fgets($envFile);
 
       // Get the form fields and remove whitespace.
-      $name = strip_tags(trim($_POST["formName"]));
+      $name = strip_tags(trim($_POST["name"]));
       $name = str_replace(array("\r","\n"),array(" "," "),$name);
-      $email = filter_var(trim($_POST["formEmail"]), FILTER_SANITIZE_EMAIL);
-      $message = trim($_POST["formAdditionalMessage"]);
-      $checkboxApp = trim($_POST["checkboxApp"]);
-      $checkboxConsultation = trim($_POST["checkboxConsultation"]);
-      $checkboxDesign = trim($_POST["checkboxDesign"]);
-      $checkboxElse = trim($_POST["checkboxElse"]);
-      $checkboxFrontBack = trim($_POST["checkboxFrontBack"]);
-      $checkboxNewsletter = trim($_POST["formNewsletter"]);
+      $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+      $message = trim($_POST["message"]);
 
       // Check that data was sent to the mailer.
       if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -36,13 +30,7 @@
       $email_content = "Name: $name\n";
       $email_content .= "Email: $email\n\n";
       $email_content .= "Subject: Contact via DEVERO Studio\n\n";
-      $email_content .= "Want app: $checkboxApp\n";
-      $email_content .= "Want consultation: $checkboxConsultation\n";
-      $email_content .= "Want design: $checkboxDesign\n";
-      $email_content .= "Want something else: $checkboxElse\n";
-      $email_content .= "Want frontend / backend: $checkboxFrontBack\n\n";
       $email_content .= "Additional message:\n$message\n\n";
-      $email_content .= "Want newsletter: $checkboxNewsletter\n\n";
 
       // Build the email headers.
       $email_headers = "From: $name <$email>";
