@@ -25,13 +25,13 @@ const Header = () => {
 
           <div className={`collapse navbar-collapse justify-content-end${isNavOpen ? ' show' : ''}`} id="navbarMain">
             <ul className="nav">
-              {/* <li className="nav-item">
+              <li className="nav-item">
                 <Link href="/">
                   <a className="nav-link">About us</a>
                 </Link>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link href="/">
                   <a className="nav-link">Services</a>
                 </Link>
