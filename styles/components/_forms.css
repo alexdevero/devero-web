@@ -4,22 +4,6 @@ fieldset {
   border: 0;
 }
 
-fieldset + fieldset,
-.row + fieldset,
-.row:not(.row--checkboxes) + .row:not(.row--checkboxes) {
-  margin-top: 32px;
-}
-
-.row--checkboxes + .row--checkboxes {
-  margin-top: 12px;
-}
-
-@media (max-width: 767px) {
-  form [class*=col-md] + [class*=col-md] {
-    margin-top: 32px;
-  }
-}
-
 input,
 textarea {
   padding: 8px;
@@ -33,7 +17,7 @@ input:hover,
 textarea:focus,
 textarea:hover {
   outline: none;
-  border-color: var(--color-brand);
+  border-color: var(--color-black);
 }
 
 label {
