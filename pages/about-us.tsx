@@ -19,9 +19,9 @@ const AboutUs = () => (
       <div className="col md-6 about-box">
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <h3 className="h4 about-box-title m-0">Startup garage</h3>
+            <h3 className="h4 about-box-title m-0">Product lab</h3>
 
-            <p className="my-3">Taking care of creating your startup, even managing it till it becomes profitable. From development, marketing, sales, to business development.</p>
+            <p className="my-3">Turning your idea into a real product for you. We help you analyze, validate, plan, build, design, and release your product to market.</p>
 
             <Link href="/about-us">Learn more &gt;</Link>
           </div>
@@ -31,9 +31,9 @@ const AboutUs = () => (
       <div className="col md-6 about-box">
         <div className="row justify-content-center">
           <div className="col-md-8">
-            <h3 className="h4 about-box-title m-0">Product lab</h3>
+            <h3 className="h4 about-box-title m-0">Startup garage</h3>
 
-            <p className="my-3">Turning your idea into a real product for you. We help you analyze, validate, plan, build, design, and release your product to market.</p>
+            <p className="my-3">Taking care of creating your startup, even managing it till it becomes profitable. From development, marketing, sales, to business development.</p>
 
             <Link href="/about-us">Learn more &gt;</Link>
           </div>
