@@ -15,7 +15,15 @@ const AboutUs = () => (
       </div>
     </div>
 
-    <h2 className="h3 text-center mt-2 mb-2">What we do</h2>
+    <div className="row justify-content-center pb-3">
+      <div className="col-md-8 col-lg-5 text-center">
+        <h2 className="h3 text-center mt-2 mb-2">What we do</h2>
+
+        <hr className="divider" />
+
+        <p>We help our clients achieve their goals, whether it is building a product or building a startup, in these four ways: product lab, startup garage, startup incubator and startup accelerator.</p>
+      </div>
+    </div>
 
     <div className="row text-center">
       <div className="col-md-6 about-box border-top border-right">
