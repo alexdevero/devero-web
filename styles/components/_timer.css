@@ -1,0 +1,16 @@
+/* Timer component */
+.countdown-label {
+  font-family: 'Roboto Condensed', Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+.countdown-value {
+  max-width: 70px;
+  height: 90px;
+  text-align: center;
+  background-color: hsla(0, 0%, 100%, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
