@@ -1,22 +1,22 @@
 /* Page - Home */
-.homepage {
+/* .homepage {
   background: url('/images/bg-hp-tablet.jpg') no-repeat 50% / cover;
   overflow: hidden;
   color: #fff;
-}
+} */
 
-@media only screen and (min-width: 769px) {
+/* @media only screen and (min-width: 769px) {
   .homepage {
     background: url('/images/bg-hp-desktop.jpg') no-repeat 50% / cover;
   }
-}
+} */
 
-.homepage .header,
+/* .homepage .header,
 .homepage .footer {
   background-color: transparent;
-}
+} */
 
-.dashboard__header {
+/* .dashboard__header {
   display: flex;
   align-items: center;
   flex-flow: column wrap;
@@ -24,10 +24,10 @@
   position: relative;
   min-height: 720px;
   text-align: center;
-}
+} */
 
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   .dashboard__content h1 {
     font-size: 48px;
   }
-}
+} */
