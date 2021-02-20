@@ -5,9 +5,9 @@ const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
-    <header className="header bg-black">
+    <header className="header bg-white">
       <div className="container">
-        <nav className="navbar navbar-expand-md navbar-dark">
+        <nav className="navbar navbar-expand-md navbar-light px-0">
           <Link href="/"><a className="navbar-brand font-bebas">DEVERO</a></Link>
 
           <button
