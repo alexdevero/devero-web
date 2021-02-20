@@ -2,7 +2,7 @@
 .header a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   transition: opacity var(--tran-duration) var(--tran-timing);
 }
 
