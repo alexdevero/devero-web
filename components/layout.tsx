@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Footer from './footer'
+import FooterBig from './footer-big'
 import Header from './header'
 
 interface LayoutUI {
@@ -26,7 +26,7 @@ const Layout = (props: LayoutUI) => {
           <div className={`container${props.isFluid ? '-fluid' : ''}`}>{props.children}</div>
         </div>
 
-        <Footer />
+        <FooterBig />
       </div>
     </>
   )
