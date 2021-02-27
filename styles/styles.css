@@ -5,6 +5,7 @@
 @import '/base/_typography.css';
 
 /* Components */
+@import '/components/_borders.css';
 @import '/components/_buttons.css';
 @import '/components/_cards.css';
 @import '/components/_dividers.css';
