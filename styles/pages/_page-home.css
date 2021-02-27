@@ -31,3 +31,13 @@
     font-size: 48px;
   }
 } */
+
+.roadmap-box-content {
+  z-index: 2;
+}
+
+.roadmap-box-bcg {
+  top: -16px;
+  left: -16px;
+  z-index: 1;
+}
