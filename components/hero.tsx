@@ -1,6 +1,6 @@
 const Hero = () => (
   <div className="hero jumbotron bg-white px-0">
-    <div className="row">
+    <div className="row py-5">
       <div className="col-md-10 col-lg-8">
         {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
 
