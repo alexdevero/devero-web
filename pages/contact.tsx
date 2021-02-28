@@ -88,13 +88,13 @@ export default function Contact() {
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6 text-center">
-          <p>Do you have an idea for a new product you want to build? Do you want to start a new start-up, or even build a new unicorn? Let&apos;s get in touch!</p>
+          <p>Do you have an idea you want to build? Whether it is a product or a new start-up, we can help you with both. Let&apos;s get in touch and get your idea off the ground.</p>
 
-          <p>Do you have a question about product or startup development? Send as a message as well. We will do our best to help.</p>
+          <p>If you have a question about product or startup development send as a message as well. We will do our best to help.</p>
         </div>
       </div>
 
-      <div className="contact-form mt-3">
+      <div className="contact-form mt-3 pb-4">
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <div className="form-row mb-1">
