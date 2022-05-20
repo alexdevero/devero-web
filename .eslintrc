@@ -18,6 +18,9 @@
     "es6": true,
     "node": true
   },
+  "extends": [
+    "plugin:react-hooks/recommended"
+  ],
   "rules":{
     // 0 - "off"; 1 - "warn"; 2 - "error"
     // Inspired by https://github.com/standard/eslint-config-standard/blob/master/eslintrc.json
@@ -223,7 +226,7 @@
     "react/prefer-es6-class": "error",
     "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
     // "react/prop-types": "error",
-    "react/react-in-jsx-scope": "error",
+    "react/react-in-jsx-scope": "off",
     // "react/require-default-props": "error",
     // "react/require-optimization": "error",
     "react/require-render-return": "error",
@@ -243,13 +246,13 @@
     "react/jsx-curly-newline": "error",
     "react/jsx-curly-spacing": ["error", "never"],
     "react/jsx-equals-spacing": ["error", "never"],
-    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", "tsx"] }],
+    "react/jsx-filename-extension": ["error", { "extensions": ["js", ".jsx", "tsx"] }],
     "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
     "react/jsx-handler-names": "error",
     "react/jsx-indent": ["error", 2],
     "react/jsx-indent-props": ["error", "first"],
     "react/jsx-key": "error",
-    "react/jsx-max-props-per-line": ["error", { "maximum": 3 }],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 5 }],
     // "react/jsx-no-bind": "error",
     "react/jsx-no-comment-textnodes": "error",
     "react/jsx-no-duplicate-props": "error",
@@ -260,9 +263,9 @@
     "react/jsx-pascal-case": "error",
     "react/jsx-props-no-multi-spaces": "error",
     "react/jsx-sort-default-props": "error",
-    "react/jsx-sort-props": ["error", { "callbacksLast": true, "shorthandFirst": true, "noSortAlphabetically" : true, "reservedFirst": true }],
+    "react/jsx-sort-props": ["error", { "callbacksLast": true, "shorthandFirst": false, "noSortAlphabetically" : true, "reservedFirst": true }],
     "react/jsx-space-before-closing": "error",
-    "react/jsx-uses-react": "error",
+    "react/jsx-uses-react": "off",
     "react/jsx-uses-vars": "error",
 
     // TypeScript
