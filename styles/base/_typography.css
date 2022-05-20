@@ -21,6 +21,14 @@ body {
   font-family: 'Bebas Neue', Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.font-roboto {
+  font-family: Roboto, Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-roboto-condensed {
+  font-family: 'Roboto Condensed', Raleway, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 h1,
 .h1,
 h2,
@@ -35,7 +43,6 @@ h6,
 .h6 {
   margin: 0;
   padding: 0;
-  font-weight: 700;
   line-height: 1.1;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;

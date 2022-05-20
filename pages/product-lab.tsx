@@ -33,7 +33,6 @@ const ProductLab = () => (
           <li>User Experience Design</li>
           <li>Interaction Design</li>
           <li>Visual Design</li>
-          <li>Design QA</li>
         </ul>
       </div>
 
@@ -47,7 +46,6 @@ const ProductLab = () => (
           <li>Backend (Node.js)</li>
           <li>Machine Learning</li>
           <li>AR/VR</li>
-          <li>QA Testing</li>
         </ul>
       </div>
 
