@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, memo } from 'react'
 import Link from 'next/link'
 
 const Header = () => {
@@ -25,11 +25,11 @@ const Header = () => {
 
           <div className={`collapse navbar-collapse justify-content-end${isNavOpen ? ' show' : ''}`} id="navbarMain">
             <ul className="nav">
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link href="/about-us">
                   <a className="nav-link">About us</a>
                 </Link>
-              </li>
+              </li> */}
 
               {/* <li className="nav-item">
                 <Link href="/">
@@ -68,4 +68,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default memo(Header)

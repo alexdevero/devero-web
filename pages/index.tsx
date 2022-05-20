@@ -7,9 +7,9 @@ const Beta = () => (
   <Layout title="Home | Devero" pageName="homepage">
     <Hero />
 
-    <CurrentStats />
+    {/* <CurrentStats /> */}
 
-    <RoadMap />
+    {/* <RoadMap /> */}
   </Layout>
 )
 
