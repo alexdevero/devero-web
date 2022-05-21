@@ -1,7 +1,9 @@
+import { memo } from 'react'
+
 import { Layout } from './../components/layout'
 import { PageHeader } from './../components/page-header'
 
-const Nexus = () => (
+const Nexus = memo(() => (
   <Layout title="Master Plan | Devero">
     <PageHeader title="Master Plan" />
 
@@ -64,6 +66,6 @@ const Nexus = () => (
       </div>
     </div>
   </Layout>
-)
+))
 
 export default Nexus

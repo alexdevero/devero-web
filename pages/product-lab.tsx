@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { memo } from 'react'
 
 import { Layout } from './../components/layout'
 import { PageHeader } from './../components/page-header'
 
-const ProductLab = () => (
+const ProductLab = memo(() => (
   <Layout title="Product lab | Devero">
     <PageHeader title="Product lab" />
 
@@ -75,6 +76,6 @@ const ProductLab = () => (
       </div>
     </div>
   </Layout>
-)
+))
 
 export default ProductLab

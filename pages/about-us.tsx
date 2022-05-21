@@ -1,9 +1,10 @@
 // import Link from 'next/link'
+import { memo } from 'react'
 
 import { Layout } from '../components/layout'
 import { PageHeader } from '../components/page-header'
 
-const AboutUs = () => (
+const AboutUs = memo(() => (
   <Layout title="About Us | Devero" isFluid>
     <PageHeader title="About us" />
 
@@ -85,6 +86,6 @@ const AboutUs = () => (
       </div>
     </div>
   </Layout>
-)
+))
 
 export default AboutUs

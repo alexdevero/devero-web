@@ -1,6 +1,8 @@
+import { memo } from 'react'
+
 import { Layout } from '../components/layout'
 
-const PrivacyPolicy = () => (
+const PrivacyPolicy = memo(() => (
   <Layout title="Privacy Policy | Devero">
     <div className="row justify-content-center pt-3 pb-3">
       <div className="col-md-10 col-lg-8">
@@ -163,6 +165,6 @@ const PrivacyPolicy = () => (
       </div>
     </div>
   </Layout>
-)
+))
 
 export default PrivacyPolicy

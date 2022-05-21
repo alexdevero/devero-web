@@ -1,6 +1,8 @@
+import { memo } from 'react'
+
 import { Layout } from '../components/layout'
 
-const TermsConditions = () => (
+const TermsConditions = memo(() => (
   <Layout title="Terms & Conditions | Devero">
     <div className="row justify-content-center pt-3 pb-3">
       <div className="col-md-10 col-lg-8">
@@ -173,6 +175,6 @@ const TermsConditions = () => (
       </div>
     </div>
   </Layout>
-)
+))
 
 export default TermsConditions

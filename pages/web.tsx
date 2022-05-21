@@ -1,7 +1,9 @@
+import { memo } from 'react'
+
 import { Layout } from './../components/layout'
 import { PageHeader } from './../components/page-header'
 
-const Web = () => (
+const Web = memo(() => (
   <Layout title="Web design & development | Devero">
     <PageHeader title="Web design & development" />
 
@@ -29,6 +31,6 @@ const Web = () => (
       <p>Looking for a reliable helping hand to get things done fast? With absolute flexibility on our end, we integrate our talent seamlessly with your in-house team to accelerate your project and help you grow.</p>
     </div>
   </Layout>
-)
+))
 
 export default Web
