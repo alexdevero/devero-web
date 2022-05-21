@@ -4,14 +4,14 @@ import Head from 'next/head'
 import { FooterBig } from './footer-big'
 import { Header } from './header'
 
-interface LayoutUI {
+interface LayoutProps {
   title: string;
   children: ReactNode;
   pageName?: string;
   isFluid?: boolean;
 }
 
-export const Layout = memo((props: LayoutUI) => {
+export const Layout = memo((props: LayoutProps) => {
   return (
     <>
       <Head>

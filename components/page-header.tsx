@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
 interface PageHeaderUI {
-  title: String;
+  title: string;
 }
 
 export const PageHeader = memo((props: PageHeaderUI) => (

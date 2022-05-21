@@ -13,7 +13,7 @@ export default function Contact() {
   const [nameError, setNameError] = useState(false)
   const [emailError, setEmailError] = useState(false)
 
-  const updateState = (type: String, payload: String) => {
+  const updateState = (type: string, payload: string) => {
     switch (type) {
       case 'name':
         setName(sanitizeHtml(payload))
