@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-const CurrentStats = memo(() => (
+export const CurrentStats = memo(() => (
   <div className="row py-5">
     <div className="col-6 col-md-3 text-center">
       <p className="h4 font-weight-bold font-roboto-condensed m-0">+350k</p>
@@ -27,5 +27,3 @@ const CurrentStats = memo(() => (
     </div>
   </div>
 ))
-
-export default CurrentStats

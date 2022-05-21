@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-const Hero = memo(() => (
+export const Hero = memo(() => (
   <div className="hero jumbotron bg-white px-0">
     <div className="row py-5">
       <div className="col-md-10 col-lg-8">
@@ -13,5 +13,3 @@ const Hero = memo(() => (
     </div>
   </div>
 ))
-
-export default Hero

@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 const TermsConditions = () => (
   <Layout title="Terms & Conditions | Devero">

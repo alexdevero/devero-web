@@ -2,7 +2,7 @@ import { useState, ChangeEvent } from 'react'
 import sanitizeHtml from 'sanitize-html'
 import { ajax } from 'jquery'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 import { PageHeader } from '../components/page-header'
 
 export default function Contact() {

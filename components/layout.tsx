@@ -1,8 +1,8 @@
 import { memo, ReactNode } from 'react'
 import Head from 'next/head'
 
-import FooterBig from './footer-big'
-import Header from './header'
+import { FooterBig } from './footer-big'
+import { Header } from './header'
 
 interface LayoutUI {
   title: string;
@@ -11,7 +11,7 @@ interface LayoutUI {
   isFluid?: boolean;
 }
 
-const Layout = memo((props: LayoutUI) => {
+export const Layout = memo((props: LayoutUI) => {
   return (
     <>
       <Head>
@@ -32,5 +32,3 @@ const Layout = memo((props: LayoutUI) => {
     </>
   )
 })
-
-export default Layout

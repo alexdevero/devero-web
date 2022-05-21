@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-const RoadMap = memo(() => (
+export const RoadMap = memo(() => (
   <div className="py-5">
     <div className="row justify-content-center">
       <div className="col-md-8 col-lg-7 col-xl*6">
@@ -110,5 +110,3 @@ const RoadMap = memo(() => (
     </div>
   </div>
 ))
-
-export default RoadMap

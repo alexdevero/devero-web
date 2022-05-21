@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Layout from '../components/layout'
+import { Layout } from '../components/layout'
 
 const CaseStudies = () => (
   <Layout title="Case studies | Devero">
