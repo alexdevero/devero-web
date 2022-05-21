@@ -1,3 +1,4 @@
+import { memo, ReactNode } from 'react'
 import Head from 'next/head'
 
 import FooterBig from './footer-big'
@@ -5,12 +6,12 @@ import Header from './header'
 
 interface LayoutUI {
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   pageName?: string;
   isFluid?: boolean;
 }
 
-const Layout = (props: LayoutUI) => {
+const Layout = memo((props: LayoutUI) => {
   return (
     <>
       <Head>
@@ -30,6 +31,6 @@ const Layout = (props: LayoutUI) => {
       </div>
     </>
   )
-}
+})
 
 export default Layout

@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 
-export const Timer = () => {
+export const Timer = memo(() => {
   const countdown = () => {
     const today = new Date().getTime()
     const deadline = new Date('2021-12-31 23:59').getTime()
@@ -60,4 +60,4 @@ export const Timer = () => {
       </div>
     </div>
   )
-}
+})

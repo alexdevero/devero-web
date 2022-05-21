@@ -1,7 +1,7 @@
 import { useState, memo } from 'react'
 import Link from 'next/link'
 
-const Header = () => {
+const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
   return (
@@ -66,6 +66,6 @@ const Header = () => {
       </div>
     </header>
   )
-}
+})
 
-export default memo(Header)
+export default Header

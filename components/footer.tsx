@@ -1,6 +1,7 @@
-import Link from 'next/link'
+// import Link from 'next/link'
+import { memo } from 'react'
 
-const Footer = () => (
+const Footer = memo(() => (
   <footer className="footer bg-black">
     <div className="container">
       {/* <div>
@@ -59,6 +60,6 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-)
+))
 
 export default Footer
