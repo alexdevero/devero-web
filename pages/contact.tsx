@@ -140,7 +140,7 @@ const Contact = memo(() => {
                 className="form-control"
                 name="formMessage"
                 id="formMessage"
-                onChange={(event: ChangeEvent<React.HTMLTextAreaElement>) => updateState('message', event.target.value)}
+                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => updateState('message', event.target.value)}
               />
 
               <div className="d-none" aria-hidden="true">
