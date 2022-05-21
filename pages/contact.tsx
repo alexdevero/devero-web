@@ -1,11 +1,11 @@
-import { useState, ChangeEvent } from 'react'
+import { useCallback, useState, ChangeEvent, memo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 import { ajax } from 'jquery'
 
 import { Layout } from '../components/layout'
 import { PageHeader } from '../components/page-header'
 
-export default function Contact() {
+const Contact = memo(() => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -13,7 +13,7 @@ export default function Contact() {
   const [nameError, setNameError] = useState(false)
   const [emailError, setEmailError] = useState(false)
 
-  const updateState = (type: string, payload: string) => {
+  const updateState = useCallback((type: string, payload: string) => {
     switch (type) {
       case 'name':
         setName(sanitizeHtml(payload))
@@ -30,9 +30,9 @@ export default function Contact() {
         setBot(!bot)
         break
     }
-  }
+  }, [bot])
 
-  const submitForm = () => {
+  const submitForm = useCallback(() => {
     if (!bot) {
       if (name.length > 0 && email.length > 0) {
         setNameError(false)
@@ -80,7 +80,7 @@ export default function Contact() {
         }
       }
     }
-  }
+  }, [bot, email, message, name])
 
   return (
     <Layout title="Contact | Devero">
@@ -140,7 +140,7 @@ export default function Contact() {
                 className="form-control"
                 name="formMessage"
                 id="formMessage"
-                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => updateState('message', event.target.value)}
+                onChange={(event: ChangeEvent<React.HTMLTextAreaElement>) => updateState('message', event.target.value)}
               />
 
               <div className="d-none" aria-hidden="true">
@@ -163,4 +163,6 @@ export default function Contact() {
       </div>
     </Layout>
   )
-}
+})
+
+export default Contact
