@@ -1,13 +1,14 @@
 import { memo, ChangeEvent } from 'react'
 
 interface FormInputProps {
-  id: string;
-  fieldName: string;
-  label: string;
-  hasError: boolean;
-  type: 'text';
   errorMessage: string;
+  fieldName: string;
+  hasError: boolean;
+  id: string;
+  label: string;
   required?: boolean;
+  type: 'text';
+  value: string;
   onChange: (fieldName: string, value: string) => void;
 }
 
@@ -21,6 +22,7 @@ export const FormInput = memo((props: FormInputProps) => (
       name={props.id}
       id={props.id}
       required={props.required}
+      value={props.value}
       onChange={(event: ChangeEvent<HTMLInputElement>) => props.onChange(props.fieldName, event.target.value)}
     />
 
