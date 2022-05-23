@@ -139,7 +139,7 @@ const Contact = memo(() => {
               />
             </div>
 
-            {!emailSent && (
+            {emailSent && (
               <div className="mt-2 mb-2">
                 <h5>Thank you for contacting us. We will contact you soon.</h5>
               </div>
