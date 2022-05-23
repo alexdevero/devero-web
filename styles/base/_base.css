@@ -3,7 +3,7 @@
   --color-brand: hsl(351.6, 97.2%, 42%); /* #d30320 */
   --color-brand-hover: hsl(351.6, 97.2%, 22%);
 
-  --tran-duration: .25s;
+  --tran-duration: .15s;
   --tran-timing: ease-in-out;
 }
 

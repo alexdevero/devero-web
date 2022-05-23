@@ -9,7 +9,7 @@ textarea {
   padding: 8px;
   width: 100%;
   border: 2px solid var(--color-black);
-  transition: all var(--tran-duration) var(--tran-timing);
+  transition: all var(--tran-duration) var(--tran-timing) !important;
 }
 
 input:focus,
@@ -55,7 +55,7 @@ textarea {
     width: 18px;
     height: 18px;
     border: 2px solid var(--color-black);
-    transition: all var(--tran-duration) var(--tran-timing);
+    transition: all var(--tran-duration) var(--tran-timing) !important;
   }
 
   &:hover + span::before {
