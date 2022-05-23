@@ -1,6 +1,8 @@
 import { useState, memo } from 'react'
 import Link from 'next/link'
 
+import { personalLinks } from '../data/links'
+
 export const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
 
@@ -56,7 +58,7 @@ export const Header = memo(() => {
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
+                <a className="nav-link" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
                   Blog
                 </a>
               </li>

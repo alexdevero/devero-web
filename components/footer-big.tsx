@@ -1,33 +1,35 @@
 import Link from 'next/link'
 import { memo } from 'react'
 
+import { personalLinks, socialMediaLinks } from '../data/links'
+
 export const FooterBig = memo(() => (
   <footer className="footer footer--big bg-white">
     <div className="container">
       <div className="row">
         <div className="col-md-6 col-lg-5">
-          <p className="m-0 h5">Say hello at <a href="mailto:hello@devero.io" className="text-body">hello@devero.io</a></p>
+          <p className="m-0 h5">Say hello at <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
 
           <ul className="nav mt-1 mb-1 d-flex justify-content-flex-start">
             <li className="nav-item">
-              <a href="https://twitter.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <a href={socialMediaLinks.twitter} className="nav-link" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-twitter" />
               </a>
             </li>
 
             <li className="nav-item">
-              <a href="https://cz.linkedin.com/in/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <a href={socialMediaLinks.linkedin} className="nav-link" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-linkedin" />
               </a>
             </li>
             <li className="nav-item">
-              <a href="https://facebook.com/deverocorp" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <a href={socialMediaLinks.facebook} className="nav-link" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-facebook-f" />
               </a>
             </li>
 
             <li className="nav-item">
-              <a href="https://github.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+              <a href={socialMediaLinks.github} className="nav-link" rel="noopener noreferrer" target="_blank">
                 <span className="fab fa-github" />
               </a>
             </li>
@@ -49,7 +51,7 @@ export const FooterBig = memo(() => (
                 </li> */}
 
                 <li className="nav-item">
-                  <a className="nav-link p-1" href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
+                  <a className="nav-link p-1" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
                     Blog
                   </a>
                 </li>
@@ -78,11 +80,9 @@ export const FooterBig = memo(() => (
 
                 <li className="nav-item p-1">Czech Republic</li>
 
-                <li className="nav-item p-1"><a href="mailto:hello@devero.io" className="text-body border-bottom border-dark">hello@devero.io</a></li>
+                <li className="nav-item p-1"><a href={personalLinks.mailto} className="text-body border-bottom border-dark">hello@devero.io</a></li>
               </ul>
             </div>
-
-            {/* <div className="col-md-6"></div> */}
           </div>
         </div>
       </div>
