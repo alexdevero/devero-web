@@ -31,11 +31,11 @@
     "brace-style": "error",
     "camelcase": "warn",
     "comma-dangle": ["warn", {
-      "arrays": "never",
-      "objects": "never",
-      "imports": "never",
-      "exports": "never",
-      "functions": "never"
+      "arrays": "only-multiline",
+      "objects": "only-multiline",
+      "imports": "only-multiline",
+      "exports": "only-multiline",
+      "functions": "only-multiline"
     }],
     "comma-spacing": ["error", { "before": false, "after": true }],
     "comma-style": ["error", "last"],
