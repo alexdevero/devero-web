@@ -161,7 +161,7 @@ const PrivacyPolicy = memo(() => (
 
         <p>Talk to us</p>
 
-        <p>If you have any queries, comments or complaints regarding this Privacy Policy, just get in touch. You can contact us through the  Contact Us section of www.devero.io or write to us at the address set out above or at the following email address <a  href="mailto:hello@devero.io">hello@devero.io</a>.</p>
+        <p>If you have any queries, comments or complaints regarding this Privacy Policy, just get in touch. You can contact us through the  Contact Us section of www.devero.io or write to us at the address set out above or at the following email address <a href="mailto:hello@devero.io">hello@devero.io</a>.</p>
       </div>
     </div>
   </Layout>

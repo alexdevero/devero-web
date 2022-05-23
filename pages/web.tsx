@@ -10,8 +10,6 @@ const Web = memo(() => (
     <div className="pb-3">
       <h2 className="h3">Our Approach</h2>
 
-      <p></p>
-
       <h2 className="h3">Technology</h2>
 
       <p>React, Next.js, Node.js, MongoDB, Firestore, PostgreSQL, SQL, Heroku, AWS, Rest, GraphQL.</p>
