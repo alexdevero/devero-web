@@ -42,11 +42,11 @@ export const FooterBig = memo(() => (
               <ul className="nav d-flex flex-column small">
                 <li className="h5 nav-item">Links</li>
 
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link href="/about-us/">
                     <a className="nav-link p-1">About us</a>
                   </Link>
-                </li>
+                </li> */}
 
                 <li className="nav-item">
                   <a className="nav-link p-1" href="https://www.blog.alexdevero.com" rel="noopener noreferrer" target="_blank">
