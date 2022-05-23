@@ -1,9 +1,12 @@
-import { useCallback, useState, ChangeEvent, memo } from 'react'
+import { useCallback, useState, memo } from 'react'
 import sanitizeHtml from 'sanitize-html'
 import { ajax } from 'jquery'
 
 import { Layout } from '../components/layout'
 import { PageHeader } from '../components/page-header'
+import { FormInput } from '../components/form-input'
+import { TextArea } from '../components/text-area'
+import { FormBotCheck } from '../components/form-bot-check'
 
 const Contact = memo(() => {
   const [name, setName] = useState('')
@@ -99,60 +102,44 @@ const Contact = memo(() => {
           <div className="col-md-8 col-lg-6">
             <div className="form-row mb-1">
               <div className="col-md-6 mb-md-down-1">
-                <label htmlFor="formName">Full name:</label>
-
-                <input
-                  required
-                  type="text"
-                  className={`form-control${nameError ? ' is-invalid' : ''}`}
-                  name="formName"
+                <FormInput
                   id="formName"
-                  onChange={(event: ChangeEvent<HTMLInputElement>) => updateState('name', event.target.value)}
+                  label="Full name:"
+                  fieldName="name"
+                  hasError={nameError}
+                  type="text"
+                  errorMessage="Please provide a valid name."
+                  onChange={updateState}
                 />
-
-                <div className="invalid-feedback">
-                  Please provide a valid name.
-                </div>
               </div>
 
               <div className="col-md-6">
-                <label htmlFor="formEmail">Email:</label>
-
-                <input
-                  required
-                  type="text"
-                  className={`form-control${emailError ? ' is-invalid' : ''}`}
-                  name="formEmail"
+                <FormInput
                   id="formEmail"
-                  onChange={(event: ChangeEvent<HTMLInputElement>) => updateState('email', event.target.value)}
+                  fieldName="email"
+                  label="Email:"
+                  hasError={emailError}
+                  type="text"
+                  errorMessage="Please provide a valid email."
+                  onChange={updateState}
                 />
-
-                <div className="invalid-feedback">
-                  Please provide a valid email.
-                </div>
               </div>
             </div>
 
             <div>
-              <label htmlFor="formEmail">Message (optional)</label>
-
-              <textarea
-                className="form-control"
-                name="formMessage"
+              <TextArea
                 id="formMessage"
-                onChange={(event: ChangeEvent<HTMLTextAreaElement>) => updateState('message', event.target.value)}
+                fieldName="message"
+                label="Message (optional)"
+                onChange={updateState}
               />
 
-              <div className="d-none" aria-hidden="true">
-                <label htmlFor="formBot">Are you a bot?</label>
-                <input
-                  type="checkbox"
-                  className={`form-control${nameError ? ' is-invalid' : ''}`}
-                  name="formBot"
-                  id="formBot"
-                  onClick={() => updateState('bot', '')}
-                />
-              </div>
+              <FormBotCheck
+                id="formBot"
+                label="Are you a bot?"
+                hasError={nameError}
+                onChange={updateState}
+              />
             </div>
 
             <div className="mt-1">
