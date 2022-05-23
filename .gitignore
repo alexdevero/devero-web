@@ -7,6 +7,10 @@ dist/
 node_modules/
 out/
 
+# Envs & Secrets #
+##################
+.env.local
+
 # Folders for inspiration & notes #
 ###################################
 _ignore/
