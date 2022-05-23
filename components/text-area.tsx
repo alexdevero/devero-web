@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { ChangeEvent, memo } from 'react'
 
 interface TextAreaProps {
   id: string;
