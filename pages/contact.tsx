@@ -1,6 +1,6 @@
 import { useCallback, useState, memo } from 'react'
 import sanitizeHtml from 'sanitize-html'
-import { ajax } from 'jquery'
+import * as yup from 'yup'
 
 import { Layout } from '../components/layout'
 import { PageHeader } from '../components/page-header'
@@ -8,15 +8,27 @@ import { FormInput } from '../components/form-input'
 import { TextArea } from '../components/text-area'
 import { FormBotCheck } from '../components/form-bot-check'
 
+import { useFirestore } from '../contexts/firestore'
+
+const formSchema = yup.object().shape({
+  email: yup.string().email().required(),
+  message: yup.string(),
+  name: yup.string().required(),
+})
+
 const Contact = memo(() => {
+  const { createEmailDocument } = useFirestore()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [bot, setBot] = useState(false)
   const [nameError, setNameError] = useState(false)
   const [emailError, setEmailError] = useState(false)
+  const [emailSent, setEmailSent] = useState(false)
 
   const updateState = useCallback((type: string, payload: string) => {
+    setEmailSent(false)
+
     switch (type) {
       case 'name':
         setName(sanitizeHtml(payload))
@@ -35,44 +47,26 @@ const Contact = memo(() => {
     }
   }, [bot])
 
-  const submitForm = useCallback(() => {
+  const submitForm = useCallback(async () => {
     if (!bot) {
-      if (name.length > 0 && email.length > 0) {
-        setNameError(false)
+      const isFormValid = await formSchema.isValid({
+        email,
+        message,
+        name,
+      }).catch(e => console.log(e))
 
-        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)) {
-          setEmailError(false)
-
-          // Process and send the email
-          setTimeout(() => {
-            ajax({
-              data: {
-                name: name,
-                email: email,
-                message: message
-              },
-              type: 'POST',
-              url: './contact.php',
-              success: function(data) {
-                console.info(data)
-              },
-              error: function(xhr, status, err) {
-                console.log(xhr)
-                console.error(status, err.toString())
-              }
-            })
-
-            // Reset states
+      if (isFormValid) {
+        createEmailDocument(name, email, message)
+          .then(() => {
             setName('')
             setEmail('')
             setMessage('')
             setBot(false)
             setNameError(false)
             setEmailError(false)
-          }, 1000)
-        } else {
-          setEmailError(true)
-        }
+            setEmailSent(true)
+          })
+          .catch(e => console.log(e))
       } else {
         if (name.length === 0) {
           setNameError(true)
@@ -83,7 +77,7 @@ const Contact = memo(() => {
         }
       }
     }
-  }, [bot, email, message, name])
+  }, [bot, createEmailDocument, email, message, name])
 
   return (
     <Layout title="Contact | Devero">
@@ -107,6 +101,7 @@ const Contact = memo(() => {
                   label="Full name:"
                   fieldName="name"
                   hasError={nameError}
+                  value={name}
                   type="text"
                   errorMessage="Please provide a valid name."
                   onChange={updateState}
@@ -119,6 +114,7 @@ const Contact = memo(() => {
                   fieldName="email"
                   label="Email:"
                   hasError={emailError}
+                  value={email}
                   type="text"
                   errorMessage="Please provide a valid email."
                   onChange={updateState}
@@ -126,11 +122,12 @@ const Contact = memo(() => {
               </div>
             </div>
 
-            <div>
+            <div className="mt-1">
               <TextArea
                 id="formMessage"
                 fieldName="message"
                 label="Message (optional)"
+                value={message}
                 onChange={updateState}
               />
 
@@ -141,6 +138,12 @@ const Contact = memo(() => {
                 onChange={updateState}
               />
             </div>
+
+            {!emailSent && (
+              <div className="mt-2 mb-2">
+                <h5>Thank you for contacting us. We will contact you soon.</h5>
+              </div>
+            )}
 
             <div className="mt-1">
               <button className="btn w-100" type="button" onClick={submitForm}>Send email</button>

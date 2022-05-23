@@ -1,12 +1,12 @@
 // pages/_app.js
 
 import '../styles/styles.css'
-import { FirebaseProvider } from '../contexts/firebase'
+import { FirestoreProvider } from '../contexts/firestore'
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <FirebaseProvider>
+    <FirestoreProvider>
       <Component {...pageProps} />
-    </FirebaseProvider>
+    </FirestoreProvider>
   )
 }

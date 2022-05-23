@@ -7,19 +7,19 @@ import { createFirebaseApp } from '../firebase/firebase'
 
 type Email = { [x: string]: DocumentData }
 
-export interface FirebaseContext {
+export interface FirestoreContext {
   fetchAllEmailDocuments: () => void;
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;
 }
 
-const ctx = createContext<FirebaseContext | undefined>(undefined)
-ctx.displayName = 'Firebase'
+const ctx = createContext<FirestoreContext | undefined>(undefined)
+ctx.displayName = 'Firestore'
 
-export interface FirebaseProviderProps {
+export interface FirestoreProviderProps {
   children?: ReactNode;
 }
 
-export const FirebaseProvider: FC<FirebaseProviderProps> = (props) => {
+export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
   const app = createFirebaseApp()
   const db = getFirestore(app)
 
@@ -86,7 +86,7 @@ export const FirebaseProvider: FC<FirebaseProviderProps> = (props) => {
     }
   }, [db, getAllEmails])
 
-  const value: FirebaseContext = useMemo(
+  const value: FirestoreContext = useMemo(
     () => ({
       createEmailDocument,
       fetchAllEmailDocuments
@@ -96,4 +96,4 @@ export const FirebaseProvider: FC<FirebaseProviderProps> = (props) => {
   return <ctx.Provider value={value}>{props.children}</ctx.Provider>
 }
 
-export const useFirebase = () => useContext(ctx)
+export const useFirestore = () => useContext(ctx)
