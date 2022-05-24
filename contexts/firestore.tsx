@@ -8,7 +8,6 @@ import { createFirebaseApp } from '../firebase/firebase'
 type Email = { [x: string]: DocumentData }
 
 export interface FirestoreContext {
-  fetchAllEmailDocuments: () => void;
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;
 }
 
@@ -25,18 +24,6 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
 
   const [emails, setEmails] = useState<Email[] | null>(null)
 
-  const getAllEmails = useCallback(async () => {
-    try {
-      const querySnapshot = await getDocs(collection(db, 'emails'))
-      const emails: Email[] = []
-
-      querySnapshot.forEach((doc) => emails.push({ [doc.id]: doc.data() }))
-      setEmails(emails)
-    } catch (e) {
-      console.log(e)
-    }
-  }, [db])
-
   const createEmailDocument = useCallback(async (name: string, email: string, message?: string) => {
     try {
       await setDoc(doc(db, 'emails', nanoid()), {
@@ -51,47 +38,11 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
     }
   }, [db])
 
-  // TODO: only for debugging
-  // useEffect(() => {
-  //   const handleKeyDown = (e: KeyboardEvent) => {
-  //     if (e.key === 'd') {
-  //       createEmailDocument('alex', 'alex@test.com', 'Hmmm, that\'s funny')
-  //     }
-  //   }
-
-  //   if (window) {
-  //     window.addEventListener('keydown', handleKeyDown)
-  //   }
-
-  //   return () => window.removeEventListener('keydown', handleKeyDown)
-  // }, [])
-
-  // TODO: only for debugging
-  // useEffect(() => {
-  //   if (db) {
-  //     getAllEmails()
-  //   }
-  // }, [db])
-
-  // TODO: only for debugging
-  // useEffect(() => {
-  //   if (emails) {
-  //     console.log(emails)
-  //   }
-  // }, [emails])
-
-  const fetchAllEmailDocuments = useCallback(() => {
-    if (db) {
-      getAllEmails()
-    }
-  }, [db, getAllEmails])
-
   const value: FirestoreContext = useMemo(
     () => ({
       createEmailDocument,
-      fetchAllEmailDocuments
     }),
-    [createEmailDocument, fetchAllEmailDocuments]
+    [createEmailDocument]
   )
   return <ctx.Provider value={value}>{props.children}</ctx.Provider>
 }
