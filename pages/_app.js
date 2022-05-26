@@ -1,7 +1,7 @@
 // pages/_app.js
+import { FirestoreProvider } from '../contexts/firestore'
 
 import '../styles/styles.css'
-import { FirestoreProvider } from '../contexts/firestore'
 
 export default function MyApp({ Component, pageProps }) {
   return (
