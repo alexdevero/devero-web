@@ -8,6 +8,7 @@
     "jsx": true
   },
   "plugins": [
+    // "eslint-plugin-local-rules",
     "@typescript-eslint",
     "import",
     // "node",
@@ -42,7 +43,7 @@
     "computed-property-spacing": ["error", "never"],
     "constructor-super": "error",
     "curly": ["error", "multi-line"],
-    "eol-last": ["warn", "always"],
+    // "local-rules/eol-last": ["warn", "always"],
     "eqeqeq": "warn",
     "func-call-spacing": ["error", "never"],
     "generator-star-spacing": ["error", { "before": true, "after": true }],
