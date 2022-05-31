@@ -175,8 +175,8 @@
       "block": { "balanced": true, "markers": ["*package", "!", ",", ":", "::", "flow-include"], "exceptions": ["*"] }
     }],
     // "sort-imports": ["warn", { "ignoreCase": true }],
-    "sort-keys": "warn",
-    "sort-vars": "warn",
+    // "sort-keys": "warn",
+    // "sort-vars": "warn",
     "strict": ["error", "global"],
     "symbol-description": "error",
     "template-curly-spacing": ["error", "never"],
