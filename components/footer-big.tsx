@@ -51,6 +51,12 @@ export const FooterBig = memo(() => (
                 </li> */}
 
                 <li className="nav-item">
+                  <Link href="/changelog/">
+                    <a className="nav-link p-1">Changelog</a>
+                  </Link>
+                </li>
+
+                <li className="nav-item">
                   <a className="nav-link p-1" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
                     Blog
                   </a>
