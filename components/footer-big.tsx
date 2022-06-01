@@ -73,6 +73,12 @@ export const FooterBig = memo(() => (
                     <a className="nav-link p-1">Terms &amp; conditions</a>
                   </Link>
                 </li>
+
+                <li className="nav-item">
+                  <Link href="/admin/">
+                    <a className="nav-link p-1">Admin</a>
+                  </Link>
+                </li>
               </ul>
             </div>
 

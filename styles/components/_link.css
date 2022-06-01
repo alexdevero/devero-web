@@ -1,0 +1,14 @@
+.link {
+  text-decoration: none;
+  color: #000;
+  transition: opacity var(--tran-duration) var(--tran-timing);
+}
+
+.link:hover {
+  opacity: .25;
+  cursor: pointer;
+}
+
+.link-underline {
+  text-decoration: underline;
+}
