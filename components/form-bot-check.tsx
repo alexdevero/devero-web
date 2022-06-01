@@ -8,9 +8,10 @@ interface FormBotCheckProps {
 }
 
 export const FormBotCheck = memo((props: FormBotCheckProps) => {
+  const { onChange } = props
   const onClick = useCallback(() => {
-    props.onChange('bot', '')
-  }, [props.onChange])
+    onChange('bot', '')
+  }, [onChange])
 
   return (
     <div className="d-none" aria-hidden="true">

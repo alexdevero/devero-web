@@ -53,6 +53,7 @@ const Contact = memo(() => {
         email,
         message,
         name,
+      // eslint-disable-next-line no-console
       }).catch(e => console.log(e))
 
       if (isFormValid) {
@@ -66,6 +67,7 @@ const Contact = memo(() => {
             setEmailError(false)
             setEmailSent(true)
           })
+          // eslint-disable-next-line no-console
           .catch(e => console.log(e))
       } else {
         if (name.length === 0) {

@@ -1,4 +1,3 @@
-// import { FirebaseApp } from 'firebase/app'
 import { collection, getFirestore, setDoc, doc, getDocs } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
 import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from 'react'
@@ -31,8 +30,10 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
         name: name,
       })
 
+      // eslint-disable-next-line no-console
       console.log('Document created.')
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log(e)
     }
   }, [db])
@@ -45,6 +46,7 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
       querySnapshot.forEach((doc) => emails.push({ [doc.id]: doc.data() } as EmailRecord))
       return emails
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.log(e)
     }
   }, [db])

@@ -21,8 +21,9 @@ const Dashboard = memo(() => {
       .then(emails => {
         setEmails(emails)
       })
+      // eslint-disable-next-line no-console
       .catch(e => console.log(e))
-  }, [])
+  }, [getAllEmails])
 
   return (
     <Layout title="Admin dashboard | Devero">
