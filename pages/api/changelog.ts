@@ -20,7 +20,7 @@ const changelog: ChangelogItem[] = [
   }
 ]
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.json({
     code: HttpCodes.OK,
     data: changelog,
