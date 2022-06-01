@@ -7,7 +7,7 @@ interface FormInputProps {
   id: string;
   label: string;
   required?: boolean;
-  type: 'text';
+  type: 'text' | 'password';
   value: string;
   onChange: (fieldName: string, value: string) => void;
 }
