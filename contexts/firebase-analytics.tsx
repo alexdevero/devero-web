@@ -1,8 +1,9 @@
-import { FC, ReactNode, createContext, useMemo, useContext, useEffect, useState } from 'react'
-import { Analytics, getAnalytics } from 'firebase/analytics'
+import { FC, ReactNode, createContext, useMemo, useContext, useEffect, useState, useCallback } from 'react'
+import { Analytics, getAnalytics, logEvent } from 'firebase/analytics'
 
 export interface FirebaseAnalyticsContext {
   analytics: Analytics;
+  handleLogViewEvent: (screenName: string, componentName: string) => void;
 }
 
 const ctx = createContext<FirebaseAnalyticsContext | undefined>(undefined)
@@ -15,6 +16,15 @@ export interface FirebaseAnalyticsProviderProps {
 export const FirebaseAnalyticsProvider: FC<FirebaseAnalyticsProviderProps> = (props) => {
   const [analytics, setAnalytics] = useState<Analytics>()
 
+  const handleLogViewEvent = useCallback((screenName: string, componentName: string) => {
+    if (analytics) {
+      logEvent(analytics, 'screen_view', {
+        firebase_screen: screenName,
+        firebase_screen_class: componentName
+      })
+    }
+  }, [analytics])
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
       setAnalytics(getAnalytics())
@@ -24,8 +34,9 @@ export const FirebaseAnalyticsProvider: FC<FirebaseAnalyticsProviderProps> = (pr
   const value: FirebaseAnalyticsContext = useMemo(
     () => ({
       analytics,
+      handleLogViewEvent,
     }),
-    [analytics]
+    [analytics, handleLogViewEvent]
   )
   return <ctx.Provider value={value}>{props.children}</ctx.Provider>
 }
