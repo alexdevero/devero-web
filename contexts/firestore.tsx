@@ -1,4 +1,4 @@
-import { collection, getFirestore, setDoc, doc, getDocs } from 'firebase/firestore'
+import { collection, getFirestore, setDoc, doc, getDocs, deleteDoc } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
 import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from 'react'
 
@@ -10,6 +10,7 @@ import { logger } from '../utils/logger'
 
 export interface FirestoreContext {
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;
+  deleteEmailDocument: (documentId: string) => Promise<boolean>;
   getAllEmails: () => Promise<EmailRecord[]>;
 }
 
@@ -50,12 +51,24 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
     }
   }, [db])
 
+  const deleteEmailDocument = useCallback(async (documentId: string) => {
+    try {
+      await deleteDoc(doc(db, 'emails', documentId))
+      await getAllEmails()
+      return true
+    } catch (e) {
+      logger(e, 'log')
+      return false
+    }
+  }, [db])
+
   const value: FirestoreContext = useMemo(
     () => ({
       createEmailDocument,
+      deleteEmailDocument,
       getAllEmails,
     }),
-    [createEmailDocument, getAllEmails]
+    [createEmailDocument, getAllEmails, deleteEmailDocument]
   )
   return <ctx.Provider value={value}>{props.children}</ctx.Provider>
 }

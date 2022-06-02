@@ -8,7 +8,7 @@ import { PageHeader } from '../../components/page-header'
 import { useFirebaseAuth } from '../../contexts/firebase-auth'
 
 const AdminLogin = memo(() => {
-  const { handleSignIn } = useFirebaseAuth()
+  const { authenticatedUser, handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [usernameError, setUsernameError] = useState(false)
@@ -57,6 +57,12 @@ const AdminLogin = memo(() => {
 
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [handleLogin])
+
+  useEffect(() => {
+    if (authenticatedUser) {
+      Router.push('/admin/dashboard')
+    }
+  }, [authenticatedUser])
 
   return (
     <Layout title="Admin login | Devero">

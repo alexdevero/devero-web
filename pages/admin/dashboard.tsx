@@ -12,7 +12,7 @@ import { EmailRecord } from '../../types/firestore'
 import { logger } from '../../utils/logger'
 
 const Dashboard = memo(() => {
-  const { getAllEmails } = useFirestore()
+  const { deleteEmailDocument, getAllEmails } = useFirestore()
   const { handleSignOut } = useFirebaseAuth()
 
   const [emails, setEmails] = useState<EmailRecord[]>([])
@@ -52,6 +52,8 @@ const Dashboard = memo(() => {
                 return (
                   <li key={id}>
                     {emailData.email}: {emailData.message}
+
+                    <span onClick={() => deleteEmailDocument(id)}>&times;</span>
                   </li>
                 )
               })}

@@ -14,7 +14,7 @@ export interface FirebaseAuthContext {
 }
 
 const ctx = createContext<FirebaseAuthContext | undefined>(undefined)
-ctx.displayName = 'Firebase'
+ctx.displayName = 'FirebaseAuth'
 
 export interface FirebaseAuthProviderProps {
   children?: ReactNode;
