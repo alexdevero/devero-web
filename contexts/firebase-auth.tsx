@@ -1,5 +1,7 @@
 import { Auth, getAuth, signInWithEmailAndPassword, signOut, User } from 'firebase/auth'
-import { FC, ReactNode, createContext, useMemo, useContext, useState, useCallback } from 'react'
+import { FC, ReactNode, createContext, useMemo, useContext, useState, useCallback, useEffect } from 'react'
+
+import { useStorage } from './storage'
 
 import { logger } from '../utils/logger'
 
@@ -22,6 +24,8 @@ export interface FirebaseAuthProviderProps {
 
 export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
   const auth = getAuth()
+  const { getStorageItem, deleteStorageItem, setStorageItem } = useStorage()
+
   const [user, setUser] = useState(undefined)
 
   const handleSignIn = useCallback(async (username: string, password: string) => {
@@ -29,6 +33,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
       try {
         const userCredential = await signInWithEmailAndPassword(auth, username, password)
         setUser(userCredential.user)
+        setStorageItem('auth', JSON.stringify(userCredential.user), 'local')
 
         return userCredential.user
       } catch (e) {
@@ -39,17 +44,29 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
         }
       }
     }
-  }, [auth])
+  }, [auth, setStorageItem])
 
   const handleSignOut = useCallback(async () => {
     try {
       await signOut(auth)
+      deleteStorageItem('auth', 'local')
       return true
     } catch (e) {
       logger(`${e.code}, ${e.message}`, 'log')
       return false
     }
-  }, [auth])
+  }, [auth, deleteStorageItem])
+
+  useEffect(() => {
+    const loadUserData = async () => {
+      const user = await getStorageItem('auth', 'local')
+      if (user) setUser(JSON.parse(user as string))
+    }
+    if (!user) {
+      loadUserData()
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const value: FirebaseAuthContext = useMemo(
     () => ({

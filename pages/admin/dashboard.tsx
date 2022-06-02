@@ -6,6 +6,7 @@ import { PageHeader } from '../../components/page-header'
 
 import { useFirebaseAuth } from '../../contexts/firebase-auth'
 import { useFirestore } from '../../contexts/firestore'
+import { useStorage } from '../../contexts/storage'
 
 import { EmailRecord } from '../../types/firestore'
 
@@ -13,7 +14,8 @@ import { logger } from '../../utils/logger'
 
 const Dashboard = memo(() => {
   const { deleteEmailDocument, getAllEmails } = useFirestore()
-  const { handleSignOut } = useFirebaseAuth()
+  const { authenticatedUser, handleSignOut } = useFirebaseAuth()
+  const { getStorageItem } = useStorage()
 
   const [emails, setEmails] = useState<EmailRecord[]>([])
 
@@ -32,6 +34,15 @@ const Dashboard = memo(() => {
       })
       .catch(e => logger(e, 'log'))
   }, [getAllEmails])
+
+  useEffect(() => {
+    (async () => {
+      const localUserData = await getStorageItem('auth', 'local')
+      if (!authenticatedUser && !localUserData) {
+        Router.push('/admin/')
+      }
+    })()
+  }, [authenticatedUser, getStorageItem])
 
   return (
     <Layout title="Admin dashboard | Devero">
