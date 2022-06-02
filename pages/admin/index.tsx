@@ -7,6 +7,8 @@ import { PageHeader } from '../../components/page-header'
 
 import { useFirebaseAuth } from '../../contexts/firebase-auth'
 
+import { routes } from '../../data/routes'
+
 const AdminLogin = memo(() => {
   const { authenticatedUser, handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
@@ -38,7 +40,7 @@ const AdminLogin = memo(() => {
         setUsernameError(false)
         setPasswordError(false)
 
-        Router.push('/admin/dashboard')
+        Router.push(routes.adminDashboard)
       } else {
         setUsernameError(true)
         setPasswordError(true)
@@ -60,7 +62,7 @@ const AdminLogin = memo(() => {
 
   useEffect(() => {
     if (authenticatedUser) {
-      Router.push('/admin/dashboard')
+      Router.push(routes.adminDashboard)
     }
   }, [authenticatedUser])
 

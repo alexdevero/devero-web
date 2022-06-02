@@ -10,6 +10,8 @@ import { useStorage } from '../../contexts/storage'
 
 import { EmailRecord } from '../../types/firestore'
 
+import { routes } from '../../data/routes'
+
 import { logger } from '../../utils/logger'
 
 const Dashboard = memo(() => {
@@ -23,7 +25,7 @@ const Dashboard = memo(() => {
     const signOutSuccess = await handleSignOut()
 
     if (signOutSuccess) {
-      Router.push('/')
+      Router.push(routes.root)
     }
   }, [handleSignOut])
 
@@ -39,7 +41,7 @@ const Dashboard = memo(() => {
     (async () => {
       const localUserData = await getStorageItem('auth', 'local')
       if (!authenticatedUser && !localUserData) {
-        Router.push('/admin/')
+        Router.push(routes.adminLogin)
       }
     })()
   }, [authenticatedUser, getStorageItem])
