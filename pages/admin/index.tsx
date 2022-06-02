@@ -4,9 +4,13 @@ import Router from 'next/router'
 import { FormInput } from '../../components/form-input'
 import { Layout } from '../../components/layout'
 import { PageHeader } from '../../components/page-header'
+
+import { useFirebaseAuth } from '../../contexts/firebase-auth'
+
 import { adminCredentials } from '../../data/admin-credentials'
 
 const AdminLogin = memo(() => {
+  const { handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [usernameError, setUsernameError] = useState(false)
@@ -18,7 +22,7 @@ const AdminLogin = memo(() => {
   const handlePasswordChange = useCallback((field: string, value: string) => {
     setPassword(value)
   }, [])
-  const handleLogin = useCallback(() => {
+  const handleLogin = useCallback(async () => {
     if (username.length === 0 && password.length === 0) {
       setUsernameError(true)
       setPasswordError(true)
@@ -30,7 +34,9 @@ const AdminLogin = memo(() => {
       setUsernameError(false)
       setPasswordError(false)
 
-      if (adminCredentials.username === username && adminCredentials.password === password) {
+      const signInSuccess = await handleSignIn(username, password)
+
+      if (signInSuccess) {
         setUsernameError(false)
         setPasswordError(false)
 
@@ -45,7 +51,7 @@ const AdminLogin = memo(() => {
         }
       }
     }
-  }, [username, password])
+  }, [username, password, handleSignIn])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

@@ -3,18 +3,25 @@ import { memo, useCallback, useEffect, useState } from 'react'
 
 import { Layout } from '../../components/layout'
 import { PageHeader } from '../../components/page-header'
+
+import { useFirebaseAuth } from '../../contexts/firebase-auth'
 import { useFirestore } from '../../contexts/firestore'
 
 import { EmailRecord } from '../../types/firestore'
 
 const Dashboard = memo(() => {
   const { getAllEmails } = useFirestore()
+  const { handleSignOut } = useFirebaseAuth()
 
   const [emails, setEmails] = useState<EmailRecord[]>([])
 
-  const handleLeaveClick = useCallback(() => {
-    Router.push('/')
-  }, [])
+  const handleLeaveClick = useCallback(async () => {
+    const signOutSuccess = await handleSignOut()
+
+    if (signOutSuccess) {
+      Router.push('/')
+    }
+  }, [handleSignOut])
 
   useEffect(() => {
     getAllEmails()
