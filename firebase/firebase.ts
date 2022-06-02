@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app'
 // import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check'
-import { getAnalytics } from 'firebase/analytics'
+// import { getAnalytics } from 'firebase/analytics'
 
 export const createFirebaseApp = () => {
   const clientCredentials = {
@@ -24,12 +24,12 @@ export const createFirebaseApp = () => {
     // })
 
     // Check that `window` is in scope for the analytics module!
-    if (typeof window !== 'undefined') {
-      // Enable analytics. https://firebase.google.com/docs/analytics/get-started
-      if ('measurementId' in clientCredentials) {
-        getAnalytics()
-      }
-    }
+    // if (typeof window !== 'undefined') {
+    //   // Enable analytics. https://firebase.google.com/docs/analytics/get-started
+    //   if ('measurementId' in clientCredentials) {
+    //     getAnalytics()
+    //   }
+    // }
 
     return app
   }

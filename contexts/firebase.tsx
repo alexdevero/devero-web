@@ -4,7 +4,7 @@ import { FC, ReactNode, createContext, useMemo, useContext } from 'react'
 import { createFirebaseApp } from '../firebase/firebase'
 
 export interface FirebaseContext {
-  firebaseApp: FirebaseApp
+  firebaseApp: FirebaseApp;
 }
 
 const ctx = createContext<FirebaseContext | undefined>(undefined)

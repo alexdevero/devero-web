@@ -1,4 +1,3 @@
-import { FirebaseApp } from 'firebase/app'
 import { collection, getFirestore, setDoc, doc, getDocs } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
 import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from 'react'
