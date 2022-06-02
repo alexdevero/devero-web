@@ -1,8 +1,9 @@
+import { FirebaseApp } from 'firebase/app'
 import { collection, getFirestore, setDoc, doc, getDocs } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
 import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from 'react'
 
-import { createFirebaseApp } from '../firebase/firebase'
+import { useFirebase } from './firebase'
 
 import { EmailRecord } from '../types/firestore'
 
@@ -19,8 +20,8 @@ export interface FirestoreProviderProps {
 }
 
 export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
-  const app = createFirebaseApp()
-  const db = getFirestore(app)
+  const { firebaseApp } = useFirebase()
+  const db = getFirestore(firebaseApp)
 
   const createEmailDocument = useCallback(async (name: string, email: string, message?: string) => {
     try {
