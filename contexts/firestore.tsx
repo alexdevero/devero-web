@@ -60,7 +60,7 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
       logger(e, 'log')
       return false
     }
-  }, [db])
+  }, [db, getAllEmails])
 
   const value: FirestoreContext = useMemo(
     () => ({
