@@ -39,24 +39,28 @@ const Dashboard = memo(() => {
       <div className="pb-3 text-center">
         <p>Email count: {emails?.length}</p>
 
-        <p>Emails:</p>
+        {emails?.length > 0 ? (
+          <>
+            <p>Emails:</p>
 
-        {emails?.length > 0 && (
-          <ul>
-            {emails.map((e) => {
-              const id = Object.keys(e)?.[0]
-              const emailData = Object.values(e)?.[0]
+            <ul>
+              {emails.map((e) => {
+                const id = Object.keys(e)?.[0]
+                const emailData = Object.values(e)?.[0]
 
-              return (
-                <li key={id}>
-                  {emailData.email}: {emailData.message}
-                </li>
-              )
-            })}
-          </ul>
+                return (
+                  <li key={id}>
+                    {emailData.email}: {emailData.message}
+                  </li>
+                )
+              })}
+            </ul>
+          </>
+        ) : (
+          <p>No emails found.</p>
         )}
 
-        <p><span className="link link-underline" onClick={handleLeaveClick}>Leave</span></p>
+        <p><span className="link link-underline" onClick={handleLeaveClick}>&larr; Leave</span></p>
       </div>
     </Layout>
   )
