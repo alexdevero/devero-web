@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from 'react'
+import { memo, useCallback, useEffect, useState } from 'react'
 import Router from 'next/router'
 
 import { FormInput } from '../../components/form-input'
@@ -46,6 +46,18 @@ const AdminLogin = memo(() => {
       }
     }
   }, [username, password])
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === 'enter') {
+        handleLogin()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [handleLogin])
 
   return (
     <Layout title="Admin login | Devero">
