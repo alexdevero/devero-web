@@ -1,6 +1,8 @@
 import { Auth, getAuth, signInWithEmailAndPassword, signOut, User } from 'firebase/auth'
 import { FC, ReactNode, createContext, useMemo, useContext, useState, useCallback } from 'react'
 
+import { logger } from '../utils/logger'
+
 export interface FirebaseAuthContext {
   firebaseAuth: Auth;
   authenticatedUser: User;
@@ -30,8 +32,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
 
         return userCredential.user
       } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log(e.code, e.message)
+        logger(`${e.code}, ${e.message}`, 'log')
         return {
           code: e.code,
           message: e.message
@@ -45,8 +46,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
       await signOut(auth)
       return true
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.log(e.code, e.message)
+      logger(`${e.code}, ${e.message}`, 'log')
       return false
     }
   }, [auth])

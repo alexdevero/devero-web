@@ -6,6 +6,8 @@ import { useFirebase } from './firebase'
 
 import { EmailRecord } from '../types/firestore'
 
+import { logger } from '../utils/logger'
+
 export interface FirestoreContext {
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;
   getAllEmails: () => Promise<EmailRecord[]>;
@@ -30,11 +32,9 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
         name: name,
       })
 
-      // eslint-disable-next-line no-console
-      console.log('Document created.')
+      logger('Document created.', 'log')
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.log(e)
+      logger(e, 'log')
     }
   }, [db])
 
@@ -46,8 +46,7 @@ export const FirestoreProvider: FC<FirestoreProviderProps> = (props) => {
       querySnapshot.forEach((doc) => emails.push({ [doc.id]: doc.data() } as EmailRecord))
       return emails
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.log(e)
+      logger(e, 'log')
     }
   }, [db])
 

@@ -9,6 +9,8 @@ import { useFirestore } from '../../contexts/firestore'
 
 import { EmailRecord } from '../../types/firestore'
 
+import { logger } from '../../utils/logger'
+
 const Dashboard = memo(() => {
   const { getAllEmails } = useFirestore()
   const { handleSignOut } = useFirebaseAuth()
@@ -28,8 +30,7 @@ const Dashboard = memo(() => {
       .then(emails => {
         setEmails(emails)
       })
-      // eslint-disable-next-line no-console
-      .catch(e => console.log(e))
+      .catch(e => logger(e, 'log'))
   }, [getAllEmails])
 
   return (

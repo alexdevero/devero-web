@@ -6,6 +6,8 @@ import { HttpCodes } from '../types/http-codes'
 import { Layout } from './../components/layout'
 import { PageHeader } from './../components/page-header'
 
+import { logger } from '../utils/logger'
+
 const Changelog = memo(() => {
   const [changelog, setChangelog] = useState<ChangelogItem[]>([])
 
@@ -19,7 +21,7 @@ const Changelog = memo(() => {
           setChangelog(data.data)
         }
       } catch (e) {
-        console.error(e)
+        logger(e, 'log')
       }
     }
 

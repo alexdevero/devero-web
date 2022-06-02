@@ -10,6 +10,8 @@ import { FormBotCheck } from '../components/form-bot-check'
 
 import { useFirestore } from '../contexts/firestore'
 
+import { logger } from '../utils/logger'
+
 const formSchema = yup.object().shape({
   email: yup.string().email().required(),
   message: yup.string(),
@@ -53,8 +55,7 @@ const Contact = memo(() => {
         email,
         message,
         name,
-      // eslint-disable-next-line no-console
-      }).catch(e => console.log(e))
+      }).catch(e => logger(e, 'log'))
 
       if (isFormValid) {
         createEmailDocument(name, email, message)
@@ -67,8 +68,7 @@ const Contact = memo(() => {
             setEmailError(false)
             setEmailSent(true)
           })
-          // eslint-disable-next-line no-console
-          .catch(e => console.log(e))
+          .catch(e => logger(e, 'info'))
       } else {
         if (name.length === 0) {
           setNameError(true)
