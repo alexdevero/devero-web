@@ -4,7 +4,7 @@
   "description": "Repository for DEVERO Corporation website on devero.xyz.",
   "private": true,
   "engines": {
-    "node": ">=16.x",
+    "node": "16.x",
     "npm": ">=8.0.0",
     "yarn": ">=1.12.0"
   },
