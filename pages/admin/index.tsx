@@ -7,8 +7,6 @@ import { PageHeader } from '../../components/page-header'
 
 import { useFirebaseAuth } from '../../contexts/firebase-auth'
 
-import { adminCredentials } from '../../data/admin-credentials'
-
 const AdminLogin = memo(() => {
   const { handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
@@ -42,13 +40,8 @@ const AdminLogin = memo(() => {
 
         Router.push('/admin/dashboard')
       } else {
-        if (adminCredentials.username !== username) {
-          setUsernameError(true)
-        }
-
-        if (adminCredentials.password !== password) {
-          setPasswordError(true)
-        }
+        setUsernameError(true)
+        setPasswordError(true)
       }
     }
   }, [username, password, handleSignIn])
