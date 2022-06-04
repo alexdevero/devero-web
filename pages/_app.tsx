@@ -1,3 +1,4 @@
+import { NextComponentType, GetStaticProps } from 'next'
 import { Toaster } from 'react-hot-toast'
 
 import { FirestoreProvider } from '../contexts/firestore'
@@ -9,7 +10,7 @@ import { ToastProvider } from '../contexts/toasts'
 
 import '../styles/styles.css'
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
   return (
     <ToastProvider>
       <StorageProvider>
