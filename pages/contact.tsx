@@ -9,6 +9,7 @@ import { TextArea } from '../components/text-area'
 import { FormBotCheck } from '../components/form-bot-check'
 
 import { useFirestore } from '../contexts/firestore'
+import { useToast } from '../contexts/toasts'
 
 import { logger } from '../utils/logger'
 
@@ -20,6 +21,7 @@ const formSchema = yup.object().shape({
 
 const Contact = memo(() => {
   const { createEmailDocument } = useFirestore()
+  const { handleToastShow } = useToast()
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -67,6 +69,7 @@ const Contact = memo(() => {
             setNameError(false)
             setEmailError(false)
             setEmailSent(true)
+            handleToastShow('Thank you for contacting us. We will contact you soon.', 'vulcanSalute')
           })
           .catch(e => logger(e, 'info'))
       } else {
@@ -79,7 +82,7 @@ const Contact = memo(() => {
         }
       }
     }
-  }, [bot, createEmailDocument, email, message, name])
+  }, [bot, createEmailDocument, email, handleToastShow, message, name])
 
   return (
     <Layout title="Contact | Devero">

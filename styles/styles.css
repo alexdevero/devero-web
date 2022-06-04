@@ -15,6 +15,7 @@
 @import '/components/_header.css';
 @import '/components/_link.css';
 @import '/components/_timer.css';
+@import '/components/_toast.css';
 
 /* Pages */
 @import '/pages/_page-about.css';
