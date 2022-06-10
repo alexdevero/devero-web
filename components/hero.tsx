@@ -8,7 +8,7 @@ export const Hero = memo(() => (
 
         <h1 className="h4 display mb-2">Next-level digital<br /> products and solutions</h1>
 
-        <p className="body1 font-weight-normal">We are a full-stack software studio that builds digital products and solutions for customer-centric companies.</p>
+        <p className="body1 lead">We are a full-stack software studio that builds digital products and solutions for customer-centric companies, optimized for user experience and performance.</p>
       </div>
     </div>
   </div>
