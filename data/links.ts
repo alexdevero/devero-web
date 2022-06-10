@@ -6,6 +6,6 @@ export const socialMediaLinks = {
 }
 
 export const personalLinks = {
-  blog: 'https://www.blog.alexdevero.com',
+  blog: 'https://blog.alexdevero.com',
   mailto: 'mailto:hello@devero.io'
 }
