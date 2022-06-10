@@ -3,12 +3,12 @@ import { memo } from 'react'
 export const Hero = memo(() => (
   <div className="hero jumbotron bg-white px-0">
     <div className="row py-5">
-      <div className="col-md-8 col-lg-6">
+      <div className="col-md-8 col-lg-7">
         {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
 
-        <h2 className="display-4 mb-2">We build products people love</h2>
+        <h1 className="h4 display mb-2">Next-level digital<br /> products and solutions</h1>
 
-        <p className="h5 font-weight-normal">90% of start-ups fail. One thing that can cause failure is product. We will help you create and deliver product your users will love. With our expertise, you can improve the odds of success and be part of those 10% that succeed.</p>
+        <p className="body1 font-weight-normal">We are a full-stack software studio that builds digital products and solutions for customer-centric companies.</p>
       </div>
     </div>
   </div>

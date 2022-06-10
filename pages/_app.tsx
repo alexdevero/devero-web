@@ -8,7 +8,7 @@ import { FirebaseAuthProvider } from '../contexts/firebase-auth'
 import { StorageProvider } from '../contexts/storage'
 import { ToastProvider } from '../contexts/toasts'
 
-import '../styles/styles.css'
+import '../styles/styles.scss'
 
 export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
   return (

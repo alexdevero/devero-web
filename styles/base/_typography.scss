@@ -43,7 +43,7 @@ h6,
 .h6 {
   margin: 0;
   padding: 0;
-  line-height: 1.618;
+  line-height: 1.382;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
   color: inherit;
@@ -64,39 +64,43 @@ h6:not(:last-child),
   margin-bottom: 16px;
 }
 
-/* .h1 {
-  font-size: 11.391rem;
+.h1 {
+  font-size: 5rem;
 }
 
 .h2 {
-  font-size: 7.594rem;
+  font-size: 4.5rem;
 }
 
 .h3 {
-  font-size: 5.063rem;
+  font-size: 4rem;
 }
 
 .h4 {
-  font-size: 3.375rem;
+  font-size: 3.5rem;
 }
 
 .h5 {
-  font-size: 2.25rem;
+  font-size: 3rem;
 }
 
 .h6 {
-  font-size: 1.5rem;
-} */
+  font-size: 2.5rem;
+}
 
 .body1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .body2 {
-  font-size: 0.667rem;
+  font-size: 1rem;
 }
 
 .body3 {
+  font-size: 0.667rem;
+}
+
+.body4 {
   font-size: 0.444rem;
 }
 

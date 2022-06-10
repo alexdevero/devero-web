@@ -11,7 +11,7 @@ export const FooterBig = memo(() => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-5">
-            <p className="m-0 h5">Say hello at <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
+            <p className="m-0 body2 font-weight-bold">Say hello at <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
 
             <ul className="nav mt-1 mb-1 d-flex justify-content-flex-start">
               <li className="nav-item">
@@ -45,7 +45,7 @@ export const FooterBig = memo(() => {
             <div className="row">
               <div className="col-md-6">
                 <ul className="nav d-flex flex-column small">
-                  <li className="h5 nav-item">Links</li>
+                  <li className="body2 font-weight-bold nav-item">Links</li>
 
                   {/* <li className="nav-item">
                     <Link href="/about-us/">
@@ -87,7 +87,7 @@ export const FooterBig = memo(() => {
 
               <div className="col-md-6 mt-md-down-2">
                 <ul className="nav d-flex flex-column small">
-                  <li className="h5 nav-item p-1">Prague</li>
+                  <li className="body2 font-weight-bold nav-item p-1">Prague</li>
 
                   <li className="nav-item p-1">Pankrác</li>
 
