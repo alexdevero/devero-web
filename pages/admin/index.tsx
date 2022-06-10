@@ -1,5 +1,6 @@
 import { memo, useCallback, useEffect, useState } from 'react'
 import Router from 'next/router'
+import { useIntl } from 'react-intl'
 
 import { FormInput } from '../../components/form-input'
 import { Layout } from '../../components/layout'
@@ -10,6 +11,8 @@ import { useFirebaseAuth } from '../../contexts/firebase-auth'
 import { routes } from '../../data/routes'
 
 const AdminLogin = memo(() => {
+  const intl = useIntl()
+
   const { authenticatedUser, handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -68,7 +71,7 @@ const AdminLogin = memo(() => {
 
   return (
     <Layout title="Admin login | Devero">
-      <PageHeader title="Admin login" />
+      <PageHeader title={intl.formatMessage({ defaultMessage: 'Admin login' })} />
 
       <div className="row justify-content-center pb-3">
         <div className="col-md-8 col-lg-5">
@@ -78,7 +81,7 @@ const AdminLogin = memo(() => {
               fieldName="username"
               label="Username"
               value={username}
-              errorMessage="Incorrect username or password"
+              errorMessage={intl.formatMessage({ defaultMessage: 'Incorrect username or password' })}
               hasError={usernameError}
               type="text"
               onChange={handleUsernameChange}
@@ -91,7 +94,7 @@ const AdminLogin = memo(() => {
               fieldName="password"
               label="Password"
               value={password}
-              errorMessage="Incorrect username or password"
+              errorMessage={intl.formatMessage({ defaultMessage: 'Incorrect username or password' })}
               hasError={passwordError}
               type="password"
               onChange={handlePasswordChange}
@@ -99,7 +102,7 @@ const AdminLogin = memo(() => {
           </div>
 
           <div className="mt-1">
-            <button type="button" className="btn" onClick={handleLogin}>Login</button>
+            <button type="button" className="btn" onClick={handleLogin}>{intl.formatMessage({ defaultMessage: 'Login' })}</button>
           </div>
         </div>
       </div>

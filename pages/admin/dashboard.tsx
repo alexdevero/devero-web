@@ -1,5 +1,6 @@
 import Router from 'next/router'
 import { memo, useCallback, useEffect, useState } from 'react'
+import { useIntl } from 'react-intl'
 
 import { Layout } from '../../components/layout'
 import { PageHeader } from '../../components/page-header'
@@ -15,6 +16,8 @@ import { routes } from '../../data/routes'
 import { logger } from '../../utils/logger'
 
 const Dashboard = memo(() => {
+  const intl = useIntl()
+
   const { deleteEmailDocument, getAllEmails } = useFirestore()
   const { authenticatedUser, handleSignOut } = useFirebaseAuth()
   const { getStorageItem } = useStorage()
@@ -48,14 +51,14 @@ const Dashboard = memo(() => {
 
   return (
     <Layout title="Admin dashboard | Devero">
-      <PageHeader title="Admin dashboard" />
+      <PageHeader title={intl.formatMessage({ defaultMessage: 'Admin dashboard' })} />
 
       <div className="pb-3 text-center">
-        <p>Email count: {emails?.length}</p>
+        <p>{intl.formatMessage({ defaultMessage: 'Email count' })}: {emails?.length}</p>
 
         {emails?.length > 0 ? (
           <>
-            <p>Emails:</p>
+            <p>{intl.formatMessage({ defaultMessage: 'Emails' })}:</p>
 
             <ul>
               {emails.map((e) => {
@@ -73,10 +76,10 @@ const Dashboard = memo(() => {
             </ul>
           </>
         ) : (
-          <p>No emails found.</p>
+          <p>{intl.formatMessage({ defaultMessage: 'No emails found.' })}</p>
         )}
 
-        <p><span className="link link-underline" onClick={handleLeaveClick}>&larr; Leave</span></p>
+        <p><span className="link link-underline" onClick={handleLeaveClick}>&larr; {intl.formatMessage({ defaultMessage: 'Leave' })}</span></p>
       </div>
     </Layout>
   )

@@ -1,15 +1,24 @@
 import { memo } from 'react'
+import { useIntl } from 'react-intl'
 
-export const Hero = memo(() => (
-  <div className="hero jumbotron bg-white px-0">
-    <div className="row py-5">
-      <div className="col-md-8 col-lg-7">
-        {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
+export const Hero = memo(() => {
+  const intl = useIntl()
 
-        <h1 className="h4 display mb-2">Next-level digital<br /> products and solutions</h1>
+  return (
+    <div className="hero jumbotron bg-white px-0">
+      <div className="row py-5">
+        <div className="col-md-8 col-lg-7">
+          {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
 
-        <p className="body1 lead">We are a full-stack software studio that builds digital products and solutions for customer-centric companies, optimized for user experience and performance.</p>
+          <h1 className="h4 display mb-2">
+            {intl.formatMessage({ defaultMessage: 'Next-level digital{br} products and solutions' }, {
+              br: <br />
+            })}
+          </h1>
+
+          <p className="body1 lead">{intl.formatMessage({ defaultMessage: 'We are a full-stack software studio that builds digital products and solutions for customer-centric companies, optimized for user experience and performance.' })}</p>
+        </div>
       </div>
     </div>
-  </div>
-))
+  )
+})

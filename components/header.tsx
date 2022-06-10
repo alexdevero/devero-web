@@ -1,10 +1,12 @@
 import { useState, memo } from 'react'
 import Link from 'next/link'
+import { useIntl } from 'react-intl'
 
 import { personalLinks } from '../data/links'
 
 export const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
+  const intl = useIntl()
 
   return (
     <header className="header bg-white">
@@ -53,13 +55,13 @@ export const Header = memo(() => {
 
               <li className="nav-item">
                 <Link href="/contact">
-                  <a className="nav-link">Contact us</a>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Contact us' })}</a>
                 </Link>
               </li>
 
               <li className="nav-item">
                 <a className="nav-link" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
-                  Blog
+                  {intl.formatMessage({ defaultMessage: 'Blog' })}
                 </a>
               </li>
             </ul>

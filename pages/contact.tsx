@@ -1,5 +1,6 @@
 import { useCallback, useState, memo } from 'react'
 import sanitizeHtml from 'sanitize-html'
+import { useIntl } from 'react-intl'
 import * as yup from 'yup'
 
 import { Layout } from '../components/layout'
@@ -20,6 +21,7 @@ const formSchema = yup.object().shape({
 })
 
 const Contact = memo(() => {
+  const intl = useIntl();
   const { createEmailDocument } = useFirestore()
   const { handleToastShow } = useToast()
   const [name, setName] = useState('')
@@ -69,7 +71,7 @@ const Contact = memo(() => {
             setNameError(false)
             setEmailError(false)
             setEmailSent(true)
-            handleToastShow('Thank you for contacting us. We will contact you soon.', 'vulcanSalute')
+            handleToastShow(intl.formatMessage({ defaultMessage: 'Thank you for contacting us. We will contact you soon.' }), 'vulcanSalute')
           })
           .catch(e => logger(e, 'info'))
       } else {
@@ -82,17 +84,17 @@ const Contact = memo(() => {
         }
       }
     }
-  }, [bot, createEmailDocument, email, handleToastShow, message, name])
+  }, [bot, createEmailDocument, email, handleToastShow, intl, message, name])
 
   return (
     <Layout title="Contact | Devero">
-      <PageHeader title="Contact us" />
+      <PageHeader title={intl.formatMessage({ defaultMessage: 'Contact us' })} />
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6 text-center">
-          <p>Do you have an idea you want to build? Whether it is a product or a new start-up, we can help you with both. Let&apos;s get in touch and get your idea off the ground.</p>
+          <p>{intl.formatMessage({ defaultMessage: 'Do you have an idea you want to build? Whether it is a product or a new start-up, we can help you with both. Let&apos;s get in touch and get your idea off the ground.'})}</p>
 
-          <p>If you have a question about product or startup development send as a message as well. We will do our best to help.</p>
+          <p>{intl.formatMessage({ defaultMessage: 'If you have a question about product or startup development send as a message as well. We will do our best to help.'})}</p>
         </div>
       </div>
 
@@ -103,12 +105,12 @@ const Contact = memo(() => {
               <div className="col-md-6 mb-md-down-1">
                 <FormInput
                   id="formName"
-                  label="Full name:"
+                  label={intl.formatMessage({ defaultMessage: 'Full name:' })}
                   fieldName="name"
                   hasError={nameError}
                   value={name}
                   type="text"
-                  errorMessage="Please provide a valid name."
+                  errorMessage={intl.formatMessage({ defaultMessage: 'Please provide a valid name.' })}
                   onChange={updateState}
                 />
               </div>
@@ -117,11 +119,11 @@ const Contact = memo(() => {
                 <FormInput
                   id="formEmail"
                   fieldName="email"
-                  label="Email:"
+                  label={intl.formatMessage({ defaultMessage: 'Email:' })}
                   hasError={emailError}
                   value={email}
                   type="text"
-                  errorMessage="Please provide a valid email."
+                  errorMessage={intl.formatMessage({ defaultMessage: 'Please provide a valid email.' })}
                   onChange={updateState}
                 />
               </div>
@@ -131,14 +133,14 @@ const Contact = memo(() => {
               <TextArea
                 id="formMessage"
                 fieldName="message"
-                label="Message (optional)"
+                label={intl.formatMessage({ defaultMessage: 'Message (optional)' })}
                 value={message}
                 onChange={updateState}
               />
 
               <FormBotCheck
                 id="formBot"
-                label="Are you a bot?"
+                label={intl.formatMessage({ defaultMessage: 'Are you a bot?' })}
                 hasError={nameError}
                 onChange={updateState}
               />
@@ -146,12 +148,12 @@ const Contact = memo(() => {
 
             {emailSent && (
               <div className="mt-2 mb-2">
-                <h5>Thank you for contacting us. We will contact you soon.</h5>
+                <h5>{intl.formatMessage({ defaultMessage: 'Thank you for contacting us. We will contact you soon.' })}</h5>
               </div>
             )}
 
             <div className="mt-1">
-              <button className="btn w-100" type="button" onClick={submitForm}>Send email</button>
+              <button className="btn w-100" type="button" onClick={submitForm}>{intl.formatMessage({ defaultMessage: 'Send email' })}</button>
             </div>
           </div>
         </div>

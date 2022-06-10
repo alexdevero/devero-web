@@ -1,9 +1,12 @@
 import Link from 'next/link'
 import { memo, useMemo } from 'react'
+import { useIntl } from 'react-intl'
 
 import { personalLinks, socialMediaLinks } from '../data/links'
 
 export const FooterBig = memo(() => {
+  const intl = useIntl()
+
   const timeStamp = useMemo(() => new Date().getFullYear(), [])
 
   return (
@@ -11,7 +14,7 @@ export const FooterBig = memo(() => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-5">
-            <p className="m-0 body2 font-weight-bold">Say hello at <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
+            <p className="m-0 body2 font-weight-bold">{intl.formatMessage({ defaultMessage: 'Say hello at' })} <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
 
             <ul className="nav mt-1 mb-1 d-flex justify-content-flex-start">
               <li className="nav-item">
@@ -38,24 +41,24 @@ export const FooterBig = memo(() => {
               </li>
             </ul>
 
-            <p className="mt-1 mb-0 small">&copy;{timeStamp} Devero Corporation. All rights reserved.</p>
+            <p className="mt-1 mb-0 small">&copy;{timeStamp} Devero Corporation. {intl.formatMessage({ defaultMessage: 'All rights reserved.' })}</p>
           </div>
 
           <div className="col-md-6 col-lg-7 mt-md-down-2">
             <div className="row">
               <div className="col-md-6">
                 <ul className="nav d-flex flex-column small">
-                  <li className="body2 font-weight-bold nav-item">Links</li>
+                  <li className="body2 font-weight-bold nav-item">{intl.formatMessage({ defaultMessage: 'Links' })}</li>
 
                   {/* <li className="nav-item">
                     <Link href="/about-us/">
-                      <a className="nav-link p-1">About us</a>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'About us' })}</a>
                     </Link>
                   </li> */}
 
                   <li className="nav-item">
                     <Link href="/changelog/">
-                      <a className="nav-link p-1">Changelog</a>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Changelog' })}</a>
                     </Link>
                   </li>
 
@@ -67,19 +70,19 @@ export const FooterBig = memo(() => {
 
                   <li className="nav-item">
                     <Link href="/privacy-policy/">
-                      <a className="nav-link p-1">Privacy policy</a>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Privacy policy' })}</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/terms-conditions/">
-                      <a className="nav-link p-1">Terms &amp; conditions</a>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Terms and conditions' })}</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
                     <Link href="/admin/">
-                      <a className="nav-link p-1">Admin</a>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Admin' })}</a>
                     </Link>
                   </li>
                 </ul>
@@ -87,13 +90,13 @@ export const FooterBig = memo(() => {
 
               <div className="col-md-6 mt-md-down-2">
                 <ul className="nav d-flex flex-column small">
-                  <li className="body2 font-weight-bold nav-item p-1">Prague</li>
+                  <li className="body2 font-weight-bold nav-item p-1">{intl.formatMessage({ defaultMessage: 'Prague' })}</li>
 
                   <li className="nav-item p-1">Pankrác</li>
 
                   <li className="nav-item p-1">Praha 4, 140 00</li>
 
-                  <li className="nav-item p-1">Czech Republic</li>
+                  <li className="nav-item p-1">{intl.formatMessage({ defaultMessage: 'Czech Republic' })}</li>
 
                   <li className="nav-item p-1"><a href={personalLinks.mailto} className="text-body border-bottom border-dark">hello@devero.io</a></li>
                 </ul>
