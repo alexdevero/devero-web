@@ -21,7 +21,8 @@ const formSchema = yup.object().shape({
 })
 
 const Contact = memo(() => {
-  const intl = useIntl();
+  const intl = useIntl()
+
   const { createEmailDocument } = useFirestore()
   const { handleToastShow } = useToast()
   const [name, setName] = useState('')
@@ -92,9 +93,9 @@ const Contact = memo(() => {
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6 text-center">
-          <p>{intl.formatMessage({ defaultMessage: 'Do you have an idea you want to build? Whether it is a product or a new start-up, we can help you with both. Let&apos;s get in touch and get your idea off the ground.'})}</p>
+          <p>{intl.formatMessage({ defaultMessage: 'Do you have an idea you want to build? Whether it is a product or a new start-up, we can help you with both. Let&apos;s get in touch and get your idea off the ground.' })}</p>
 
-          <p>{intl.formatMessage({ defaultMessage: 'If you have a question about product or startup development send as a message as well. We will do our best to help.'})}</p>
+          <p>{intl.formatMessage({ defaultMessage: 'If you have a question about product or startup development send as a message as well. We will do our best to help.' })}</p>
         </div>
       </div>
 
