@@ -9,7 +9,8 @@
     "import",
     // "node",
     // "promise",
-    "react"
+    "react",
+    "formatjs"
   ],
   "env": {
     "es6": true,
@@ -291,5 +292,7 @@
     "@typescript-eslint/prefer-namespace-keyword": "error",
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/type-annotation-spacing": "error"
+    // formatjs
+    // "formatjs/enforce-id": "error"
   }
 }

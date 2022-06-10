@@ -9,11 +9,13 @@ import { FirebaseAuthProvider } from '../contexts/firebase-auth'
 import { StorageProvider } from '../contexts/storage'
 import { ToastProvider } from '../contexts/toasts'
 
+import English from '../content/compiled-locales/en.json'
+
 import '../styles/styles.scss'
 
 export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
   return (
-    <IntlProvider locale="en" defaultLocale="en">
+    <IntlProvider locale="en" defaultLocale="en" messages={English}>
       <ToastProvider>
         <StorageProvider>
           <FirebaseProvider>
