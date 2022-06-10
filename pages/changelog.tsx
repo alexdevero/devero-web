@@ -1,4 +1,5 @@
 import { memo, useEffect, useState } from 'react'
+import { useIntl } from 'react-intl'
 
 import { ChangelogItem, ChangelogResponse } from '../types/changelog'
 import { HttpCodes } from '../types/http-codes'
@@ -9,6 +10,8 @@ import { PageHeader } from './../components/page-header'
 import { logger } from '../utils/logger'
 
 const Changelog = memo(() => {
+  const intl = useIntl()
+
   const [changelog, setChangelog] = useState<ChangelogItem[]>([])
 
   useEffect(() => {
@@ -30,12 +33,12 @@ const Changelog = memo(() => {
 
   return (
     <Layout title="Changelog | Devero">
-      <PageHeader title="Changelog" />
+      <PageHeader title={intl.formatMessage({ defaultMessage: 'Changelog' })} />
 
       <div className="row justify-content-center pb-3">
         <div className="col-md-8 col-lg-5">
           {changelog.length === 0 ? (
-            <p className="text--center">Nothing to see, yet...</p>
+            <p className="text--center">{intl.formatMessage({ defaultMessage: 'Nothing to see yet...' })}</p>
           ) : (
             <ul>
               {changelog.map(change => (
