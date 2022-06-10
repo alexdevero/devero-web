@@ -1,5 +1,6 @@
 import { NextComponentType, GetStaticProps } from 'next'
 import { Toaster } from 'react-hot-toast'
+import { IntlProvider } from 'react-intl'
 
 import { FirestoreProvider } from '../contexts/firestore'
 import { FirebaseProvider } from '../contexts/firebase'
@@ -12,19 +13,21 @@ import '../styles/styles.scss'
 
 export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
   return (
-    <ToastProvider>
-      <StorageProvider>
-        <FirebaseProvider>
-          <FirebaseAuthProvider>
-            <FirestoreProvider>
-              <FirebaseAnalyticsProvider>
-                <Toaster />
-                <Component {...pageProps} />
-              </FirebaseAnalyticsProvider>
-            </FirestoreProvider>
-          </FirebaseAuthProvider>
-        </FirebaseProvider>
-      </StorageProvider>
-    </ToastProvider>
+    <IntlProvider locale="en" defaultLocale="en">
+      <ToastProvider>
+        <StorageProvider>
+          <FirebaseProvider>
+            <FirebaseAuthProvider>
+              <FirestoreProvider>
+                <FirebaseAnalyticsProvider>
+                  <Toaster />
+                  <Component {...pageProps} />
+                </FirebaseAnalyticsProvider>
+              </FirestoreProvider>
+            </FirebaseAuthProvider>
+          </FirebaseProvider>
+        </StorageProvider>
+      </ToastProvider>
+    </IntlProvider>
   )
 }
