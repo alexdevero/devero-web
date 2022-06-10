@@ -28,20 +28,20 @@ export const Header = memo(() => {
           <div className={`collapse navbar-collapse justify-content-end${isNavOpen ? ' show' : ''}`} id="navbarMain">
             <ul className="nav">
               {/* <li className="nav-item">
-                <Link href="/about-us">
-                  <a className="nav-link">About us</a>
+                <Link href="/">
+                  <a className="nav-link">Services</a>
                 </Link>
               </li> */}
 
               {/* <li className="nav-item">
                 <Link href="/">
-                  <a className="nav-link">Services</a>
-                </Link>
-              </li>
-
-              <li className="nav-item">
-                <Link href="/">
                   <a className="nav-link">Our work</a>
+                </Link>
+              </li> */}
+
+              {/* <li className="nav-item">
+                <Link href="/about-us">
+                  <a className="nav-link">About us</a>
                 </Link>
               </li> */}
 
