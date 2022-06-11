@@ -16,7 +16,7 @@ export const Hero = memo(() => {
             })}
           </h1>
 
-          <p className="body1 lead">{intl.formatMessage({ defaultMessage: 'We are a full-stack software studio that builds digital products and solutions for customer-centric companies, optimized for user experience and performance.' })}</p>
+          <p className="body1 lead">{intl.formatMessage({ defaultMessage: 'We are a full-stack software studio that builds digital products and solutions for customer-centric companies, products optimized for user experience and performance.' })}</p>
         </div>
       </div>
     </div>

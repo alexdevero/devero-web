@@ -3,6 +3,7 @@ import { memo, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 
 import { personalLinks, socialMediaLinks } from '../data/links'
+import { routes } from '../data/routes'
 
 export const FooterBig = memo(() => {
   const intl = useIntl()
@@ -14,7 +15,7 @@ export const FooterBig = memo(() => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-5">
-            <p className="m-0 body2 font-weight-bold">{intl.formatMessage({ defaultMessage: 'Say hello at' })} <a href={personalLinks.mailto} className="text-body">hello@devero.io</a></p>
+            <p className="m-0 body2 font-weight-bold">{intl.formatMessage({ defaultMessage: 'Say hello at' })} <a href={personalLinks.mailto} className="text-body text-underline">hello@devero.io</a></p>
 
             <ul className="nav mt-1 mb-1 d-flex justify-content-flex-start">
               <li className="nav-item">
@@ -56,32 +57,38 @@ export const FooterBig = memo(() => {
                     </Link>
                   </li> */}
 
-                  <li className="nav-item">
+                  {/* <li className="nav-item">
                     <Link href="/changelog/">
                       <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Changelog' })}</a>
+                    </Link>
+                  </li> */}
+
+                  <li className="nav-item">
+                    <Link href={routes.contact}>
+                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Contact us' })}</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link p-1" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
-                      Blog
-                    </a>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link href="/privacy-policy/">
+                    <Link href={routes.privacyPolicy}>
                       <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Privacy policy' })}</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/terms-conditions/">
+                    <Link href={routes.termsConditions}>
                       <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Terms and conditions' })}</a>
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href="/admin/">
+                    <a className="nav-link p-1" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
+                      {intl.formatMessage({ defaultMessage: 'Blog' })}
+                    </a>
+                  </li>
+
+                  <li className="nav-item">
+                    <Link href={routes.adminLogin}>
                       <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Admin' })}</a>
                     </Link>
                   </li>
