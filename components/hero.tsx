@@ -6,6 +6,7 @@ export const Hero = memo(() => {
 
   return (
     <div className="hero jumbotron px-0">
+      <div className="box"></div>
       <div className="row py-5">
         <div className="col-md-8 col-lg-7">
           {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
