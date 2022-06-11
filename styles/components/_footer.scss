@@ -14,3 +14,11 @@ footer {
 .footer a:hover {
   opacity: .25;
 }
+
+.footer--big > .container > .row {
+  flex-direction: column-reverse;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+  }
+}

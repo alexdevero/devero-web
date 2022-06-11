@@ -15,10 +15,17 @@
 .box {
   position: absolute;
   top: rem(80);
-  left: rem(-40);
+  left: rem(-10);
   width: rem(756);
+  max-width: 100%;
   height: rem(380);
+  max-height: 100%;
   background: #121212;
   box-shadow: rem(30) rem(30) 0 #efefef;
   transition: all .25s ease-in-out;
+
+  @media (min-width: $breakpoint-sm) {
+    top: rem(80);
+    left: rem(-40);
+  }
 }
