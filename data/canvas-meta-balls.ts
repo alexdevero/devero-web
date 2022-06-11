@@ -114,7 +114,7 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   gl.vertexAttribPointer(positionHandle,
     2, // position is a vec2
     gl.FLOAT, // each component is a float
-    gl.FALSE, // don't normalize values
+    false, // don't normalize values
     2 * 4, // two 4 byte float components per vertex
     0 // offset into each span of vertex data
   )
