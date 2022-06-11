@@ -7,7 +7,13 @@
   --tran-timing: ease-in-out;
 }
 
+body {
+  overflow: hidden auto;
+}
+
 .page-wrapper {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-flow: column wrap;
   min-height: 100vh;
