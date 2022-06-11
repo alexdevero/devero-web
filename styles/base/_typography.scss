@@ -1,6 +1,6 @@
 /* Typography */
 html {
-  font-size: 16px;
+  font-size: $base-unit;
 }
 
 body {
@@ -61,47 +61,47 @@ h5:not(:last-child),
 .h5:not(:last-child),
 h6:not(:last-child),
 .h6:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: rem(16);
 }
 
 .h1 {
-  font-size: 5rem;
+  font-size: rem(80);
 }
 
 .h2 {
-  font-size: 4.5rem;
+  font-size: rem(72);
 }
 
 .h3 {
-  font-size: 4rem;
+  font-size: rem(64);
 }
 
 .h4 {
-  font-size: 3.5rem;
+  font-size: rem(56);
 }
 
 .h5 {
-  font-size: 3rem;
+  font-size: rem(48);
 }
 
 .h6 {
-  font-size: 2.5rem;
+  font-size: rem(40);
 }
 
 .body1 {
-  font-size: 1.5rem;
+  font-size: rem(24);
 }
 
 .body2 {
-  font-size: 1rem;
+  font-size: rem(16);
 }
 
 .body3 {
-  font-size: 0.667rem;
+  font-size: rem(10);
 }
 
 .body4 {
-  font-size: 0.444rem;
+  font-size: rem(7);
 }
 
 .display {
@@ -114,7 +114,7 @@ p {
 }
 
 p + p {
-  margin-top: 16px;
+  margin-top: rem(16);
 }
 
 /* p a {

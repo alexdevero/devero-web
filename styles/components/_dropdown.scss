@@ -7,12 +7,12 @@
   display: none;
   flex-flow: column wrap;
   position: absolute;
-  top: 61px;
+  top: rem(61);
 }
 
 .nav .dropdown__list {
-  padding-top: 61px;
-  margin-top: -61px;
+  padding-top: rem(61);
+  margin-top: rem(-61);
 }
 
 .dropdown__trigger {
@@ -27,9 +27,9 @@
 }
 
 .dropdown__item {
-  min-width: 220px;
+  min-width: rem(220);
   background-color: var(--color-brand);
-  border-top: 1px solid hsla(0, 0%, 100%, 0.15);
+  border-top: rem(1) solid hsla(0, 0%, 100%, 0.15);
   transition: all var(--tran-duration) var(--tran-timing);
   white-space: nowrap;
 }

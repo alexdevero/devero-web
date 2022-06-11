@@ -5,8 +5,8 @@
 }
 
 .countdown-value {
-  max-width: 70px;
-  height: 90px;
+  max-width: rem(70);
+  height: rem(90);
   text-align: center;
   background-color: hsla(0, 0%, 100%, .1);
   display: flex;

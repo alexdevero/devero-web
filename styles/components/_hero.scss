@@ -5,20 +5,20 @@
 
   &:hover {
     .box {
-      top: 90px;
-      left: -30px;
-      box-shadow: 10px 10px 0 #efefef;
+      top: rem(90);
+      left: rem(-30);
+      box-shadow: rem(10) rem(10) 0 #efefef;
     }
   }
 }
 
 .box {
   position: absolute;
-  top: 80px;
-  left: -40px;
-  width: 756px;
-  height: 380px;
+  top: rem(80);
+  left: rem(-40);
+  width: rem(756);
+  height: rem(380);
   background: #121212;
-  box-shadow: 30px 30px 0 #efefef;
+  box-shadow: rem(30) rem(30) 0 #efefef;
   transition: all .25s ease-in-out;
 }

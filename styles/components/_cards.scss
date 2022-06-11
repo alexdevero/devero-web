@@ -4,7 +4,7 @@
   flex-flow: column wrap;
   position: relative;
   z-index: 2;
-  min-height: 320px;
+  min-height: rem(320);
   text-decoration: none;
   transition: transform var(--tran-duration) var(--tran-timing);
 }
@@ -19,8 +19,8 @@
 
 .company-box::before {
   position: absolute;
-  bottom: -16px;
-  right: -16px;
+  bottom: rem(-16);
+  right: rem(-16);
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -39,10 +39,10 @@
   z-index: 2;
   width: 100%;
   height: 100%;
+
   /* background-color: hsl(351.6, 97.2%, 42%); */
   background: #fff;
-  border: 4px solid var(--color-brand);
-
+  border: rem(4) solid var(--color-brand);
   align-items: center;
   font-size: responsive 21px 28px;
   text-align: center;
@@ -56,14 +56,14 @@
 }
 
 .card-box__thumbnail svg {
-  width: 80px;
+  width: rem(80);
 }
 
 .company-box__info {
   margin: auto 0 0;
   position: relative;
   z-index: 2;
-  padding: 28px;
+  padding: rem(28);
   color: #fff;
   background-color: var(--color-brand);
 }
@@ -71,7 +71,7 @@
 .company-box__heading {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 21px;
+  font-size: rem(21);
   font-weight: 400;
   line-height: 1;
 }
@@ -81,15 +81,15 @@
 } */
 
 .company-box__description {
-  margin-top: 8px;
+  margin-top: rem(8);
   margin-bottom: 0;
   overflow: hidden;
   height: auto;
   max-height: 0;
-  font-size: 14px;
+  font-size: rem(14);
   transition: max-height var(--tran-duration) var(--tran-timing);
 }
 
 .company-box:hover .company-box__description {
-  max-height: 1000px;
+  max-height: rem(1000);
 }

@@ -1,4 +1,5 @@
 /* Page - Home */
+
 /* .homepage {
   background: url('/images/bg-hp-tablet.jpg') no-repeat 50% / cover;
   overflow: hidden;
@@ -22,13 +23,13 @@
   flex-flow: column wrap;
   justify-content: center;
   position: relative;
-  min-height: 720px;
+  min-height: rem(720);
   text-align: center;
 } */
 
 /* @media (max-width: 479px) {
   .dashboard__content h1 {
-    font-size: 48px;
+    font-size: rem(48);
   }
 } */
 
@@ -37,7 +38,7 @@
 }
 
 .roadmap-box-bcg {
-  top: -16px;
-  left: -16px;
+  top: rem(-16);
+  left: rem(-16);
   z-index: 1;
 }

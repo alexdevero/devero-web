@@ -5,15 +5,15 @@
 }
 
 .toast-text {
-  font-size: 14px;
+  font-size: rem(14);
 }
 
 .toast-cancel-icon {
-  margin-left: 8px;
+  margin-left: rem(8);
   border-radius: 50%;
   background-color: #f3f4f6;
-  min-width: 21px;
-  height: 21px;
+  min-width: rem(21);
+  height: rem(21);
   display: flex;
   justify-content: center;
   align-items: center;

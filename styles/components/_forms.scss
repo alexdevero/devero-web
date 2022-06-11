@@ -6,9 +6,9 @@ fieldset {
 
 input,
 textarea {
-  padding: 8px;
+  padding: rem(8);
   width: 100%;
-  border: 2px solid var(--color-black);
+  border: rem(2) solid var(--color-black);
   transition: all var(--tran-duration) var(--tran-timing) !important;
 }
 
@@ -22,8 +22,8 @@ textarea:hover {
 
 label {
   display: block;
-  margin-bottom: 4px;
-  font-size: 14px;
+  margin-bottom: rem(4);
+  font-size: rem(14);
   font-weight: 700;
 }
 
@@ -32,7 +32,7 @@ textarea {
 }
 
 [type=checkbox] + span {
-  margin-left: 24px;
+  margin-left: rem(24);
 }
 
 /* Custom checkbox */
@@ -47,14 +47,14 @@ textarea {
 
   & + span::before {
     position: absolute;
-    top: -1px;
-    left: -26px;
+    top: rem(-1);
+    left: rem(-26);
     content: '';
     display: inline-block;
     vertical-align: text-top;
-    width: 18px;
-    height: 18px;
-    border: 2px solid var(--color-black);
+    width: rem(18);
+    height: rem(18);
+    border: rem(2) solid var(--color-black);
     transition: all var(--tran-duration) var(--tran-timing) !important;
   }
 
@@ -63,7 +63,7 @@ textarea {
   }
 
   &:focus + span::before {
-    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 rem(3) rgba(0, 0, 0, 0.12);
   }
 
   &:checked + span::before {
@@ -73,13 +73,13 @@ textarea {
 
   &:checked + span::after {
     position: absolute;
-    top: 7px;
-    left: -22px;
+    top: rem(7);
+    left: rem(-22);
     content: '';
     background: #fff;
-    width: 2px;
-    height: 2px;
-    box-shadow: 2px 0 0 #fff, 4px 0 0 #fff, 4px -2px 0 #fff, 4px -4px 0 #fff, 4px -6px 0 #fff, 4px -8px 0 #fff;
+    width: rem(2);
+    height: rem(2);
+    box-shadow: rem(2) 0 0 #fff, rem(4) 0 0 #fff, rem(4) rem(-2) 0 #fff, rem(4) rem(-4) 0 #fff, rem(4) rem(-6) 0 #fff, rem(4) rem(-8) 0 #fff;
     transform: rotate(45deg);
   }
 }
