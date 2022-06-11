@@ -65,35 +65,91 @@ h6:not(:last-child),
 }
 
 .h1 {
-  font-size: rem(80);
+  font-size: rem(64);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(72);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(80);
+  }
 }
 
 .h2 {
-  font-size: rem(72);
+  font-size: rem(56);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(64);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(72);
+  }
 }
 
 .h3 {
-  font-size: rem(64);
+  font-size: rem(48);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(56);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(64);
+  }
 }
 
 .h4 {
-  font-size: rem(56);
+  font-size: rem(40);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(48);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(56);
+  }
 }
 
 .h5 {
-  font-size: rem(48);
+  font-size: rem(24);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(40);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(48);
+  }
 }
 
 .h6 {
-  font-size: rem(40);
+  font-size: rem(16);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(24);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: rem(40);
+  }
 }
 
 .body1 {
   font-size: rem(24);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(24);
+  }
 }
 
 .body2 {
-  font-size: rem(16);
+  font-size: rem(14);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(16);
+  }
 }
 
 .body3 {
@@ -114,7 +170,11 @@ p {
 }
 
 p + p {
-  margin-top: rem(16);
+  margin-top: rem(8);
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: rem(16);
+  }
 }
 
 /* p a {
