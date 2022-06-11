@@ -1,0 +1,15 @@
+@use 'sass:math';
+
+$base-unit: 16px;
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+@function rem($pxValue) {
+  @return math.div(strip-unit($pxValue), strip-unit($base-unit)) * 1rem;
+}
