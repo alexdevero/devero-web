@@ -59,11 +59,11 @@ export const Header = memo(() => {
                 </Link>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
                   {intl.formatMessage({ defaultMessage: 'Blog' })}
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
