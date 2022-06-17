@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { useIntl } from 'react-intl'
 
 // import { personalLinks } from '../data/links'
+import { routes } from '../data/routes'
 
 export const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -12,7 +13,7 @@ export const Header = memo(() => {
     <header className="header bg-white">
       <div className="container">
         <nav className="navbar navbar-expand-md navbar-light px-0">
-          <Link href="/"><a className="navbar-brand font-bebas">DEVERO</a></Link>
+          <Link href={routes.root}><a className="navbar-brand font-bebas">DEVERO</a></Link>
 
           <button
             className="navbar-toggler"
@@ -30,31 +31,37 @@ export const Header = memo(() => {
           <div className={`collapse navbar-collapse justify-content-end${isNavOpen ? ' show' : ''}`} id="navbarMain">
             <ul className="nav">
               {/* <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link">Services</a>
-                </Link>
-              </li> */}
-
-              {/* <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link">Our work</a>
-                </Link>
-              </li> */}
-
-              {/* <li className="nav-item">
-                <Link href="/about-us">
-                  <a className="nav-link">About us</a>
-                </Link>
-              </li> */}
-
-              {/* <li className="nav-item">
-                <Link href="/">
-                  <a className="nav-link">Careers</a>
+                <Link href={routes.services}>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Services' })}</a>
                 </Link>
               </li> */}
 
               <li className="nav-item">
-                <Link href="/contact">
+                <Link href={routes.caseStudies}>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Case studies' })}</a>
+                </Link>
+              </li>
+
+              {/* <li className="nav-item">
+                <Link href={routes.portfolio}>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Our work' })}</a>
+                </Link>
+              </li> */}
+
+              {/* <li className="nav-item">
+                <Link href={routes.aboutUs}>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'About us' })}</a>
+                </Link>
+              </li> */}
+
+              {/* <li className="nav-item">
+                <Link href={routes.careers}>
+                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Careers' })}</a>
+                </Link>
+              </li> */}
+
+              <li className="nav-item">
+                <Link href={routes.contact}>
                   <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Contact us' })}</a>
                 </Link>
               </li>
