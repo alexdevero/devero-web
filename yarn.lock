@@ -681,7 +681,7 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.6.2.tgz#6d05fa126104c9907573364dc04147b89b530e15"
   integrity sha512-zThUKcqIU6utWzM93uEvhlh8qj8A5LMPFJPvk/ODb+8GSSif19xM2Lw1M2ijyBy8+6skSkQBbavPzOU5Oh/8tQ==
 
-"@formatjs/cli@^5.0.2":
+"@formatjs/cli@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@formatjs/cli/-/cli-5.0.2.tgz#1df27fc52aae0ddcfc34ac0d2d8504fe244e6f0f"
   integrity sha512-I25CK1NjqBPab50VZxUHeIwYtDx6C/upjuNQCUUD/Ehte0EoGQk2QOkpwqRScuiFVjLiD2dNxGbq+5n5NGRq7g==
@@ -1338,7 +1338,7 @@ autoprefixer@^10.4.7:
     picocolors "^1.0.0"
     postcss-value-parser "^4.2.0"
 
-babel-plugin-formatjs@^10.3.24:
+babel-plugin-formatjs@10.3.24:
   version "10.3.24"
   resolved "https://registry.yarnpkg.com/babel-plugin-formatjs/-/babel-plugin-formatjs-10.3.24.tgz#4c500fa886bc1b35ca06549860251d394cebcc85"
   integrity sha512-31n0NPmNHseYTVz+g+rH0otk0jOMHiZSeTeBpMAkX1keSjG3gr8DbKj5H3l1H/glGuW0yfDDsPImYmh4xLl4pg==
@@ -1753,7 +1753,7 @@ eslint-plugin-es@^3.0.0:
     eslint-utils "^2.0.0"
     regexpp "^3.0.0"
 
-eslint-plugin-formatjs@^3.1.5:
+eslint-plugin-formatjs@3.1.5:
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/eslint-plugin-formatjs/-/eslint-plugin-formatjs-3.1.5.tgz#2f86ceabfa3f1a3a2e240c0a869d6dce4834468b"
   integrity sha512-FZM7mS7bCMHrbjB6XTH13N39jSIrDZPmFjYWVXSoVbMilOhd1YPbyLCRPm/MWuW00P8MVHW2NPsIXEt/v4xE7Q==
@@ -3231,7 +3231,7 @@ react-hot-toast@2.2.0:
   dependencies:
     goober "^2.1.1"
 
-react-intl@^6.0.4:
+react-intl@6.0.4:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/react-intl/-/react-intl-6.0.4.tgz#635d7639aa7b70e837c75796535cf1d534016acf"
   integrity sha512-eBIP4QuFOdr67+ZmNOA7WGzJ6dj0qgsGQbx3phzcel2B0kVLvfojTJuvYiFuLgbZTrRJMjHwYJZO5zsmibsfug==
@@ -3389,7 +3389,7 @@ sanitize-html@2.7.0:
     parse-srcset "^1.0.2"
     postcss "^8.3.11"
 
-sass@^1.52.3:
+sass@1.52.3:
   version "1.52.3"
   resolved "https://registry.yarnpkg.com/sass/-/sass-1.52.3.tgz#b7cc7ffea2341ccc9a0c4fd372bf1b3f9be1b6cb"
   integrity sha512-LNNPJ9lafx+j1ArtA7GyEJm9eawXN8KlA1+5dF6IZyoONg1Tyo/g+muOsENWJH/2Q1FHbbV4UwliU0cXMa/VIA==
