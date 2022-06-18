@@ -9,6 +9,7 @@ interface LayoutProps {
   children: ReactNode;
   pageName?: string;
   isFluid?: boolean;
+  flexContainer?: boolean;
 }
 
 export const Layout = memo((props: LayoutProps) => {
@@ -24,7 +25,7 @@ export const Layout = memo((props: LayoutProps) => {
         <Header />
 
         <div className="page-content">
-          <div className={`container${props.isFluid ? '-fluid' : ''}`}>{props.children}</div>
+          <div className={`container${props.isFluid ? '-fluid' : ''}${props.flexContainer ? ' d-flex' : ''}`}>{props.children}</div>
         </div>
 
         <FooterBig />

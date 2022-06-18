@@ -1,0 +1,26 @@
+.split-screen-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+.split-screen-editor {
+  position: absolute;
+  top: 0;
+}
+
+.split-screen-drag-line {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 3px;
+  height: 100%;
+  background: #efefef;
+  cursor: col-resize;
+  transition: box-shadow .25s ease-out;
+  user-select: none;
+
+  &:hover {
+    box-shadow: 0 0 1px 1px #eee;
+  }
+}
