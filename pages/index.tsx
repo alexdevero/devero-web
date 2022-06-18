@@ -1,4 +1,4 @@
-import { memo, useCallback, useState } from 'react'
+import { memo, useCallback, useEffect, useState } from 'react'
 
 // import { CurrentStats } from '../components/current-stats'
 import { Hero } from '../components/hero'
@@ -17,6 +17,10 @@ const Beta = memo(() => {
   }, [])
 
   useWindowEvent('resize', onResize)
+
+  useEffect(() => {
+    onResize()
+  }, [onResize])
 
   return (
     <>
