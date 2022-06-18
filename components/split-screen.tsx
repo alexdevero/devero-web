@@ -1,6 +1,8 @@
 import { memo, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import Editor, { EditorProps } from '@monaco-editor/react'
 
+import { useWindowEvent } from '../hooks/use-window-event'
+
 interface SplitScreenProps extends EditorProps {
   children?: ReactNode;
 }
@@ -93,6 +95,14 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
 
     return () => el.removeEventListener('mousedown', mouseDownHandler)
   }, [mouseDownHandler])
+
+  useWindowEvent('resize', () => {
+    dragLineRef.current.style.left = 65 / 100 * window.innerWidth
+    editorRef.current.style.left = 65 / 100 * window.innerWidth
+
+    setMouseX(65 / 100 * window.innerWidth)
+    setEditorWidth(calculateEditorWidth())
+  })
 
   return (
     <div className="split-screen-wrapper">
@@ -202,6 +212,14 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
 
     return () => el.removeEventListener('mousedown', mouseDownHandler)
   }, [mouseDownHandler])
+
+  useWindowEvent('resize', () => {
+    dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+    editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+
+    setMouseX(65 / 100 * window.innerWidth)
+    setEditorWidth(calculateEditorWidth())
+  })
 
   return (
     <div className="split-screen-wrapper">
