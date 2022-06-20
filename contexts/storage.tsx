@@ -1,6 +1,6 @@
 import { FC, ReactNode, createContext, useMemo, useContext, useCallback } from 'react'
 
-import { logger } from '../utils/logger'
+import { logger } from '@utils/logger'
 
 type Storage = 'local' | 'session'
 

@@ -2,13 +2,13 @@ import { memo, useCallback, useEffect, useState } from 'react'
 import Router from 'next/router'
 import { useIntl } from 'react-intl'
 
-import { FormInput } from '../../components/form-input'
-import { Layout } from '../../components/layout'
-import { PageHeader } from '../../components/page-header'
+import { FormInput } from '@../components/form-input'
+import { Layout } from '@../components/layout'
+import { PageHeader } from '@../components/page-header'
 
-import { useFirebaseAuth } from '../../contexts/firebase-auth'
+import { useFirebaseAuth } from '@../contexts/firebase-auth'
 
-import { routes } from '../../data/routes'
+import { routes } from '@../data/routes'
 
 const AdminLogin = memo(() => {
   const intl = useIntl()

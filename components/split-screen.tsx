@@ -1,7 +1,7 @@
 import { memo, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 import Editor, { EditorProps } from '@monaco-editor/react'
 
-import { useWindowEvent } from '../hooks/use-window-event'
+import { useWindowEvent } from '@hooks/use-window-event'
 
 interface SplitScreenProps extends EditorProps {
   children?: ReactNode;

@@ -2,16 +2,16 @@ import { NextComponentType, GetStaticProps } from 'next'
 import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
 
-import { FirestoreProvider } from '../contexts/firestore'
-import { FirebaseProvider } from '../contexts/firebase'
-import { FirebaseAnalyticsProvider } from '../contexts/firebase-analytics'
-import { FirebaseAuthProvider } from '../contexts/firebase-auth'
-import { StorageProvider } from '../contexts/storage'
-import { ToastProvider } from '../contexts/toasts'
+import { FirestoreProvider } from '@contexts/firestore'
+import { FirebaseProvider } from '@contexts/firebase'
+import { FirebaseAnalyticsProvider } from '@contexts/firebase-analytics'
+import { FirebaseAuthProvider } from '@contexts/firebase-auth'
+import { StorageProvider } from '@contexts/storage'
+import { ToastProvider } from '@contexts/toasts'
 
 import English from '../content/compiled-locales/en.json'
 
-import '../styles/styles.scss'
+import '@styles/styles.scss'
 
 export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
   return (

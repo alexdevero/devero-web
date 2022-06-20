@@ -2,8 +2,8 @@
 import { memo } from 'react'
 import { useIntl } from 'react-intl'
 
-import { Layout } from '../components/layout'
-import { PageHeader } from '../components/page-header'
+import { Layout } from '@components/layout'
+import { PageHeader } from '@components/page-header'
 
 const AboutUs = memo(() => {
   const intl = useIntl()

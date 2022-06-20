@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import { useIntl } from 'react-intl'
 
-import { Layout } from '../components/layout'
+import { Layout } from '@components/layout'
 
 const NotFoundPage = memo(() => {
   const intl = useIntl()

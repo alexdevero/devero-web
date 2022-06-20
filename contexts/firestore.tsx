@@ -4,9 +4,9 @@ import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from '
 
 import { useFirebase } from './firebase'
 
-import { EmailRecord } from '../types/firestore'
+import { EmailRecord } from '@types/firestore'
 
-import { logger } from '../utils/logger'
+import { logger } from '@utils/logger'
 
 export interface FirestoreContext {
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;

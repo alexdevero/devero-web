@@ -2,8 +2,8 @@ import Link from 'next/link'
 import { memo, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 
-import { personalLinks, socialMediaLinks } from '../data/links'
-import { routes } from '../data/routes'
+import { personalLinks, socialMediaLinks } from '@data/links'
+import { routes } from '@data/routes'
 
 export const FooterBig = memo(() => {
   const intl = useIntl()

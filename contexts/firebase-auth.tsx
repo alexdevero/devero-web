@@ -3,7 +3,7 @@ import { FC, ReactNode, createContext, useMemo, useContext, useState, useCallbac
 
 import { useStorage } from './storage'
 
-import { logger } from '../utils/logger'
+import { logger } from '@utils/logger'
 
 export interface FirebaseAuthContext {
   firebaseAuth: Auth;

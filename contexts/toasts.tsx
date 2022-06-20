@@ -1,9 +1,9 @@
 import { createContext, FC, ReactNode, useCallback, useContext, useMemo } from 'react'
 import { Toast, useToaster, toast, ToastOptions } from 'react-hot-toast'
 
-import { toastIcons } from '../data/toast-icons'
+import { toastIcons } from '@data/toast-icons'
 
-import { ToastIcons } from '../types/toasts'
+import { ToastIcons } from '@types/toasts'
 
 export interface ToastsContext {
   toasts: Toast[];
