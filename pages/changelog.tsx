@@ -1,8 +1,8 @@
 import { memo, useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
-import { ChangelogItem, ChangelogResponse } from '@types/changelog'
-import { HttpCodes } from '@types/http-codes'
+import { ChangelogItem, ChangelogResponse } from '@custom-types/changelog'
+import { HttpCodes } from '@custom-types/http-codes'
 
 import { Layout } from './../components/layout'
 import { PageHeader } from './../components/page-header'

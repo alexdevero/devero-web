@@ -2,18 +2,18 @@ import Router from 'next/router'
 import { memo, useCallback, useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
-import { Layout } from '@../components/layout'
-import { PageHeader } from '@../components/page-header'
+import { Layout } from '@components/layout'
+import { PageHeader } from '@components/page-header'
 
-import { useFirebaseAuth } from '@../contexts/firebase-auth'
-import { useFirestore } from '@../contexts/firestore'
-import { useStorage } from '@../contexts/storage'
+import { useFirebaseAuth } from '@contexts/firebase-auth'
+import { useFirestore } from '@contexts/firestore'
+import { useStorage } from '@contexts/storage'
 
-import { EmailRecord } from '@../types/firestore'
+import { EmailRecord } from '@custom-types/firestore'
 
-import { routes } from '@../data/routes'
+import { routes } from '@data/routes'
 
-import { logger } from '@../utils/logger'
+import { logger } from '@utils/logger'
 
 const Dashboard = memo(() => {
   const intl = useIntl()

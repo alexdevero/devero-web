@@ -4,7 +4,7 @@ import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from '
 
 import { useFirebase } from './firebase'
 
-import { EmailRecord } from '@types/firestore'
+import { EmailRecord } from '@custom-types/firestore'
 
 import { logger } from '@utils/logger'
 

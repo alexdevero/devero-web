@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 
-import { ChangelogItem } from '@../types/changelog'
-import { HttpCodes } from '@../types/http-codes'
+import { ChangelogItem } from '@custom-types/changelog'
+import { HttpCodes } from '@custom-types/http-codes'
 
 const changelog: ChangelogItem[] = [
   {
