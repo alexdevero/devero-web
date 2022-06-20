@@ -3,6 +3,8 @@ footer {
   padding-top: rem(32);
   padding-bottom: rem(32);
   width: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 .footer a {

@@ -24,7 +24,7 @@ const Beta = memo(() => {
 
   return (
     <>
-      <Layout title="Home | Devero" pageName="homepage" flexContainer isFluid>
+      <Layout title="Home | Devero" pageName="homepage" flexContainer>
         {/* <Hero /> */}
 
         {isMobile ? (
