@@ -244,7 +244,7 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
           {...rest}
           width={editorWidth}
           height={splitScreenHeight}
-          defaultLanguage="TypeScript"
+          language="typescript"
           value={content}
           options={{
             domReadOnly: true,
