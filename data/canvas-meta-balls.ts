@@ -1,5 +1,11 @@
-// TODO: resolve type issues
-// @ts-nocheck
+type MetaBall = {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  r: number;
+}
+
 export const initCanvas = (canvas: HTMLCanvasElement) => {
   const width = canvas.width = window.innerWidth * 0.75
   const height = canvas.height = window.innerHeight * 0.75
@@ -9,7 +15,7 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   const mouse = { x: 0, y: 0 }
 
   const numMetaBalls = 30
-  const metaBalls = []
+  const metaBalls: MetaBall[] = []
 
   for (let i = 0; i < numMetaBalls; i++) {
     const radius = Math.random() * 60 + 10
@@ -64,38 +70,50 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
     }
   `
 
-  function compileShader(shaderSource, shaderType) {
-    var shader = gl.createShader(shaderType)
-    gl.shaderSource(shader, shaderSource)
-    gl.compileShader(shader)
+  function compileShader(shaderSource: string, shaderType: number) {
+    var shader = gl?.createShader(shaderType)
 
-    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
-      throw new Error('Shader compile failed with: ' + gl.getShaderInfoLog(shader))
+    if (!shader) return
+
+    gl?.shaderSource(shader, shaderSource)
+    gl?.compileShader(shader)
+
+    if (!gl?.getShaderParameter(shader, gl?.COMPILE_STATUS)) {
+      throw new Error('Shader compile failed with: ' + gl?.getShaderInfoLog(shader))
     }
 
     return shader
   }
 
-  function getUniformLocation(program, name) {
-    var uniformLocation = gl.getUniformLocation(program, name)
+  function getUniformLocation(program: WebGLProgram, name: string) {
+    var uniformLocation = gl?.getUniformLocation(program, name)
+
     if (uniformLocation === -1) {
       throw new Error('Can not find uniform ' + name + '.')
     }
+
     return uniformLocation
   }
 
-  function getAttribLocation(program, name) {
-    var attributeLocation = gl.getAttribLocation(program, name)
+  function getAttribLocation(program: WebGLProgram, name: string) {
+    var attributeLocation = gl?.getAttribLocation(program, name)
+
     if (attributeLocation === -1) {
       throw new Error('Can not find attribute ' + name + '.')
     }
+
     return attributeLocation
   }
+
+  if (!(gl?.VERTEX_SHADER && gl?.FRAGMENT_SHADER)) return
 
   const vertexShader = compileShader(vertexShaderSrc, gl.VERTEX_SHADER)
   const fragmentShader = compileShader(fragmentShaderSrc, gl.FRAGMENT_SHADER)
 
   const program = gl.createProgram()
+
+  if (!(program && vertexShader && fragmentShader)) return
+
   gl.attachShader(program, vertexShader)
   gl.attachShader(program, fragmentShader)
   gl.linkProgram(program)
@@ -112,6 +130,9 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.STATIC_DRAW)
 
   const positionHandle = getAttribLocation(program, 'position')
+
+  if (!positionHandle) return
+
   gl.enableVertexAttribArray(positionHandle)
   gl.vertexAttribPointer(positionHandle,
     2, // position is a vec2
@@ -145,10 +166,12 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
       dataToSendToGPU[baseIndex + 2] = mb.r
     }
 
-    gl.uniform3fv(metaBallsHandle, dataToSendToGPU)
+    if (metaBallsHandle) {
+      gl?.uniform3fv(metaBallsHandle, dataToSendToGPU)
+    }
 
     // Draw
-    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
+    gl?.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
 
     requestAnimationFrame(loop)
   }
