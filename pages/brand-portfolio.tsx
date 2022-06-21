@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { memo } from 'react'
 
-import { Layout } from '@components/layout'
+import { Layout } from '@components'
 
 const BrandPortfolio = memo(() => (
   <Layout title="Brand folio | Devero">

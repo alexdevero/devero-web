@@ -1,3 +1,3 @@
-import { toastIcons } from '@data/toast-icons'
+import { toastIcons } from '@data'
 
 export type ToastIcons = keyof typeof toastIcons

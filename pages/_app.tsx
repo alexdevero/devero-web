@@ -2,12 +2,14 @@ import { NextComponentType, GetStaticProps } from 'next'
 import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
 
-import { FirestoreProvider } from '@contexts/firestore'
-import { FirebaseProvider } from '@contexts/firebase'
-import { FirebaseAnalyticsProvider } from '@contexts/firebase-analytics'
-import { FirebaseAuthProvider } from '@contexts/firebase-auth'
-import { StorageProvider } from '@contexts/storage'
-import { ToastProvider } from '@contexts/toasts'
+import {
+  FirestoreProvider,
+  FirebaseProvider,
+  FirebaseAnalyticsProvider,
+  FirebaseAuthProvider,
+  StorageProvider,
+  ToastProvider,
+} from '@contexts'
 
 import English from '../content/compiled-locales/en.json'
 

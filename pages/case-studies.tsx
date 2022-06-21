@@ -2,10 +2,9 @@ import Link from 'next/link'
 import { memo } from 'react'
 import { useIntl } from 'react-intl'
 
-import { Layout } from '@components/layout'
-import { PageHeader } from '@components/page-header'
+import { Layout, PageHeader } from '@components'
 
-import { routes } from '@data/routes'
+import { routes } from '@data'
 
 const CaseStudies = memo(() => {
   const intl = useIntl()

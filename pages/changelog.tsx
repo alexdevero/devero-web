@@ -1,13 +1,14 @@
 import { memo, useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
-import { ChangelogItem, ChangelogResponse } from '@custom-types/changelog'
-import { HttpCodes } from '@custom-types/http-codes'
+import { ChangelogItem, ChangelogResponse, HttpCodes } from '@custom-types'
 
-import { Layout } from './../components/layout'
-import { PageHeader } from './../components/page-header'
+import {
+  Layout,
+  PageHeader
+} from '@components'
 
-import { logger } from '@utils/logger'
+import { logger } from '@utils'
 
 const Changelog = memo(() => {
   const intl = useIntl()

@@ -3,16 +3,17 @@ import sanitizeHtml from 'sanitize-html'
 import { useIntl } from 'react-intl'
 import * as yup from 'yup'
 
-import { Layout } from '@components/layout'
-import { PageHeader } from '@components/page-header'
-import { FormInput } from '@components/form-input'
-import { TextArea } from '@components/text-area'
-import { FormBotCheck } from '@components/form-bot-check'
+import {
+  Layout,
+  PageHeader,
+  FormInput,
+  TextArea,
+  FormBotCheck,
+} from '@components'
 
-import { useFirestore } from '@contexts/firestore'
-import { useToast } from '@contexts/toasts'
+import { useFirestore, useToast } from '@contexts'
 
-import { logger } from '@utils/logger'
+import { logger } from '@utils'
 
 const formSchema = yup.object().shape({
   email: yup.string().email().required(),

@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Layout } from '@components/layout'
+import { Layout } from '@components'
 
 const TermsConditions = memo(() => (
   <Layout title="Terms & Conditions | Devero">

@@ -1,6 +1,6 @@
 import { memo, useEffect, useRef } from 'react'
 
-import { initCanvas } from '@data/canvas-meta-balls'
+import { initCanvas } from '@data'
 
 export const Canvas = memo(() => {
   const canvasRef = useRef<null | HTMLCanvasElement>(null)

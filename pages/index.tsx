@@ -1,13 +1,15 @@
 import { memo, useCallback, useEffect, useState } from 'react'
 
-// import { CurrentStats } from '@components/current-stats'
-import { Hero } from '@components/hero'
-import { Layout } from '@components/layout'
-import { SplitScreen } from '@components/split-screen'
-// import { Canvas } from '@components/canvas'
-// import { RoadMap } from '@components/roadmap'
+import {
+  // Canvas,
+  // CurrentStats,
+  Hero,
+  Layout,
+  // RoadMap,
+  SplitScreen,
+} from '@components'
 
-import { useWindowEvent } from '@hooks/use-window-event'
+import { useWindowEvent } from '@hooks'
 
 const Beta = memo(() => {
   const [isMobile, setIsMobile] = useState(false)
