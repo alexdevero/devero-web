@@ -165,7 +165,7 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
   }, [])
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && (dragLineRef.current && editorRef.current)) {
       dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
       editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
 
@@ -173,9 +173,11 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
     }
   }, [])
 
-  const mouseMoveHandler = useCallback((e) => {
+  const mouseMoveHandler = useCallback((e: MouseEvent) => {
     const dragLineEl = dragLineRef.current
     const editorEl = editorRef.current
+
+    if (!(dragLineEl && editorEl)) return
 
     let newPosition: number
     if (e.clientX < 0) {
@@ -197,7 +199,7 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
     document.removeEventListener('mouseup', mouseUpHandler)
   }, [mouseMoveHandler])
 
-  const mouseDownHandler = useCallback((e) => {
+  const mouseDownHandler = useCallback((e: MouseEvent) => {
     setMouseX(e.clientX)
 
     document.addEventListener('mousemove', mouseMoveHandler)
@@ -210,15 +212,17 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
       el.addEventListener('mousedown', mouseDownHandler)
     }
 
-    return () => el.removeEventListener('mousedown', mouseDownHandler)
+    return () => el?.removeEventListener('mousedown', mouseDownHandler)
   }, [mouseDownHandler])
 
   useWindowEvent('resize', () => {
-    dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
-    editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+    if (dragLineRef.current && editorRef.current) {
+      dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+      editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
 
-    setMouseX(65 / 100 * window.innerWidth)
-    setEditorWidth(calculateEditorWidth())
+      setMouseX(65 / 100 * window.innerWidth)
+      setEditorWidth(calculateEditorWidth())
+    }
   })
 
   return (

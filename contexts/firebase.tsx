@@ -1,10 +1,12 @@
 import { FirebaseApp } from 'firebase/app'
-import { FC, ReactNode, createContext, useMemo, useContext } from 'react'
+import { FC, ReactNode, createContext, useMemo } from 'react'
+
+import { useContext } from '@hooks'
 
 import { createFirebaseApp } from '../firebase/firebase'
 
 export interface FirebaseContext {
-  firebaseApp: FirebaseApp;
+  firebaseApp: FirebaseApp | undefined;
 }
 
 const ctx = createContext<FirebaseContext | undefined>(undefined)

@@ -1,8 +1,10 @@
-import { FC, ReactNode, createContext, useMemo, useContext, useEffect, useState, useCallback } from 'react'
+import { FC, ReactNode, createContext, useMemo, useEffect, useState, useCallback } from 'react'
 import { Analytics, getAnalytics, logEvent } from 'firebase/analytics'
 
+import { useContext } from '@hooks'
+
 export interface FirebaseAnalyticsContext {
-  analytics: Analytics;
+  analytics: Analytics | undefined;
   handleLogViewEvent: (screenName: string, componentName: string) => void;
 }
 

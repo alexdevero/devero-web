@@ -3,7 +3,6 @@ import { memo } from 'react'
 import { useIntl } from 'react-intl'
 
 import { Layout, PageHeader } from '@components'
-
 import { routes } from '@data'
 
 const CaseStudies = memo(() => {

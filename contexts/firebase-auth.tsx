@@ -1,14 +1,16 @@
 import { Auth, getAuth, signInWithEmailAndPassword, signOut, User } from 'firebase/auth'
-import { FC, ReactNode, createContext, useMemo, useContext, useState, useCallback, useEffect } from 'react'
+import { FC, ReactNode, createContext, useMemo, useState, useCallback, useEffect } from 'react'
+
+import { CustomError } from '@custom-types'
+import { useContext } from '@hooks'
+import { logger } from '@utils'
 
 import { useStorage } from './storage'
 
-import { logger } from '@utils'
-
 export interface FirebaseAuthContext {
   firebaseAuth: Auth;
-  authenticatedUser: User;
-  handleSignIn: (username: string, password: string) => Promise<User | {
+  authenticatedUser: User | undefined;
+  handleSignIn: (username: string, password: string) => Promise<User | undefined | {
     code: number;
     message: string;
   }>;
@@ -26,7 +28,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
   const auth = getAuth()
   const { getStorageItem, deleteStorageItem, setStorageItem } = useStorage()
 
-  const [user, setUser] = useState(undefined)
+  const [user, setUser] = useState<User | undefined>(undefined)
 
   const handleSignIn = useCallback(async (username: string, password: string) => {
     if (auth) {
@@ -37,10 +39,12 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
 
         return userCredential.user
       } catch (e) {
-        logger(`${e.code}, ${e.message}`, 'log')
+        const err = e as CustomError
+
+        logger(`${err.code}, ${err.message}`, 'log')
         return {
-          code: e.code,
-          message: e.message
+          code: err.code,
+          message: err.message
         }
       }
     }
@@ -52,7 +56,10 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
       deleteStorageItem('auth', 'local')
       return true
     } catch (e) {
-      logger(`${e.code}, ${e.message}`, 'log')
+      const err = e as CustomError
+
+      logger(`${err.code}, ${err.message}`, 'log')
+
       return false
     }
   }, [auth, deleteStorageItem])

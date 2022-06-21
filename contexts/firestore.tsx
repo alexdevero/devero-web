@@ -1,17 +1,17 @@
 import { collection, getFirestore, setDoc, doc, getDocs, deleteDoc } from 'firebase/firestore'
 import { nanoid } from 'nanoid'
-import { FC, ReactNode, createContext, useMemo, useCallback, useContext } from 'react'
+import { FC, ReactNode, createContext, useMemo, useCallback } from 'react'
+
+import { useContext } from '@hooks'
+import { EmailRecord } from '@custom-types'
+import { logger } from '@utils'
 
 import { useFirebase } from './firebase'
-
-import { EmailRecord } from '@custom-types'
-
-import { logger } from '@utils'
 
 export interface FirestoreContext {
   createEmailDocument: (name: string, email: string, message?: string) => Promise<void>;
   deleteEmailDocument: (documentId: string) => Promise<boolean>;
-  getAllEmails: () => Promise<EmailRecord[]>;
+  getAllEmails: () => Promise<EmailRecord[] | undefined>;
 }
 
 const ctx = createContext<FirestoreContext | undefined>(undefined)

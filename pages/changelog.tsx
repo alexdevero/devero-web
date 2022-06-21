@@ -7,7 +7,6 @@ import {
   Layout,
   PageHeader
 } from '@components'
-
 import { logger } from '@utils'
 
 const Changelog = memo(() => {

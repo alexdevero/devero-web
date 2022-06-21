@@ -1,7 +1,8 @@
-import { createContext, FC, ReactNode, useCallback, useContext, useMemo } from 'react'
+import { createContext, FC, ReactNode, useCallback, useMemo } from 'react'
 import { Toast, useToaster, toast, ToastOptions } from 'react-hot-toast'
 
 import { toastIcons } from '@data'
+import { useContext } from '@hooks'
 
 import { ToastIcons } from '@custom-types'
 

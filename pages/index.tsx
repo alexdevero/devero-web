@@ -8,7 +8,6 @@ import {
   // RoadMap,
   SplitScreen,
 } from '@components'
-
 import { useWindowEvent } from '@hooks'
 
 const Beta = memo(() => {

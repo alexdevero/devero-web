@@ -22,7 +22,7 @@ const Dashboard = memo(() => {
   const { authenticatedUser, handleSignOut } = useFirebaseAuth()
   const { getStorageItem } = useStorage()
 
-  const [emails, setEmails] = useState<EmailRecord[]>([])
+  const [emails, setEmails] = useState<EmailRecord[] | undefined>([])
 
   const handleLeaveClick = useCallback(async () => {
     const signOutSuccess = await handleSignOut()
@@ -56,12 +56,12 @@ const Dashboard = memo(() => {
       <div className="pb-3 text-center">
         <p>{intl.formatMessage({ defaultMessage: 'Email count' })}: {emails?.length}</p>
 
-        {emails?.length > 0 ? (
+        {(emails || [])?.length > 0 ? (
           <>
             <p>{intl.formatMessage({ defaultMessage: 'Emails' })}:</p>
 
             <ul>
-              {emails.map((e) => {
+              {(emails || []).map((e) => {
                 const id = Object.keys(e)?.[0]
                 const emailData = Object.values(e)?.[0]
 

@@ -2,8 +2,10 @@ import { useState, memo } from 'react'
 import Link from 'next/link'
 import { useIntl } from 'react-intl'
 
-// import { personalLinks } from '@data/links'
-import { routes } from '@data'
+import {
+  // personalLinks,
+  routes,
+} from '@data'
 
 export const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
