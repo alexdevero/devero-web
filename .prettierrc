@@ -1,6 +1,8 @@
 {
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none",
-  "bracketSpacing": true
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "importOrder": ["^@components$", "^@contexts$", "^@data$", "^@hooks$", "^@custom-types$", "^[./]"],
+  "importOrderSeparation": true
 }
