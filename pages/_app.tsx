@@ -1,6 +1,7 @@
 import { NextComponentType, GetStaticProps } from 'next'
 import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
+import { Analytics } from '@vercel/analytics/react'
 
 import {
   FirestoreProvider,
@@ -26,6 +27,7 @@ export default function MyApp({ Component, pageProps }: { Component: NextCompone
                 <FirebaseAnalyticsProvider>
                   <Toaster />
                   <Component {...pageProps} />
+                  <Analytics />
                 </FirebaseAnalyticsProvider>
               </FirestoreProvider>
             </FirebaseAuthProvider>
