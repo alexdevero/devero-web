@@ -63,20 +63,20 @@ export const FooterBig = memo(() => {
                   </li> */}
 
                   <li className="nav-item">
-                    <Link href={routes.contact}>
-                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Contact us' })}</a>
+                    <Link href={routes.contact} className="nav-link p-1">
+                      {intl.formatMessage({ defaultMessage: 'Contact us' })}
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.privacyPolicy}>
-                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Privacy policy' })}</a>
+                    <Link href={routes.privacyPolicy} className="nav-link p-1">
+                      {intl.formatMessage({ defaultMessage: 'Privacy policy' })}
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.termsConditions}>
-                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Terms and conditions' })}</a>
+                    <Link href={routes.termsConditions} className="nav-link p-1">
+                      {intl.formatMessage({ defaultMessage: 'Terms and conditions' })}
                     </Link>
                   </li>
 
@@ -87,8 +87,8 @@ export const FooterBig = memo(() => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.adminLogin}>
-                      <a className="nav-link p-1">{intl.formatMessage({ defaultMessage: 'Admin' })}</a>
+                    <Link href={routes.adminLogin} className="nav-link p-1">
+                      {intl.formatMessage({ defaultMessage: 'Admin' })}
                     </Link>
                   </li>
                 </ul>
@@ -112,5 +112,5 @@ export const FooterBig = memo(() => {
         </div>
       </div>
     </footer>
-  )
+  );
 })

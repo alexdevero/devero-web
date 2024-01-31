@@ -17,12 +17,12 @@ const CaseStudies = memo(() => {
           <div className="col-md-8 col-lg-6 text-center">
             <p className="mt-0 mb-2">{intl.formatMessage({ defaultMessage: 'This page is under construction...' })}</p>
 
-            <Link href={routes.root}><a>&larr; {intl.formatMessage({ defaultMessage: 'Go back home' })}</a></Link>
+            <Link href={routes.root}>←{intl.formatMessage({ defaultMessage: 'Go back home' })}</Link>
           </div>
         </div>
       </div>
     </Layout>
-  )
+  );
 })
 
 export default CaseStudies

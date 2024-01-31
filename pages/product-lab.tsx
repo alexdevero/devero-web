@@ -70,19 +70,19 @@ const ProductLab = memo(() => {
 
       <div className="row mt-2">
         <div className="col-md-6 d-flex justify-content-center justify-content-md-end">
-          <Link href="/product-lab">
-            <a className="btn">Web development</a>
+          <Link href="/product-lab" className="btn">
+            Web development
           </Link>
         </div>
 
         <div className="col-md-6 d-flex justify-content-center justify-content-md-start mt-md-down-2">
-          <Link href="/product-lab">
-            <a className="btn">App development</a>
+          <Link href="/product-lab" className="btn">
+            App development
           </Link>
         </div>
       </div>
     </Layout>
-  )
+  );
 })
 
 export default ProductLab

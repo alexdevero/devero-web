@@ -15,7 +15,7 @@ export const Header = memo(() => {
     <header className="header bg-white">
       <div className="container">
         <nav className="navbar navbar-expand-md navbar-light px-0">
-          <Link href={routes.root}><a className="navbar-brand font-bebas">DEVERO</a></Link>
+          <Link href={routes.root} className="navbar-brand font-bebas">DEVERO</Link>
 
           <button
             className="navbar-toggler"
@@ -39,8 +39,8 @@ export const Header = memo(() => {
               </li> */}
 
               <li className="nav-item">
-                <Link href={routes.caseStudies}>
-                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Case studies' })}</a>
+                <Link href={routes.caseStudies} className="nav-link">
+                  {intl.formatMessage({ defaultMessage: 'Case studies' })}
                 </Link>
               </li>
 
@@ -63,8 +63,8 @@ export const Header = memo(() => {
               </li> */}
 
               <li className="nav-item">
-                <Link href={routes.contact}>
-                  <a className="nav-link">{intl.formatMessage({ defaultMessage: 'Contact us' })}</a>
+                <Link href={routes.contact} className="nav-link">
+                  {intl.formatMessage({ defaultMessage: 'Contact us' })}
                 </Link>
               </li>
 
@@ -78,5 +78,5 @@ export const Header = memo(() => {
         </nav>
       </div>
     </header>
-  )
+  );
 })
