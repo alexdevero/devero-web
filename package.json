@@ -79,7 +79,7 @@
     "react-intl": "6.6.2",
     "react-recaptcha": "2.3.10",
     "sanitize-html": "2.11.0",
-    "yup": "0.32.11"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@formatjs/cli": "5.0.2",
