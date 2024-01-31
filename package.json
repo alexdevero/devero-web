@@ -48,6 +48,8 @@
     "i18n": "npm run extract:i18n && npm run compile:i18n",
     "start": "next dev",
     "start-prod": "next start",
+    "lint:check": "eslint --ext .js,.jsx,.ts,.tsx ./src",
+    "prettier:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx}\"",
     "typecheck": "tsc --noEmit",
     "test": "eslint src/**/*.js",
     "pre-commit": "lint-staged",
@@ -99,6 +101,7 @@
     "postcss": "8.4.33",
     "postcss-import": "16.0.0",
     "postcss-preset-env": "9.3.0",
+    "prettier": "^3.2.4",
     "sass": "1.70.0",
     "typescript": "4.7.4"
   }
