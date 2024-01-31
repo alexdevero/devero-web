@@ -11,12 +11,7 @@ export const Canvas = memo(() => {
     }
   }, [])
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="canvas canvas-fullscreen"
-    />
-  )
+  return <canvas ref={canvasRef} className="canvas canvas-fullscreen" />
 })
 
 Canvas.displayName = 'Canvas'

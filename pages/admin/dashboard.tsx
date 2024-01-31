@@ -34,14 +34,14 @@ const Dashboard = memo(() => {
 
   useEffect(() => {
     getAllEmails()
-      .then(emails => {
+      .then((emails) => {
         setEmails(emails)
       })
-      .catch(e => logger(e, 'log'))
+      .catch((e) => logger(e, 'log'))
   }, [getAllEmails])
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const localUserData = await getStorageItem('auth', 'local')
       if (!authenticatedUser && !localUserData) {
         Router.push(routes.adminLogin)
@@ -51,10 +51,15 @@ const Dashboard = memo(() => {
 
   return (
     <Layout title="Admin dashboard | Devero">
-      <PageHeader title={intl.formatMessage({ defaultMessage: 'Admin dashboard' })} />
+      <PageHeader
+        title={intl.formatMessage({ defaultMessage: 'Admin dashboard' })}
+      />
 
       <div className="pb-3 text-center">
-        <p>{intl.formatMessage({ defaultMessage: 'Email count' })}: {emails?.length}</p>
+        <p>
+          {intl.formatMessage({ defaultMessage: 'Email count' })}:{' '}
+          {emails?.length}
+        </p>
 
         {(emails || [])?.length > 0 ? (
           <>
@@ -68,7 +73,6 @@ const Dashboard = memo(() => {
                 return (
                   <li key={id}>
                     {emailData.email}: {emailData.message}
-
                     <span onClick={() => deleteEmailDocument(id)}>&times;</span>
                   </li>
                 )
@@ -79,7 +83,11 @@ const Dashboard = memo(() => {
           <p>{intl.formatMessage({ defaultMessage: 'No emails found.' })}</p>
         )}
 
-        <p><span className="link link-underline" onClick={handleLeaveClick}>&larr; {intl.formatMessage({ defaultMessage: 'Leave' })}</span></p>
+        <p>
+          <span className="link link-underline" onClick={handleLeaveClick}>
+            &larr; {intl.formatMessage({ defaultMessage: 'Leave' })}
+          </span>
+        </p>
       </div>
     </Layout>
   )

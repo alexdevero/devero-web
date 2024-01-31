@@ -14,41 +14,74 @@ export const FooterBig = memo(() => {
       <div className="container">
         <div className="row">
           <div className="col-md-6 col-lg-5">
-            <p className="m-0 body2 font-weight-bold">{intl.formatMessage({ defaultMessage: 'Say hello at' })} <a href={personalLinks.mailto} className="text-body text-underline">hello@devero.io</a></p>
+            <p className="m-0 body2 font-weight-bold">
+              {intl.formatMessage({ defaultMessage: 'Say hello at' })}{' '}
+              <a
+                href={personalLinks.mailto}
+                className="text-body text-underline"
+              >
+                hello@devero.io
+              </a>
+            </p>
 
             <ul className="nav mt-1 mb-1 d-flex justify-content-flex-start">
               <li className="nav-item">
-                <a href={socialMediaLinks.twitter} className="nav-link" rel="noopener noreferrer" target="_blank">
+                <a
+                  href={socialMediaLinks.twitter}
+                  className="nav-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <span className="fab fa-twitter" />
                 </a>
               </li>
 
               <li className="nav-item">
-                <a href={socialMediaLinks.linkedin} className="nav-link" rel="noopener noreferrer" target="_blank">
+                <a
+                  href={socialMediaLinks.linkedin}
+                  className="nav-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <span className="fab fa-linkedin" />
                 </a>
               </li>
               <li className="nav-item">
-                <a href={socialMediaLinks.facebook} className="nav-link" rel="noopener noreferrer" target="_blank">
+                <a
+                  href={socialMediaLinks.facebook}
+                  className="nav-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <span className="fab fa-facebook-f" />
                 </a>
               </li>
 
               <li className="nav-item">
-                <a href={socialMediaLinks.github} className="nav-link" rel="noopener noreferrer" target="_blank">
+                <a
+                  href={socialMediaLinks.github}
+                  className="nav-link"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   <span className="fab fa-github" />
                 </a>
               </li>
             </ul>
 
-            <p className="mt-1 mb-0 small">&copy;{timeStamp} Devero Corporation. {intl.formatMessage({ defaultMessage: 'All rights reserved.' })}</p>
+            <p className="mt-1 mb-0 small">
+              &copy;{timeStamp} Devero Corporation.{' '}
+              {intl.formatMessage({ defaultMessage: 'All rights reserved.' })}
+            </p>
           </div>
 
           <div className="col-md-6 col-lg-7 mt-md-down-2">
             <div className="row">
               <div className="col-md-6">
                 <ul className="nav d-flex flex-column small">
-                  <li className="body2 font-weight-bold nav-item">{intl.formatMessage({ defaultMessage: 'Links' })}</li>
+                  <li className="body2 font-weight-bold nav-item">
+                    {intl.formatMessage({ defaultMessage: 'Links' })}
+                  </li>
 
                   {/* <li className="nav-item">
                     <Link href="/about-us/">
@@ -75,13 +108,23 @@ export const FooterBig = memo(() => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.termsConditions} className="nav-link p-1">
-                      {intl.formatMessage({ defaultMessage: 'Terms and conditions' })}
+                    <Link
+                      href={routes.termsConditions}
+                      className="nav-link p-1"
+                    >
+                      {intl.formatMessage({
+                        defaultMessage: 'Terms and conditions',
+                      })}
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <a className="nav-link p-1" href={personalLinks.blog} rel="noopener noreferrer" target="_blank">
+                    <a
+                      className="nav-link p-1"
+                      href={personalLinks.blog}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
                       {intl.formatMessage({ defaultMessage: 'Blog' })}
                     </a>
                   </li>
@@ -96,15 +139,26 @@ export const FooterBig = memo(() => {
 
               <div className="col-md-6 mt-md-down-2">
                 <ul className="nav d-flex flex-column small">
-                  <li className="body2 font-weight-bold nav-item p-1">{intl.formatMessage({ defaultMessage: 'Prague' })}</li>
+                  <li className="body2 font-weight-bold nav-item p-1">
+                    {intl.formatMessage({ defaultMessage: 'Prague' })}
+                  </li>
 
                   <li className="nav-item p-1">Pankrác</li>
 
                   <li className="nav-item p-1">Praha 4, 140 00</li>
 
-                  <li className="nav-item p-1">{intl.formatMessage({ defaultMessage: 'Czech Republic' })}</li>
+                  <li className="nav-item p-1">
+                    {intl.formatMessage({ defaultMessage: 'Czech Republic' })}
+                  </li>
 
-                  <li className="nav-item p-1"><a href={personalLinks.mailto} className="text-body border-bottom border-dark">hello@devero.io</a></li>
+                  <li className="nav-item p-1">
+                    <a
+                      href={personalLinks.mailto}
+                      className="text-body border-bottom border-dark"
+                    >
+                      hello@devero.io
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -112,5 +166,5 @@ export const FooterBig = memo(() => {
         </div>
       </div>
     </footer>
-  );
+  )
 })

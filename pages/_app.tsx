@@ -16,7 +16,13 @@ import English from '../content/compiled-locales/en.json'
 
 import '@styles/styles.scss'
 
-export default function MyApp({ Component, pageProps }: { Component: NextComponentType; pageProps: GetStaticProps }) {
+export default function MyApp({
+  Component,
+  pageProps,
+}: {
+  Component: NextComponentType
+  pageProps: GetStaticProps
+}) {
   return (
     <IntlProvider locale="en" defaultLocale="en" messages={English}>
       <ToastProvider>

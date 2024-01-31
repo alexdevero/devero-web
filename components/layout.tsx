@@ -5,11 +5,11 @@ import { FooterBig } from './footer-big'
 import { Header } from './header'
 
 interface LayoutProps {
-  title: string;
-  children: ReactNode;
-  pageName?: string;
-  isFluid?: boolean;
-  flexContainer?: boolean;
+  title: string
+  children: ReactNode
+  pageName?: string
+  isFluid?: boolean
+  flexContainer?: boolean
 }
 
 export const Layout = memo((props: LayoutProps) => {
@@ -21,11 +21,17 @@ export const Layout = memo((props: LayoutProps) => {
         <title>{props.title}</title>
       </Head>
 
-      <div className={`page-wrapper${props.pageName ? ' ' + props.pageName : ''}`}>
+      <div
+        className={`page-wrapper${props.pageName ? ' ' + props.pageName : ''}`}
+      >
         <Header />
 
         <div className="page-content">
-          <div className={`container${props.isFluid ? '-fluid' : ''}${props.flexContainer ? ' d-flex' : ''}`}>{props.children}</div>
+          <div
+            className={`container${props.isFluid ? '-fluid' : ''}${props.flexContainer ? ' d-flex' : ''}`}
+          >
+            {props.children}
+          </div>
         </div>
 
         <FooterBig />

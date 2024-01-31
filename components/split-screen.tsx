@@ -1,10 +1,17 @@
-import { memo, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import {
+  memo,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react'
 import Editor, { EditorProps } from '@monaco-editor/react'
 
 import { useWindowEvent } from '@hooks'
 
 interface SplitScreenProps extends EditorProps {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
 const headerHeight = 58
@@ -148,7 +155,7 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
   const editorRef = useRef<HTMLDivElement | null>(null)
 
   const calculateEditorWidth = useCallback(() => {
-    return (window.innerWidth - mouseX)
+    return window.innerWidth - mouseX
   }, [mouseX])
 
   useEffect(() => {
@@ -165,11 +172,15 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
   }, [])
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && (dragLineRef.current && editorRef.current)) {
-      dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
-      editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+    if (
+      typeof window !== 'undefined' &&
+      dragLineRef.current &&
+      editorRef.current
+    ) {
+      dragLineRef.current.style.left = `${(65 / 100) * window.innerWidth}px`
+      editorRef.current.style.left = `${(65 / 100) * window.innerWidth}px`
 
-      setMouseX(65 / 100 * window.innerWidth)
+      setMouseX((65 / 100) * window.innerWidth)
     }
   }, [])
 
@@ -199,12 +210,15 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
     document.removeEventListener('mouseup', mouseUpHandler)
   }, [mouseMoveHandler])
 
-  const mouseDownHandler = useCallback((e: MouseEvent) => {
-    setMouseX(e.clientX)
+  const mouseDownHandler = useCallback(
+    (e: MouseEvent) => {
+      setMouseX(e.clientX)
 
-    document.addEventListener('mousemove', mouseMoveHandler)
-    document.addEventListener('mouseup', mouseUpHandler)
-  }, [mouseMoveHandler, mouseUpHandler])
+      document.addEventListener('mousemove', mouseMoveHandler)
+      document.addEventListener('mouseup', mouseUpHandler)
+    },
+    [mouseMoveHandler, mouseUpHandler],
+  )
 
   useEffect(() => {
     const el = dragLineRef.current
@@ -217,25 +231,19 @@ export const SplitScreen = memo((props: SplitScreenProps) => {
 
   useWindowEvent('resize', () => {
     if (dragLineRef.current && editorRef.current) {
-      dragLineRef.current.style.left = `${65 / 100 * window.innerWidth}px`
-      editorRef.current.style.left = `${65 / 100 * window.innerWidth}px`
+      dragLineRef.current.style.left = `${(65 / 100) * window.innerWidth}px`
+      editorRef.current.style.left = `${(65 / 100) * window.innerWidth}px`
 
-      setMouseX(65 / 100 * window.innerWidth)
+      setMouseX((65 / 100) * window.innerWidth)
       setEditorWidth(calculateEditorWidth())
     }
   })
 
   return (
     <div className="split-screen-wrapper">
-      <div className="split-screen-content">
-        {children}
-      </div>
+      <div className="split-screen-content">{children}</div>
 
-      <div
-        ref={dragLineRef}
-        className="split-screen-drag-line"
-        draggable
-      />
+      <div ref={dragLineRef} className="split-screen-drag-line" draggable />
 
       <div
         ref={editorRef}

@@ -1,10 +1,10 @@
 import { memo, useCallback } from 'react'
 
 interface FormBotCheckProps {
-  hasError: boolean;
-  id: string;
-  label: string;
-  onChange: (fieldName: string, value: string) => void;
+  hasError: boolean
+  id: string
+  label: string
+  onChange: (fieldName: string, value: string) => void
 }
 
 export const FormBotCheck = memo((props: FormBotCheckProps) => {

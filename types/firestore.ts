@@ -4,8 +4,8 @@ export type Email = { [x: string]: DocumentData }
 
 export type EmailRecord = {
   [id: string]: {
-    message: string;
-    email: string;
-    name: string;
-  };
+    message: string
+    email: string
+    name: string
+  }
 }

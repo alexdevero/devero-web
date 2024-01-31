@@ -2,21 +2,23 @@ import Link from 'next/link'
 import { memo } from 'react'
 import { useIntl } from 'react-intl'
 
-import {
-  Layout,
-  PageHeader,
-} from '@components'
+import { Layout, PageHeader } from '@components'
 
 const ProductLab = memo(() => {
   const intl = useIntl()
 
   return (
     <Layout title="Product lab | Devero">
-      <PageHeader title={intl.formatMessage({ defaultMessage: 'Product lab' })} />
+      <PageHeader
+        title={intl.formatMessage({ defaultMessage: 'Product lab' })}
+      />
 
       <div className="row justify-content-center">
         <div className="col-md-8 col-lg-6 text-center">
-          <p className="mb-4">We turn your idea into a real product for you. We help you analyze, validate, plan, build, design, and release your product to market.</p>
+          <p className="mb-4">
+            We turn your idea into a real product for you. We help you analyze,
+            validate, plan, build, design, and release your product to market.
+          </p>
         </div>
       </div>
 
@@ -82,7 +84,7 @@ const ProductLab = memo(() => {
         </div>
       </div>
     </Layout>
-  );
+  )
 })
 
 export default ProductLab

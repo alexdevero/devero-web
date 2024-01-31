@@ -1,14 +1,14 @@
 type MetaBall = {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  r: number;
+  x: number
+  y: number
+  vx: number
+  vy: number
+  r: number
 }
 
 export const initCanvas = (canvas: HTMLCanvasElement) => {
-  const width = canvas.width = window.innerWidth * 0.75
-  const height = canvas.height = window.innerHeight * 0.75
+  const width = (canvas.width = window.innerWidth * 0.75)
+  const height = (canvas.height = window.innerHeight * 0.75)
 
   const gl = canvas.getContext('webgl')
 
@@ -25,7 +25,7 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
       y: Math.random() * (height - 2 * radius) + radius,
       vx: (Math.random() - 0.5) * 3,
       vy: (Math.random() - 0.5) * 3,
-      r: radius * 0.75
+      r: radius * 0.75,
     })
   }
 
@@ -39,20 +39,29 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
     }
   `
 
-  const fragmentShaderSrc = `
+  const fragmentShaderSrc =
+    `
     precision highp float;
 
-    const float WIDTH = ` + (width >> 0) + `.0;
-    const float HEIGHT = ` + (height >> 0) + `.0;
+    const float WIDTH = ` +
+    (width >> 0) +
+    `.0;
+    const float HEIGHT = ` +
+    (height >> 0) +
+    `.0;
 
-    uniform vec3 metaBalls[` + numMetaBalls + `];
+    uniform vec3 metaBalls[` +
+    numMetaBalls +
+    `];
 
     void main(){
       float x = gl_FragCoord.x;
       float y = gl_FragCoord.y;
 
       float sum = 0.0;
-      for (int i = 0; i < ` + numMetaBalls + `; i++) {
+      for (int i = 0; i < ` +
+    numMetaBalls +
+    `; i++) {
         vec3 metaBall = metaBalls[i];
         float dx = metaBall.x - x;
         float dy = metaBall.y - y;
@@ -79,7 +88,9 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
     gl?.compileShader(shader)
 
     if (!gl?.getShaderParameter(shader, gl?.COMPILE_STATUS)) {
-      throw new Error('Shader compile failed with: ' + gl?.getShaderInfoLog(shader))
+      throw new Error(
+        'Shader compile failed with: ' + gl?.getShaderInfoLog(shader),
+      )
     }
 
     return shader
@@ -120,10 +131,14 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   gl.useProgram(program)
 
   const vertexData = new Float32Array([
-    -1.0, 1.0, // top left
-    -1.0, -1.0, // bottom left
-    1.0, 1.0, // top right
-    1.0, -1.0, // bottom right
+    -1.0,
+    1.0, // top left
+    -1.0,
+    -1.0, // bottom left
+    1.0,
+    1.0, // top right
+    1.0,
+    -1.0, // bottom right
   ])
   const vertexDataBuffer = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, vertexDataBuffer)
@@ -134,12 +149,13 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   if (!positionHandle) return
 
   gl.enableVertexAttribArray(positionHandle)
-  gl.vertexAttribPointer(positionHandle,
+  gl.vertexAttribPointer(
+    positionHandle,
     2, // position is a vec2
     gl.FLOAT, // each component is a float
     false, // don't normalize values
     2 * 4, // two 4 byte float components per vertex
-    0 // offset into each span of vertex data
+    0, // offset into each span of vertex data
   )
 
   const metaBallsHandle = getUniformLocation(program, 'metaBalls')
@@ -151,8 +167,10 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
       metaBall.x += metaBall.vx
       metaBall.y += metaBall.vy
 
-      if (metaBall.x < metaBall.r || metaBall.x > width - metaBall.r) metaBall.vx *= -1
-      if (metaBall.y < metaBall.r || metaBall.y > height - metaBall.r) metaBall.vy *= -1
+      if (metaBall.x < metaBall.r || metaBall.x > width - metaBall.r)
+        metaBall.vx *= -1
+      if (metaBall.y < metaBall.r || metaBall.y > height - metaBall.r)
+        metaBall.vy *= -1
     }
 
     const dataToSendToGPU = new Float32Array(3 * numMetaBalls)
@@ -177,7 +195,7 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
   }
   loop()
 
-  canvas.onmousemove = function(e) {
+  canvas.onmousemove = function (e) {
     mouse.x = e.clientX
     mouse.y = e.clientY
   }

@@ -11,12 +11,20 @@ export const Hero = memo(() => {
           {/* <h1 className="display-3 font-bebas">DEVERO Corporation</h1> */}
 
           <h1 className="h4 display mb-2">
-            {intl.formatMessage({ defaultMessage: 'We build digital{br} products and solutions' }, {
-              br: <br />
-            })}
+            {intl.formatMessage(
+              { defaultMessage: 'We build digital{br} products and solutions' },
+              {
+                br: <br />,
+              },
+            )}
           </h1>
 
-          <p className="body1 lead">{intl.formatMessage({ defaultMessage: 'We are a full-stack software studio that builds digital products and solutions for companies of any size, products optimized for user experience and performance.' })}</p>
+          <p className="body1 lead">
+            {intl.formatMessage({
+              defaultMessage:
+                'We are a full-stack software studio that builds digital products and solutions for companies of any size, products optimized for user experience and performance.',
+            })}
+          </p>
         </div>
       </div>
     </div>

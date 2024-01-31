@@ -1,4 +1,10 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from 'next/document'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -12,9 +18,15 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
 
-          <meta name="keywords" content="startups, products, company, innovation, technology, web design, web development, nanotechnology, financial, space, media, industries, robotics, security, ventures, ai, genomics" />
+          <meta
+            name="keywords"
+            content="startups, products, company, innovation, technology, web design, web development, nanotechnology, financial, space, media, industries, robotics, security, ventures, ai, genomics"
+          />
 
-          <meta name="description" content="Devero corporation - build successful products and companies better and faster." />
+          <meta
+            name="description"
+            content="Devero corporation - build successful products and companies better and faster."
+          />
 
           <link
             rel="apple-touch-icon"
@@ -48,17 +60,29 @@ class MyDocument extends Document {
 
           <meta name="msapplication-TileColor" content="#000000" />
 
-          <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+          <meta
+            name="msapplication-config"
+            content="/favicon/browserconfig.xml"
+          />
 
           <meta name="theme-color" content="#000" />
 
           <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+            rel="stylesheet"
+          />
 
-          <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+            rel="stylesheet"
+          />
 
-          <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+            rel="stylesheet"
+          />
 
           {/* <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&amp;subset=latin-ext" rel="stylesheet" /> */}
 

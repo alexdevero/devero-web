@@ -2,7 +2,11 @@ import { memo } from 'react'
 
 export const IconAi = memo(() => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" style={{ isolation: 'isolate' }} viewBox="0 0 512 512">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ isolation: 'isolate' }}
+      viewBox="0 0 512 512"
+    >
       <defs>
         <clipPath id="a">
           <path d="M0 0h512v512H0z" />
@@ -25,7 +29,11 @@ export const IconFinancial = () => {
 
 export const IconFoundation = memo(() => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" style={{ isolation: 'isolate' }} viewBox="0 0 512 512">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ isolation: 'isolate' }}
+      viewBox="0 0 512 512"
+    >
       <defs>
         <clipPath id="a">
           <path d="M0 0h512v512H0z" />
@@ -76,7 +84,11 @@ export const IconStudio = memo(() => {
 
 export const IconTechnologies = memo(() => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" style={{ isolation: 'isolate' }} viewBox="0 0 512 477.093">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ isolation: 'isolate' }}
+      viewBox="0 0 512 477.093"
+    >
       <defs>
         <clipPath id="a">
           <path d="M0 0h512v477.093H0z" />

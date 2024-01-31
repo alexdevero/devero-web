@@ -3,6 +3,7 @@
   "singleQuote": true,
   "trailingComma": "all",
   "bracketSpacing": true,
+  "printWidth": 80,
   "importOrder": ["^@components$", "^@contexts$", "^@data$", "^@hooks$", "^@custom-types$", "^[./]"],
   "importOrderSeparation": true
 }

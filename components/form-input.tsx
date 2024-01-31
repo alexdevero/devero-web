@@ -1,15 +1,15 @@
 import { memo, ChangeEvent } from 'react'
 
 interface FormInputProps {
-  errorMessage: string;
-  fieldName: string;
-  hasError: boolean;
-  id: string;
-  label: string;
-  required?: boolean;
-  type: 'text' | 'password';
-  value: string;
-  onChange: (fieldName: string, value: string) => void;
+  errorMessage: string
+  fieldName: string
+  hasError: boolean
+  id: string
+  label: string
+  required?: boolean
+  type: 'text' | 'password'
+  value: string
+  onChange: (fieldName: string, value: string) => void
 }
 
 export const FormInput = memo((props: FormInputProps) => (
@@ -23,11 +23,11 @@ export const FormInput = memo((props: FormInputProps) => (
       id={props.id}
       required={props.required}
       value={props.value}
-      onChange={(event: ChangeEvent<HTMLInputElement>) => props.onChange(props.fieldName, event.target.value)}
+      onChange={(event: ChangeEvent<HTMLInputElement>) =>
+        props.onChange(props.fieldName, event.target.value)
+      }
     />
 
-    <div className="invalid-feedback">
-      {props.errorMessage}
-    </div>
+    <div className="invalid-feedback">{props.errorMessage}</div>
   </>
 ))

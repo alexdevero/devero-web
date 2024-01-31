@@ -7,7 +7,12 @@ export const RoadMap = memo(() => (
         <div className="text-center mb-4">
           <h1 className="h2 mb-2">How it works</h1>
 
-          <p>Our product development method is based on a well-tested step-by-step process. This process focuses on stress-testing the idea, while spending the least amount of resources, before proceeding to more risky steps.</p>
+          <p>
+            Our product development method is based on a well-tested
+            step-by-step process. This process focuses on stress-testing the
+            idea, while spending the least amount of resources, before
+            proceeding to more risky steps.
+          </p>
         </div>
       </div>
     </div>

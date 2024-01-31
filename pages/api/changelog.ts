@@ -10,17 +10,20 @@ const changelog: ChangelogItem[] = [
     changes: [
       {
         text: 'Added changelog page',
-        id: 'c_101_1'
+        id: 'c_101_1',
       },
       {
         text: 'Added first batch of changes',
-        id: 'c_101_2'
-      }
-    ]
-  }
+        id: 'c_101_2',
+      },
+    ],
+  },
 ]
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   return res.json({
     code: HttpCodes.OK,
     data: changelog,

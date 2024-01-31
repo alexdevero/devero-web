@@ -35,24 +35,44 @@ export const Footer = memo(() => (
       <div className="mt-1">
         <ul className="nav d-flex justify-content-center">
           <li className="nav-item">
-            <a href="https://twitter.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://twitter.com/alexdevero"
+              className="nav-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <span className="fab fa-twitter" />
             </a>
           </li>
 
           <li className="nav-item">
-            <a href="https://cz.linkedin.com/in/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://cz.linkedin.com/in/alexdevero"
+              className="nav-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <span className="fab fa-linkedin" />
             </a>
           </li>
           <li className="nav-item">
-            <a href="https://facebook.com/deverocorp" className="nav-link" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://facebook.com/deverocorp"
+              className="nav-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <span className="fab fa-facebook-f" />
             </a>
           </li>
 
           <li className="nav-item">
-            <a href="https://github.com/alexdevero" className="nav-link" rel="noopener noreferrer" target="_blank">
+            <a
+              href="https://github.com/alexdevero"
+              className="nav-link"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <span className="fab fa-github" />
             </a>
           </li>

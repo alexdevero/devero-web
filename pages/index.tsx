@@ -31,9 +31,7 @@ const Beta = memo(() => {
         {isMobile ? (
           <Hero />
         ) : (
-          <SplitScreen
-            theme="dark"
-          >
+          <SplitScreen theme="dark">
             <Hero />
           </SplitScreen>
         )}

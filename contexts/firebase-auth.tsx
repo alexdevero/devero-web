@@ -1,5 +1,19 @@
-import { Auth, getAuth, signInWithEmailAndPassword, signOut, User } from 'firebase/auth'
-import { FC, ReactNode, createContext, useMemo, useState, useCallback, useEffect } from 'react'
+import {
+  Auth,
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  User,
+} from 'firebase/auth'
+import {
+  FC,
+  ReactNode,
+  createContext,
+  useMemo,
+  useState,
+  useCallback,
+  useEffect,
+} from 'react'
 
 import { CustomError } from '@custom-types'
 import { useContext } from '@hooks'
@@ -8,20 +22,27 @@ import { logger } from '@utils'
 import { useStorage } from './storage'
 
 export interface FirebaseAuthContext {
-  firebaseAuth: Auth;
-  authenticatedUser: User | undefined;
-  handleSignIn: (username: string, password: string) => Promise<User | undefined | {
-    code: number;
-    message: string;
-  }>;
-  handleSignOut: () => Promise<boolean>;
+  firebaseAuth: Auth
+  authenticatedUser: User | undefined
+  handleSignIn: (
+    username: string,
+    password: string,
+  ) => Promise<
+    | User
+    | undefined
+    | {
+        code: number
+        message: string
+      }
+  >
+  handleSignOut: () => Promise<boolean>
 }
 
 const ctx = createContext<FirebaseAuthContext | undefined>(undefined)
 ctx.displayName = 'FirebaseAuth'
 
 export interface FirebaseAuthProviderProps {
-  children?: ReactNode;
+  children?: ReactNode
 }
 
 export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
@@ -30,25 +51,32 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
 
   const [user, setUser] = useState<User | undefined>(undefined)
 
-  const handleSignIn = useCallback(async (username: string, password: string) => {
-    if (auth) {
-      try {
-        const userCredential = await signInWithEmailAndPassword(auth, username, password)
-        setUser(userCredential.user)
-        setStorageItem('auth', JSON.stringify(userCredential.user), 'local')
+  const handleSignIn = useCallback(
+    async (username: string, password: string) => {
+      if (auth) {
+        try {
+          const userCredential = await signInWithEmailAndPassword(
+            auth,
+            username,
+            password,
+          )
+          setUser(userCredential.user)
+          setStorageItem('auth', JSON.stringify(userCredential.user), 'local')
 
-        return userCredential.user
-      } catch (e) {
-        const err = e as CustomError
+          return userCredential.user
+        } catch (e) {
+          const err = e as CustomError
 
-        logger(`${err.code}, ${err.message}`, 'log')
-        return {
-          code: err.code,
-          message: err.message
+          logger(`${err.code}, ${err.message}`, 'log')
+          return {
+            code: err.code,
+            message: err.message,
+          }
         }
       }
-    }
-  }, [auth, setStorageItem])
+    },
+    [auth, setStorageItem],
+  )
 
   const handleSignOut = useCallback(async () => {
     try {
@@ -72,7 +100,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
     if (!user) {
       loadUserData()
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const value: FirebaseAuthContext = useMemo(
@@ -82,7 +110,7 @@ export const FirebaseAuthProvider: FC<FirebaseAuthProviderProps> = (props) => {
       handleSignIn,
       handleSignOut,
     }),
-    [auth, user, handleSignIn, handleSignOut]
+    [auth, user, handleSignIn, handleSignOut],
   )
   return <ctx.Provider value={value}>{props.children}</ctx.Provider>
 }
