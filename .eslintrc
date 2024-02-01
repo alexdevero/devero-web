@@ -344,7 +344,7 @@
     // "@typescript-eslint/explicit-member-accessibility": "error",
     "@typescript-eslint/indent": ["warn", 2, { "SwitchCase": 1 }],
     // "@typescript-eslint/interface-name-prefix": "error",
-    "@typescript-eslint/member-delimiter-style": "error",
+    "@typescript-eslint/member-delimiter-style": "off",
     "@typescript-eslint/no-array-constructor": "error",
     "@typescript-eslint/no-empty-interface": "error",
     "@typescript-eslint/no-explicit-any": "error",

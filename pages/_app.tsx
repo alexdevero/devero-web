@@ -14,6 +14,7 @@ import {
 
 import English from '../content/compiled-locales/en.json'
 
+import '@styles/globals.css'
 import '@styles/styles.scss'
 
 export default function MyApp({
