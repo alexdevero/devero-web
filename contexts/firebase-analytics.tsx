@@ -32,7 +32,9 @@ export const FirebaseAnalyticsProvider: FC<FirebaseAnalyticsProviderProps> = (
     (screenName: string, componentName: string) => {
       if (analytics) {
         logEvent(analytics, 'screen_view', {
+          // eslint-disable-next-line camelcase
           firebase_screen: screenName,
+          // eslint-disable-next-line camelcase
           firebase_screen_class: componentName,
         })
       }

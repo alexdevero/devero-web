@@ -167,10 +167,12 @@ export const initCanvas = (canvas: HTMLCanvasElement) => {
       metaBall.x += metaBall.vx
       metaBall.y += metaBall.vy
 
-      if (metaBall.x < metaBall.r || metaBall.x > width - metaBall.r)
+      if (metaBall.x < metaBall.r || metaBall.x > width - metaBall.r) {
         metaBall.vx *= -1
-      if (metaBall.y < metaBall.r || metaBall.y > height - metaBall.r)
+      }
+      if (metaBall.y < metaBall.r || metaBall.y > height - metaBall.r) {
         metaBall.vy *= -1
+      }
     }
 
     const dataToSendToGPU = new Float32Array(3 * numMetaBalls)

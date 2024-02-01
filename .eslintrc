@@ -200,7 +200,7 @@
     "semi-spacing": ["error", { "before": false, "after": true }],
     "space-before-blocks": ["error", "always"],
     "space-before-function-paren": [
-      "error",
+      "off",
       {
         "anonymous": "never",
         "named": "never",
@@ -295,7 +295,7 @@
     "react/jsx-child-element-spacing": "error",
     "react/jsx-closing-bracket-location": "error",
     "react/jsx-closing-tag-location": "error",
-    "react/jsx-curly-newline": "error",
+    "react/jsx-curly-newline": "off",
     "react/jsx-curly-spacing": ["error", "never"],
     "react/jsx-equals-spacing": ["error", "never"],
     "react/jsx-filename-extension": [

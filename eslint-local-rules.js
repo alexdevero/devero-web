@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   'eol-last': {
     meta: {
@@ -23,16 +21,16 @@ module.exports = {
     create: function (context) {
       return {
         Identifier: function checkBadEOF(node) {
-          const sourceCode = context.getSourceCode(),
-            src = sourceCode.getText(),
-            lastLine = sourceCode.lines[sourceCode.lines.length - 1],
-            location = {
-              column: lastLine.length,
-              line: sourceCode.lines.length,
-            },
-            LF = '\n',
-            CRLF = `\r${LF}`,
-            endsWithNewline = src.endsWith(LF)
+          const sourceCode = context.getSourceCode()
+          const src = sourceCode.getText()
+          const lastLine = sourceCode.lines[sourceCode.lines.length - 1]
+          const location = {
+            column: lastLine.length,
+            line: sourceCode.lines.length,
+          }
+          const LF = '\n'
+          const CRLF = `\r${LF}`
+          const endsWithNewline = src.endsWith(LF)
 
           /*
            * Empty source is always valid: No content in file so we don't
@@ -42,8 +40,8 @@ module.exports = {
             return
           }
 
-          let mode = context.options[0] || 'always',
-            appendCRLF = false
+          let mode = context.options[0] || 'always'
+          let appendCRLF = false
 
           if (mode === 'unix') {
             // `"unix"` should behave exactly as `"always"`
@@ -84,10 +82,10 @@ module.exports = {
               },
               messageId: 'unexpected',
               fix(fixer) {
-                const finalEOLs = /(?:\r?\n)+$/u,
-                  match = finalEOLs.exec(sourceCode.text),
-                  start = match.index,
-                  end = sourceCode.text.length
+                const finalEOLs = /(?:\r?\n)+$/u
+                const match = finalEOLs.exec(sourceCode.text)
+                const start = match.index
+                const end = sourceCode.text.length
 
                 return fixer.replaceTextRange([start, end], '')
               },
