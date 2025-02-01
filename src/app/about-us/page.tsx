@@ -1,11 +1,13 @@
-// import Link from 'next/link'
-import { memo } from 'react'
-import { useIntl } from 'react-intl'
+'use client'
+
+// import { useIntl } from 'react-intl'
 
 import { Layout, PageHeader } from '@components'
 
-const AboutUs = memo(() => {
-  const intl = useIntl()
+export default function AboutUs() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   return (
     <Layout title="About Us | Devero" isFluid>
@@ -130,6 +132,4 @@ const AboutUs = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default AboutUs
+}

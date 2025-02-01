@@ -1,11 +1,14 @@
+'use client'
+
 import Link from 'next/link'
-import { memo } from 'react'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 
 import { Layout, PageHeader } from '@components'
 
-const ProductLab = memo(() => {
-  const intl = useIntl()
+export default function ProductLab() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   return (
     <Layout title="Product lab | Devero">
@@ -85,6 +88,4 @@ const ProductLab = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default ProductLab
+}

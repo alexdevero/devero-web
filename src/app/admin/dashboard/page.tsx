@@ -1,6 +1,8 @@
+'use client'
+
 import Router from 'next/router'
-import { memo, useCallback, useEffect, useState } from 'react'
-import { useIntl } from 'react-intl'
+import { useCallback, useEffect, useState } from 'react'
+// import { useIntl } from 'react-intl'
 
 import { Layout } from '@components/layout'
 import { PageHeader } from '@components/page-header'
@@ -15,8 +17,10 @@ import { routes } from '@data/routes'
 
 import { logger } from '@utils/logger'
 
-const Dashboard = memo(() => {
-  const intl = useIntl()
+export default function Dashboard() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   const { deleteEmailDocument, getAllEmails } = useFirestore()
   const { authenticatedUser, handleSignOut } = useFirebaseAuth()
@@ -41,7 +45,7 @@ const Dashboard = memo(() => {
   }, [getAllEmails])
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const localUserData = await getStorageItem('auth', 'local')
       if (!authenticatedUser && !localUserData) {
         Router.push(routes.adminLogin)
@@ -91,6 +95,4 @@ const Dashboard = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default Dashboard
+}

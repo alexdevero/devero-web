@@ -1,4 +1,5 @@
-import { memo, useCallback, useEffect, useState } from 'react'
+'use client'
+import { useCallback, useEffect, useState } from 'react'
 
 import {
   // Canvas,
@@ -10,7 +11,7 @@ import {
 } from '@components'
 import { useWindowEvent } from '@hooks'
 
-const Beta = memo(() => {
+export default function Home() {
   const [isMobile, setIsMobile] = useState(false)
 
   const onResize = useCallback(() => {
@@ -44,6 +45,4 @@ const Beta = memo(() => {
       {/* <Canvas /> */}
     </>
   )
-})
-
-export default Beta
+}

@@ -90,8 +90,9 @@
     "@typescript-eslint/parser": "6.21.0",
     "autoprefixer": "10.4.20",
     "babel-plugin-formatjs": "10.5.13",
+    "clsx": "^2.1.1",
     "eslint": "8.57.1",
-    "eslint-config-next": "14.2.23",
+    "eslint-config-next": "15.1.6",
     "eslint-plugin-formatjs": "4.14.0",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-local-rules": "2.0.1",
@@ -109,4 +110,3 @@
     "typescript": "5.3.3"
   }
 }
-

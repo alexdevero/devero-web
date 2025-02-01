@@ -1,6 +1,8 @@
-import { memo, useCallback, useEffect, useState } from 'react'
+'use client'
+
+import { useCallback, useEffect, useState } from 'react'
 import Router from 'next/router'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 
 import { FormInput } from '@components/form-input'
 import { Layout } from '@components/layout'
@@ -10,8 +12,10 @@ import { useFirebaseAuth } from '@contexts/firebase-auth'
 
 import { routes } from '@data/routes'
 
-const AdminLogin = memo(() => {
-  const intl = useIntl()
+export default function AdminLogin() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   const { authenticatedUser, handleSignIn } = useFirebaseAuth()
   const [username, setUsername] = useState('')
@@ -116,6 +120,4 @@ const AdminLogin = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default AdminLogin
+}

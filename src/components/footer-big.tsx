@@ -1,11 +1,13 @@
 import Link from 'next/link'
 import { memo, useMemo } from 'react'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 
 import { personalLinks, routes, socialMediaLinks } from '@data'
 
 export const FooterBig = memo(() => {
-  const intl = useIntl()
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   const timeStamp = useMemo(() => new Date().getFullYear(), [])
 

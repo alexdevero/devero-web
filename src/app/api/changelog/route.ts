@@ -1,5 +1,3 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-
 import { ChangelogItem } from '@custom-types/changelog'
 import { HttpCodes } from '@custom-types/http-codes'
 
@@ -20,11 +18,8 @@ const changelog: ChangelogItem[] = [
   },
 ]
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  return res.json({
+export async function GET() {
+  return Response.json({
     code: HttpCodes.OK,
     data: changelog,
   })

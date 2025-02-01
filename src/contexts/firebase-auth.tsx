@@ -28,12 +28,12 @@ export interface FirebaseAuthContext {
     username: string,
     password: string,
   ) => Promise<
-  | User
-  | undefined
-  | {
-    code: number
-    message: string
-  }
+    | User
+    | undefined
+    | {
+        code: number
+        message: string
+      }
   >
   handleSignOut: () => Promise<boolean>
 }

@@ -1,6 +1,6 @@
 import { useState, memo } from 'react'
 import Link from 'next/link'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 
 import {
   // personalLinks,
@@ -9,7 +9,9 @@ import {
 
 export const Header = memo(() => {
   const [isNavOpen, setIsNavOpen] = useState(false)
-  const intl = useIntl()
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   return (
     <header className="header bg-white">

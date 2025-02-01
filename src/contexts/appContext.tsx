@@ -1,4 +1,5 @@
-import { NextComponentType, GetStaticProps } from 'next'
+'use client'
+
 import { Toaster } from 'react-hot-toast'
 import { IntlProvider } from 'react-intl'
 import { Analytics } from '@vercel/analytics/react'
@@ -14,16 +15,9 @@ import {
 
 import English from '../content/compiled-locales/en.json'
 
-import '@styles/globals.css'
-import '@styles/styles.scss'
+import { FC, PropsWithChildren } from 'react'
 
-export default function MyApp({
-  Component,
-  pageProps,
-}: {
-  Component: NextComponentType
-  pageProps: GetStaticProps
-}) {
+export const AppContext: FC<PropsWithChildren> = ({ children }) => {
   return (
     <IntlProvider locale="en" defaultLocale="en" messages={English}>
       <ToastProvider>
@@ -33,7 +27,7 @@ export default function MyApp({
               <FirestoreProvider>
                 <FirebaseAnalyticsProvider>
                   <Toaster />
-                  <Component {...pageProps} />
+                  {children}
                   <Analytics />
                 </FirebaseAnalyticsProvider>
               </FirestoreProvider>

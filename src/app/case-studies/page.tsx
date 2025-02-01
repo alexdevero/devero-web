@@ -1,12 +1,11 @@
-import Link from 'next/link'
-import { memo } from 'react'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 
 import { Layout, PageHeader } from '@components'
-import { routes } from '@data'
 
-const CaseStudies = memo(() => {
-  const intl = useIntl()
+export default function CaseStudies() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   return (
     <Layout title="Case studies | Devero">
@@ -21,15 +20,9 @@ const CaseStudies = memo(() => {
                 defaultMessage: 'This page is under construction...',
               })}
             </p>
-
-            <Link href={routes.root} legacyBehavior>
-              ←{intl.formatMessage({ defaultMessage: 'Go back home' })}
-            </Link>
           </div>
         </div>
       </div>
     </Layout>
   )
-})
-
-export default CaseStudies
+}

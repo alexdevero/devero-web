@@ -317,7 +317,7 @@
     "react/jsx-fragments": ["error", "syntax"],
     "react/jsx-pascal-case": "error",
     "react/jsx-props-no-multi-spaces": "error",
-    "react/jsx-sort-default-props": "error",
+    "react/sort-default-props": "error",
     "react/jsx-sort-props": [
       "error",
       {
@@ -327,7 +327,7 @@
         "reservedFirst": true
       }
     ],
-    "react/jsx-space-before-closing": "error",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
     "react/jsx-uses-react": "off",
     "react/jsx-uses-vars": "error",
 
@@ -357,7 +357,11 @@
     // "@typescript-eslint/no-var-requires": "error",
     "@typescript-eslint/prefer-namespace-keyword": "error",
     "@typescript-eslint/triple-slash-reference": "error",
-    "@typescript-eslint/type-annotation-spacing": "error"
+    "@typescript-eslint/type-annotation-spacing": "error",
+    // Enforce consistent `type` export
+    // "@typescript-eslint/consistent-type-exports": 2,
+    // Enforce consistent `type` imports
+    // "@typescript-eslint/consistent-type-imports": 2
     // formatjs
     // "formatjs/enforce-id": "error"
   }

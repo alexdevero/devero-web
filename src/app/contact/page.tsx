@@ -1,6 +1,8 @@
-import { useCallback, useState, memo } from 'react'
+'use client'
+
+import { useCallback, useState } from 'react'
 import sanitizeHtml from 'sanitize-html'
-import { useIntl } from 'react-intl'
+// import { useIntl } from 'react-intl'
 import { z } from 'zod'
 
 import {
@@ -19,8 +21,10 @@ const schema = z.object({
   name: z.string().min(1, { message: 'Please provide a your name.' }),
 })
 
-const Contact = memo(() => {
-  const intl = useIntl()
+export default function Contact() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   const { createEmailDocument } = useFirestore()
   const { handleToastShow } = useToast()
@@ -194,6 +198,4 @@ const Contact = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default Contact
+}

@@ -1,8 +1,14 @@
-import { memo } from 'react'
-import { useIntl } from 'react-intl'
+import { memo, ReactNode } from 'react'
+// import { useIntl } from 'react-intl'
 
 export const Hero = memo(() => {
-  const intl = useIntl()
+  const intl = {
+    formatMessage: (
+      args: { defaultMessage: string },
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      options?: { br: ReactNode },
+    ) => args.defaultMessage,
+  } // useIntl()
 
   return (
     <div className="hero jumbotron px-0">

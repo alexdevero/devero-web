@@ -1,13 +1,17 @@
-import { memo, useEffect, useState } from 'react'
-import { useIntl } from 'react-intl'
+'use client'
+
+import { useEffect, useState } from 'react'
+// import { useIntl } from 'react-intl'
 
 import { ChangelogItem, ChangelogResponse, HttpCodes } from '@custom-types'
 
 import { Layout, PageHeader } from '@components'
 import { logger } from '@utils'
 
-const Changelog = memo(() => {
-  const intl = useIntl()
+export default function Changelog() {
+  const intl = {
+    formatMessage: (args: { defaultMessage: string }) => args.defaultMessage,
+  } // useIntl()
 
   const [changelog, setChangelog] = useState<ChangelogItem[]>([])
 
@@ -60,6 +64,4 @@ const Changelog = memo(() => {
       </div>
     </Layout>
   )
-})
-
-export default Changelog
+}
