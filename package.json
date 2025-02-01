@@ -1,13 +1,13 @@
 {
   "name": "devero-web",
   "version": "1.0.0",
-  "description": "Repository for DEVERO Corporation website on devero.xyz.",
+  "description": "Repository for DEVERO Corporation website on devero.dev.",
   "private": true,
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0",
-    "pnpm": ">=8.0.0",
-    "yarn": ">=1.12.0"
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0",
+    "pnpm": ">=10.0.0",
+    "yarn": ">=1.22.0"
   },
   "keywords": [],
   "main": "src/index.js",
@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "4.6.0",
-    "@vercel/analytics": "^0.1.11",
+    "@vercel/analytics": "0.1.11",
     "firebase": "9.8.3",
     "nanoid": "5.0.4",
     "next": "14.2.23",
@@ -79,7 +79,7 @@
     "react-intl": "6.6.2",
     "react-recaptcha": "2.3.10",
     "sanitize-html": "2.11.0",
-    "zod": "^3.22.4"
+    "zod": "3.22.4"
   },
   "devDependencies": {
     "@formatjs/cli": "5.0.2",
@@ -88,24 +88,25 @@
     "@types/react": "18.2.48",
     "@typescript-eslint/eslint-plugin": "6.20.0",
     "@typescript-eslint/parser": "6.20.0",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "10.4.17",
     "babel-plugin-formatjs": "10.5.13",
     "eslint": "8.56.0",
-    "eslint-config-next": "^14.2.23",
+    "eslint-config-next": "14.2.23",
     "eslint-plugin-formatjs": "4.12.2",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-local-rules": "2.0.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.3.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.3.0",
     "postcss": "8.4.33",
     "postcss-import": "16.0.0",
     "postcss-preset-env": "9.3.0",
-    "prettier": "^3.2.4",
+    "prettier": "3.2.4",
     "sass": "1.70.0",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
   }
 }
+
