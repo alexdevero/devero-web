@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, memo } from 'react'
 import Link from 'next/link'
 // import { useIntl } from 'react-intl'
