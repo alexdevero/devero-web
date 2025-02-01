@@ -41,7 +41,7 @@ const Dashboard = memo(() => {
   }, [getAllEmails])
 
   useEffect(() => {
-    (async () => {
+    ;(async () => {
       const localUserData = await getStorageItem('auth', 'local')
       if (!authenticatedUser && !localUserData) {
         Router.push(routes.adminLogin)
