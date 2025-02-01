@@ -40,7 +40,7 @@
   ],
   "scripts": {
     "build": "npm run i18n && next build",
-    "dev": "next dev -p 3002",
+    "dev": "next dev --turbopack -p 3002",
     "export": "next build && next export",
     "extract:i18n": "formatjs extract '{pages,components}/**/*.{js,ts,tsx}' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
     "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
@@ -71,9 +71,9 @@
     "@vercel/analytics": "0.1.11",
     "firebase": "9.8.3",
     "nanoid": "5.0.9",
-    "next": "14.2.23",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-helmet": "6.1.0",
     "react-hot-toast": "2.5.1",
     "react-intl": "6.6.2",
@@ -83,9 +83,9 @@
   },
   "devDependencies": {
     "@formatjs/cli": "5.0.2",
-    "@next/eslint-plugin-next": "12.3.4",
+    "@next/eslint-plugin-next": "15.1.6",
     "@types/node": "18.19.74",
-    "@types/react": "18.3.18",
+    "@types/react": "19.0.8",
     "@typescript-eslint/eslint-plugin": "6.21.0",
     "@typescript-eslint/parser": "6.21.0",
     "autoprefixer": "10.4.20",
@@ -108,5 +108,10 @@
     "sass": "1.83.4",
     "tailwindcss": "3.4.17",
     "typescript": "5.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.0.8"
+    }
   }
 }

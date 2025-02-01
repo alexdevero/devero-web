@@ -42,7 +42,7 @@ export const ToastProvider: FC<ToastsProviderProps> = (props) => {
         ...options,
       }
       toast(
-        (t) => (
+        (t: Toast) => (
           <span className="toast-wrapper">
             <span className="toast-text">{text}</span>
             <button
