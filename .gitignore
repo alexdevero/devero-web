@@ -21,6 +21,7 @@ _ignore/
 logs/
 *.log
 npm-debug.log*
+tsconfig.tsbuildinfo
 
 # Packages #
 ############
