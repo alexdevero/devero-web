@@ -96,13 +96,21 @@ export const FooterBig = memo(() => {
                   </li> */}
 
                   <li className="nav-item">
-                    <Link href={routes.contact} className="nav-link p-1">
+                    <Link
+                      href={routes.contact}
+                      className="nav-link p-1"
+                      legacyBehavior
+                    >
                       {intl.formatMessage({ defaultMessage: 'Contact us' })}
                     </Link>
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.privacyPolicy} className="nav-link p-1">
+                    <Link
+                      href={routes.privacyPolicy}
+                      className="nav-link p-1"
+                      legacyBehavior
+                    >
                       {intl.formatMessage({ defaultMessage: 'Privacy policy' })}
                     </Link>
                   </li>
@@ -111,6 +119,7 @@ export const FooterBig = memo(() => {
                     <Link
                       href={routes.termsConditions}
                       className="nav-link p-1"
+                      legacyBehavior
                     >
                       {intl.formatMessage({
                         defaultMessage: 'Terms and conditions',
@@ -130,7 +139,11 @@ export const FooterBig = memo(() => {
                   </li>
 
                   <li className="nav-item">
-                    <Link href={routes.adminLogin} className="nav-link p-1">
+                    <Link
+                      href={routes.adminLogin}
+                      className="nav-link p-1"
+                      legacyBehavior
+                    >
                       {intl.formatMessage({ defaultMessage: 'Admin' })}
                     </Link>
                   </li>

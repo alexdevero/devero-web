@@ -44,7 +44,11 @@ export const Header = memo(() => {
               </li> */}
 
               <li className="nav-item">
-                <Link href={routes.caseStudies} className="nav-link">
+                <Link
+                  href={routes.caseStudies}
+                  className="nav-link"
+                  legacyBehavior
+                >
                   {intl.formatMessage({ defaultMessage: 'Case studies' })}
                 </Link>
               </li>
@@ -68,7 +72,7 @@ export const Header = memo(() => {
               </li> */}
 
               <li className="nav-item">
-                <Link href={routes.contact} className="nav-link">
+                <Link href={routes.contact} className="nav-link" legacyBehavior>
                   {intl.formatMessage({ defaultMessage: 'Contact us' })}
                 </Link>
               </li>

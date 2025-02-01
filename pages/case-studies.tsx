@@ -13,7 +13,6 @@ const CaseStudies = memo(() => {
       <PageHeader
         title={intl.formatMessage({ defaultMessage: 'Case studies' })}
       />
-
       <div className="container pb-3">
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6 text-center">
@@ -23,7 +22,7 @@ const CaseStudies = memo(() => {
               })}
             </p>
 
-            <Link href={routes.root}>
+            <Link href={routes.root} legacyBehavior>
               ←{intl.formatMessage({ defaultMessage: 'Go back home' })}
             </Link>
           </div>
